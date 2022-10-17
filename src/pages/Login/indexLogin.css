@@ -1,0 +1,5 @@
+.main{
+    display: flex;
+    min-height: 450px;
+    flex-wrap: wrap;
+}

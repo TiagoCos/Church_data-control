@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+}
+.principal{
+    min-height: 450px;
+}
+.carrossel{
+    border:  3px solid rgb(36, 7, 204);
+    display: flex;
+    overflow-x: scroll ;
+    padding: 24px;
+    width: 1000px;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 24px;
+    border-radius: 8px;
+    gap: 8px;
+
+   margin-top: 6em;
+   margin-left: 11em;
+   color: aliceblue;
+   background: black; 
+}
+.item{
+    flex: 0 0 100%;
+    padding: 24px;
+    border-radius: 8px;
+    scroll-snap-align: start;
+}

@@ -1,19 +1,23 @@
 .header{
-    padding: 3em;
-    background: rgb(190, 182, 182);
+    padding: 1em;
+    background: rgb(99, 99, 240);
     border: 2px solid black;
+    height: 104px;
     
 }
 .logo{
-    height: 50px;
-    width: 50px;
-    margin-top: 2px;
+    height: 44px;
+    width: 44px;
+    margin-top: 5px;
     margin-left: 2px;
 }
 .list{
     display: flex;
     justify-content: space-between;
     background: rgb(99, 99, 240);
+    height: 60px ;
+    padding: 0%;
+    
 
     
 }
@@ -22,5 +26,6 @@
     margin-top: 22px;
     margin-right: 3em;
     margin-left: 2em;
-
+    height: 44px;
+    font-weight: bold;
 }

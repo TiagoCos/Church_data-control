@@ -3,7 +3,14 @@
     padding: 0px;
     margin: 0px;
 }
-
+.footer{
+    display: flex;
+    border:  2px solid rgb(0, 0, 0);
+    min-height: 50px;
+    background: rgb(99, 99, 240);
+    height: 130px;
+   
+}
 body {
     background: #131315;
     
@@ -14,18 +21,12 @@ a {
 }
 
 ul {
-  
     display: flex;
     padding: 0;
+    
+    align-items: flex-end;
+    justify-content: flex-end;
 }
-
-ul div {
-    width: 40px;
-    height: 5px;
-    background-color: #9581F4;
-    margin: auto;
-}
-
 ul li {
     position: relative;
     list-style: none;
@@ -66,10 +67,4 @@ ul li:nth-child(4):hover span {
 
 ul li:nth-child(5):hover span {
     background: #2C3456 !important;
-}
-.footer{
-    display: flex;
-    border:  1px solid blue;
-    min-height: 150px;
-   
 }

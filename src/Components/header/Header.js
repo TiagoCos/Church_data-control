@@ -1,24 +1,25 @@
+import React from 'react';
 import  '../header/indexHeader.css'
-import { Link } from 'react-router-dom';
+import { Anchor } from 'antd';
 import logo from '../../assets/icons/logo.png';
+import { Link } from 'react-router-dom';
 
 
 function Header(){
     return(
+     <Anchor >
        <header className='header'>
-          <div className='list'>
-      
-                <Link  to= '/' ><img className='logo' src={logo}/> </Link>
-                 <Link id='link' to= '/Login' >Conheça a Diretoria</Link> 
-                 <Link id='link' to= '/Login' >Igrejas Filiadas</Link>
-                 <Link id='link' to= '/Login' >Estatuto</Link>
-                 <Link id='link' to= '/Login' >Palavra do presidente</Link> 
-                 <Link id='link' to= '/Login' >Fazer Login </Link> 
-              
-            
-           
-          </div>
+        <div className='list'>
+          <Link to= '/' ><img className='logo' src={logo}/> </Link>
+           <Link> <a id='link' href='#c' >Conheça a Diretoria</a> </Link>
+            <a id='link' href='#c' >Igrejas Filiadas</a>
+            <a id='link' href='#c' >Estatuto</a>
+            <a id='link' href='#c' >Palavra do presidente</a> 
+            <Link id='link' to='/Login' >Fazer Login </Link> 
+             
+         </div>
        </header>
+      </Anchor> 
     )
 }
 export default Header

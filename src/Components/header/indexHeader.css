@@ -29,3 +29,10 @@
     height: 44px;
     font-weight: bold;
 }
+.contentStyle{
+    height: 160px;
+    color: #fff;
+    line-height: 160px;
+    text-align: center;
+    background: #364d79;
+}

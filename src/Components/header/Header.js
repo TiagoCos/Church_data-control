@@ -11,11 +11,11 @@ function Header(){
        <header className='header'>
         <div className='list'>
           <Link to= '/' ><img className='logo' src={logo}/> </Link>
-           <Link> <a id='link' href='#c' >Conheça a Diretoria</a> </Link>
+            <a id='link' href='#c' >Conheça a Diretoria</a> 
             <a id='link' href='#c' >Igrejas Filiadas</a>
             <a id='link' href='#c' >Estatuto</a>
             <a id='link' href='#c' >Palavra do presidente</a> 
-            <Link id='link' to='/Login' >Fazer Login </Link> 
+            <Link className='btn' id='link' to='/Login' >Fazer Login </Link> 
              
          </div>
        </header>

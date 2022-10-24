@@ -1,15 +1,14 @@
-import '../Dashboard/indexHome.css';
+import  '../Dashboard/indexHome.css';
+
+import React from 'react';
 
 function Home(){
+  
+
      return(
         <main className='principal'>
-        <section id='a' className='apresentacao'>
-          <section id='b' className='diretoria'>
-            <section id='c' className='filiacao'>
-             <section id='d' className='estatuto'>
-               <section id='e' className='presidente'>
-
-           <div className='carrossel'>
+        <section id='1' className='apresentacao'>
+        <div className='carrossel'>
               <div className='item'>
              ABC da Amazônia: Pato no tucupi. Comer pato é coisa comum no pará,
               e o pato no tucupi está sempre na mesa em dias de festa.
@@ -31,11 +30,17 @@ function Home(){
             e que faz parte de muitas receitas da cozinha paraense
             </div>
            </div>  
+          <section id='b' className='diretoria'>
+            <section id='c' className='filiacao'>
+             <section id='d' className='estatuto'>
+               <section id='2' className='presidente'>
+          
              </section>
             </section>
            </section>
           </section>
         </section>
+       
         </main>
     )
 }

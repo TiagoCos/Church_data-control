@@ -41,23 +41,23 @@
 
 /*--------------------containers--------------------------------------------*/
 .diretoria{
-    height: 400px;
+    height: 400px; /*2º*/
     background: rgba(0, 0, 0, 0);
     border: 1px solid rgba(0, 0, 0, 0);
     margin: 0px;
     margin-top: 25em;
 }
-.filiacao{
+.filiacao{ /*3º*/
     height: 400px;
     background: rgba(0, 0, 0, 0);
-    border: 1px solid rgb(255, 0, 0);
+    border: 1px solid rgba(0, 0, 0, 0);
     margin: 0px;
     margin-top: 25em;
     
 
 }
 .estatuto{
-    height: 400px;
+    height: 400px; /*4º*/
     background: rgba(0, 0, 0, 0);
     border: 1px solid rgba(0, 0, 0, 0);
     margin: 0px;
@@ -65,16 +65,17 @@
     
 }
 .presidente{
-    height: 400px;
+    height: 400px; /*5º*/
     background: rgba(0, 0, 0, 0);
     border: 1px solid rgba(0, 0, 0, 0);
     margin: 0px;
     margin-top: 25em;
 }
-.apresentacao{
+.apresentacao{  /*1º*/
     height: 400px;
     background: rgba(0, 0, 0, 0);
-    border: 1px solid rgba(0, 0, 0, 0);
+    border: 1px solidrgba(0, 0, 0, 0);
     margin: 0px;
+    border-bottom: 1px solid #5a5a5a;
     
 }

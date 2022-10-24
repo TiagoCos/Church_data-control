@@ -5,10 +5,11 @@
 }
 .footer{
     display: flex;
-    border:  2px solid rgb(0, 0, 0);
+    border:  1px solid rgb(0, 0, 0);
     min-height: 50px;
-    background: rgb(99, 99, 240);
+    background: rgba(24, 23, 23, 0.87);
     height: 130px;
+    align-items: center;
    
 }
 body {

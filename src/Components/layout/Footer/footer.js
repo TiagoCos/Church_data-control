@@ -4,8 +4,18 @@ function  Footer(){
     
     return(
       <footer className='footer'>
-<ul className='ulfoot'>
-        
+        <section className='infomações-footer-colun01'>
+            <div>
+
+            </div>
+        </section>
+
+        <section  className='infomações-footer-colun02'>
+           <div>
+
+           </div>
+        </section>
+    <ul> 
         <li>
             <a href="#">
 
@@ -27,11 +37,9 @@ function  Footer(){
         </li>
         <li>
             <a href="#">
-
                 <span className="fa fa-linkedin"></span>
             </a>
-        </li>
-        
+        </li> 
     </ul>
 
 

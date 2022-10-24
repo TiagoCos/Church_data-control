@@ -1,20 +1,27 @@
+
 .header{
-    padding: 1em;
-    background: rgb(99, 99, 240);
-    border: 2px solid black;
-    height: 104px;
+   
+    background: rgba(53, 53, 53, 0.062);
+    border-bottom: 1px solid black;
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+   
     
 }
 .logo{
     height: 44px;
     width: 44px;
     margin-top: 5px;
-    margin-left: 2px;
+    margin-right: 2.5em;
 }
 .list{
     display: flex;
     justify-content: space-between;
-    background: rgb(99, 99, 240);
+    /* background: linear-gradient(68.15deg, #181547 16.62%, #58878f 85.61%);*/
+    
     height: 60px ;
     padding: 0%;
     
@@ -22,17 +29,24 @@
     
 }
 #link{
+    text-decoration: none;
     color: black;
     margin-top: 22px;
     margin-right: 3em;
     margin-left: 2em;
     height: 44px;
     font-weight: bold;
+
 }
-.contentStyle{
-    height: 160px;
-    color: #fff;
-    line-height: 160px;
-    text-align: center;
-    background: #364d79;
+
+
+.Login-btn{
+    text-decoration: none;
+    color: black;
+    margin-top: 22px;
+    margin-right: 3em;
+    margin-left: 2em;
+    height: 44px;
+    font-weight: bold;
+
 }

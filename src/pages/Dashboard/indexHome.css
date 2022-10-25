@@ -28,18 +28,19 @@
 .principal{
     min-height: 2004px;
     display: flexbox;
+    margin-bottom: 48px;
     
 }
 
 /*--------------------containers--------------------------------------------*/
-.diretoria{
+.segundo{
     height: 400px; /*2º*/
     background: rgba(0, 0, 0, 0);
     border: 1px solid rgba(0, 0, 0, 0);
     margin: 0px;
     margin-top: 25em;
 }
-.filiacao{ /*3º*/
+.terceiro{ /*3º*/
     height: 400px;
     background: rgba(0, 0, 0, 0);
     border: 1px solid rgba(0, 0, 0, 0);
@@ -48,7 +49,7 @@
     
 
 }
-.estatuto{
+.quarto{
     height: 400px; /*4º*/
     background: rgba(0, 0, 0, 0);
     border: 1px solid rgba(0, 0, 0, 0);
@@ -56,7 +57,7 @@
     margin-top: 25em;
     
 }
-.presidente{
+.quinto{
     height: 400px; /*5º*/
     background: rgba(0, 0, 0, 0);
     border: 1px solid rgba(0, 0, 0, 0);
@@ -64,14 +65,19 @@
     margin-top: 25em;
 }
 .apresentacao{  /*1º*/
-    height: 400px;
+    height: 800px;
     background: rgba(0, 0, 0, 0);
     border: 1px solidrgba(0, 0, 0, 0);
     margin: 0px;
     border-bottom: 1px solid #030303;
+    border-top: 2em;
     
 }
-.i{
-    
-   
+/* loop*/
+.Loop-Banner{
+    border: 1px solid red;
+}
+
+.Sub-div{
+    align-items: center;
 }

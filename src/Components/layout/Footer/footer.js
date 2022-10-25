@@ -4,6 +4,9 @@ function  Footer(){
     
     return(
       <footer className='footer'>
+        <div>
+            <i>Copyright © 2020 Tech</i>
+        </div>
         <section className='infomações-footer-colun01'>
             <div>
 

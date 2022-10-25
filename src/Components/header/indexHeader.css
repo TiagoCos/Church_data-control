@@ -1,7 +1,7 @@
 
 .header{
    
-    background: rgba(53, 53, 53, 0.062);
+    background: rgba(1, 8, 12, 0.89);
     border-bottom: 1px solid black;
     height: 90px;
     display: flex;
@@ -16,12 +16,12 @@
     width: 44px;
     margin-top: 5px;
     margin-right: 2.5em;
+    
 }
 .list{
     display: flex;
     justify-content: space-between;
-    /* background: linear-gradient(68.15deg, #181547 16.62%, #58878f 85.61%);*/
-    
+    /* background: linear-gradient(68.15deg, #181547 16.62%, #58878f 85.61%);*/ 
     height: 60px ;
     padding: 0%;
     
@@ -30,7 +30,7 @@
 }
 #link{
     text-decoration: none;
-    color: black;
+    color: rgb(253, 253, 253);
     margin-top: 22px;
     margin-right: 3em;
     margin-left: 2em;
@@ -42,7 +42,7 @@
 
 .Login-btn{
     text-decoration: none;
-    color: black;
+    color: rgb(248, 241, 241);
     margin-top: 22px;
     margin-right: 3em;
     margin-left: 2em;

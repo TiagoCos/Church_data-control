@@ -16,7 +16,9 @@ const contentStyle = {
 
 function Home(){
 
-  const msg = 'olha aqui'
+  const msg = 'Olha aqui'
+
+
   const onChange = (currentSlide) => {
     console.log(currentSlide);
   };
@@ -49,23 +51,28 @@ function Home(){
         <h3 style={contentStyle}>4</h3>
       </div>
     </Carousel>
-  
-          </aside>
-          </div>
-
+   </aside>            
+   </div>
+   </section>
                
              <section id='b' className='diretoria'>
-              <section id='c' className='filiacao'>
-               <section id='d' className='estatuto'>
-                <section id='2' className='presidente'>
-                </section>
-               </section>
-              </section>
              </section>
 
+              <section id='c' className='filiacao'>
+              </section>
+
+               <section id='d' className='estatuto'>
+               </section>
+
+                <section id='2' className='presidente'>
+                </section>
+             
+              
+           
 
 
-            </section>
+
+            
         </main>
     )
 }

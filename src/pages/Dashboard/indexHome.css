@@ -29,6 +29,7 @@
     min-height: 2004px;
     display: flexbox;
     margin-bottom: 48px;
+    border: 2px solid #222;
     
 }
 
@@ -76,8 +77,10 @@
 /* loop*/
 .Loop-Banner{
     border: 1px solid red;
+    margin-top: 5px;
 }
 
 .Sub-div{
     align-items: center;
+
 }

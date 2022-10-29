@@ -51,7 +51,10 @@ function Home(){
         <h3 style={contentStyle}>4</h3>
       </div>
     </Carousel>
-   </aside>            
+   </aside>      
+         <h1>Conheça nosso site </h1>
+         <i>*novidades*</i>
+         <p>baixe as informações mais relevantes pra você!</p>
    </div>
    </section>
                

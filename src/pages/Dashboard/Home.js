@@ -16,7 +16,7 @@ const contentStyle = {
 
 function Home(){
 
-  const msg = 'teste'
+  const msg = 'teste 06'
 
 
   const onChange = (currentSlide) => {

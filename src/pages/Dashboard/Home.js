@@ -1,6 +1,6 @@
 import  '../Dashboard/indexHome.css';
 import { Alert } from 'antd';
-import Marquee from 'react-fast-marquee';
+import Marquee from 'react-fast-marquee' ;
 import React from 'react';
 
 import { Carousel } from 'antd';
@@ -69,13 +69,7 @@ function Home(){
 
                 <section id='2' className='presidente'>
                 </section>
-             
-              
-           
-
-
-
-            
+          
         </main>
     )
 }

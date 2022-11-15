@@ -53,7 +53,7 @@ function Home(){
     </Carousel>
    </aside>      
          <h1>Conheça nosso site </h1>
-         <i>*novidades*</i>
+         <i></i>
          <p>baixe as informações mais relevantes pra você!</p>
    </div>
    </section>

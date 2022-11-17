@@ -18,7 +18,7 @@ function Header(){
             <Link  className='Login-btn' to='/Login' ><p>Fazer Login </p></Link> 
              
          </div>
-       </header>
+       </header >
       </Anchor> 
     )
 }

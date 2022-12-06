@@ -76,11 +76,25 @@
 }
 /* loop*/
 .Loop-Banner{
-    border: 1px solid red;
-    margin-top: 5px;
+    height: 50px;
+    
 }
 
 .Sub-div{
     align-items: center;
 
+
+}
+.Home_img{
+    width: 1350px;
+    height: 500px;
+    display: flex;
+    margin-right: 3px;
+
+}
+.aqui{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    color: rgb(255, 208, 0);
 }

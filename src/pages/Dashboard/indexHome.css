@@ -82,19 +82,19 @@
 
 .Sub-div{
     align-items: center;
+    background-image: url(../../assets/imagem.jpg);
+    border: 2px solid rgb(255, 253, 253) ;
+    height: 800px;
+    background-repeat: no-repeat;
+    background-size: cover;
 
 
 }
 .Home_img{
-    width: 1350px;
+    width: none;
     height: 500px;
     display: flex;
     margin-right: 3px;
 
-}
-.aqui{
-    display: flex;
-    justify-content: center;
-    margin: 10px;
-    color: rgb(255, 208, 0);
+
 }

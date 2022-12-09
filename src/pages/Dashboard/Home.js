@@ -2,7 +2,6 @@ import  '../Dashboard/indexHome.css';
 import { Alert } from 'antd';
 import Marquee from 'react-fast-marquee' ;
 import React from 'react';
-import imagem from '../../assets/imagem.jpg'
 import 'antd/dist/antd.css';
 
 function Home(){
@@ -11,7 +10,7 @@ function Home(){
      return(
      <main className='principal'>
     <section id='1' className='apresentacao'>
-         <div className='Sub-div'> 
+    <div className='Sub-div'> 
           <div className='Loop-Banner'>
            <Alert
               banner
@@ -22,9 +21,7 @@ function Home(){
                }/>
           </div>
 
-          <img className='Home_img' src={imagem}></img> 
-         <h1 className='aqui'>Conheça nosso site </h1>
-         <i></i>
+         <h3>Conheça nosso site </h3>
          <p>baixe as informações mais relevantes pra você!</p>
         </div>
    </section>  

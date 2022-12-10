@@ -88,9 +88,6 @@
     background-size: cover;
     margin-left: 10;
     margin-right: 10;
-  
-
-
 }
 .Home_img{
     width: none;
@@ -98,5 +95,12 @@
     display: flex;
     margin-right: 3px;
 
+
+}
+#info{
+    display: flex;
+    align-content: center;
+    color: brown;
+    
 
 }

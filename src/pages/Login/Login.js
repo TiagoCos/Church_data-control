@@ -1,14 +1,14 @@
-import { redirect } from 'react-router-dom';
 import '../Login/indexLogin.css'
 
-function App() {
- 
+function Login() {
 /*const teste ={
   height: '160px',
   color: '#fff',
   textAlign: 'center',
   background: '#a52a2a',
 }*/
+
+
   return (
     <main className='main'>
     
@@ -16,4 +16,4 @@ function App() {
   )
 }
 
-export default App;
+export default Login;

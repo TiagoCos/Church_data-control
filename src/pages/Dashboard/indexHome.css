@@ -29,7 +29,6 @@
     min-height: 2004px;
     display: flexbox;
     margin-bottom: 48px;
-    border: 2px solid #222  ;
     
 }
 
@@ -83,10 +82,13 @@
 .Sub-div{
     align-items: center;
     background-image: url(../../assets/imagem.jpg);
-    border: 2px solid rgb(255, 253, 253) ;
+    border: 1px solid rgb(255, 253, 253) ;
     height: 800px;
     background-repeat: no-repeat;
     background-size: cover;
+    margin-left: 10;
+    margin-right: 10;
+  
 
 
 }

@@ -12,8 +12,8 @@ function Home(){
 
      return(
   <main className='principal'>
-    <section id='1' className='apresentacao'>
-      <div className='Sub-div'> 
+    <section id='a' className='primeiro'>
+      <div className='Sub-div-img'> 
          <div className='Loop-Banner'>
            <Alert
               banner
@@ -22,26 +22,28 @@ function Home(){
                <strong>{msg}</strong> 
                </Marquee>
                }/></div>
-        <h3 id='info'>Conheça nosso site </h3>
-        <p id='info'>Confira as informações mais relevantes pra você!</p>
+        <span className='info-img'>
+        <h1 className='Title'>Conheça nosso site </h1>
+        <p className='Sub-Title'>Confira as informações mais relevantes pra você!</p>
+        </span>
         </div>
-   </section>  
-          <section id='b' className='diretoria'>
+        </section>  
+          <section id='b' className='segundo'>
             <h3>Diretoria e direção da igreja.</h3>
               <div className='imagem-presidente'></div>
                <h2>{cargo}</h2>
-                 
-
+                 </section>
+        <section id='c' className='terceiro'>
+            <p>presidente</p>
                  </section>
 
-           <section id='c' className='filiacao'>
-              </section>
-
-            <section id='d' className='estatuto'>
+        <section id='d' className='quarto'>
+            <p>Filiação</p>
                </section>
 
-             <section id='2' className='presidente'>
-                </section>
+        <section id='e'className='quinto' >
+           <p> estatuto</p>
+              </section>
           
         </main>
     )

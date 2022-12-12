@@ -1,4 +1,23 @@
 .main{
   min-height: 45em;
- 
+  padding: 0px;
+  margin: 0%;
+}
+.main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container{
+  height: 500px;
+  width:350px ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid brown;
+  color: rgb(5, 5, 5);
+  background: linear-gradient(68.15deg, #ccc4c4 16.62%, #140c08 85.61%);
+}
+.btn-login{
+  color: #140c08;
 }

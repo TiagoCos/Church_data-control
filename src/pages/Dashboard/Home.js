@@ -48,7 +48,7 @@ function Home(){
         <section id='e'className='quinto' >
           <span>
            <h3 className='estatuto-title'> Baixe o estatuto para conhecer essa comunidade!</h3>
-            <a className='img-download' download href='estatuto'> <DownloadOutlined /></a>
+            <a className='img-download' download href={estatuto}> <DownloadOutlined /></a>
              </span>
               </section>
           

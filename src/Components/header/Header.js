@@ -11,9 +11,9 @@ function Header(){
        <header className='header'>
         <div className='list'>
           <Link to= '/' ><img className='logo' src={logo}/> </Link>
-            <a id='link' href='#c' >Conheça a Diretoria</a> 
-            <a id='link' href='#c' >Igrejas Filiadas</a>
-            <a id='link' href='#c' >Estatuto</a>
+            <a id='link' href='#b' >Conheça a Diretoria</a> 
+            <a id='link' href='#d' >Igrejas Filiadas</a>
+            <a id='link' href='#e' >Estatuto</a>
             <a id='link' href='#c' >Palavra do presidente  </a> 
             <Link  className='Login-btn' to='/Login' ><p>Entrar</p></Link> 
              

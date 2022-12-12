@@ -4,11 +4,15 @@ import Marquee from 'react-fast-marquee' ;
 import React from 'react';
 import 'antd/dist/antd.css';
 import { useState } from 'react';
+import {DownloadOutlined} from '@ant-design/icons'
+
 
 function Home(){
   const [cargo , setCargo] = useState('')
-
+  const estatuto = '../../assets/icons/logo.png'
   const msg = 'teste de mensagem'
+
+
 
      return(
   <main className='principal'>
@@ -19,7 +23,7 @@ function Home(){
               banner
                 message={
                <Marquee pauseOnHover gradient={false}>
-               <strong>{msg}</strong> 
+               <strong>{msg}</strong>
                </Marquee>
                }/></div>
         <span className='info-img'>
@@ -42,7 +46,10 @@ function Home(){
                </section>
 
         <section id='e'className='quinto' >
-           <p> estatuto</p>
+          <span>
+           <h3 className='estatuto-title'> Baixe o estatuto para conhecer essa comunidade!</h3>
+            <a className='img-download' download href='estatuto'> <DownloadOutlined /></a>
+             </span>
               </section>
           
         </main>

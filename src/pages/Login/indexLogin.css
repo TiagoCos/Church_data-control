@@ -2,24 +2,33 @@
   min-height: 45em;
   padding: 0px;
   margin: 0%;
-}
-.main{
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .container{
   border-radius: 20px;
-  padding: 2em 4em;
+  padding: 1em 3em;
   height: 500px;
-  width:350px ;
+  width:400px ;
+  border: 1px solid brown;
+  color: rgb(5, 5, 5);
+  background: linear-gradient(68.15deg, #aa3737 16.62%, #bd4407 85.61%);
+
+  column-span: all;
+}
+.login-box{
+  border:  1px solid green;
+  height: 20em;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid brown;
-  color: rgb(5, 5, 5);
-  background: linear-gradient(68.15deg, #ccc4c4 16.62%, #140c08 85.61%);
+  
 }
 .btn-login{
   color: #140c08;
+}
+.title-login{
+  display: flex;
+  justify-content: center;
 }

@@ -8,7 +8,7 @@ function  Footer(){
     return(
       <footer className='footer'>
         <span className='info-column'>
-        https://www.w3schools.com/default.asp
+       
         </span>
         <div className='info-column'>
             <i>Copyright © 2022 Church</i>

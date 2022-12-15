@@ -23,10 +23,12 @@
 .terceiro{ /*3º*/
     height: 400px;
     margin: 0px;
+    border: 1px solid rgb(157, 255, 0);
 }
 .quarto{
     height: 400px; /*4º*/
     margin: 0px;
+    border: 1px solid red;
 }
 .quinto{
     height: 400px; /*5º*/
@@ -62,6 +64,11 @@
     display: flex;
     margin: 75px 0px 0px 0px;
 
+}
+.card{
+    height: 100px;
+    width: 60px;
+    border:1px solid rgb(238, 159, 14);
 }
 .Title-diretoria{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;

@@ -1,5 +1,5 @@
 import  '../Dashboard/indexHome.css';
-import { Alert } from 'antd';
+import { Alert, Card } from 'antd';
 import Marquee from 'react-fast-marquee' ;
 import React from 'react';
 import 'antd/dist/antd.css';
@@ -34,22 +34,29 @@ function Home(){
           <section id='b' className='segundo'>
             <h3 className='Title-diretoria'>Diretoria e direção da igreja.</h3>
           </section>
-          
+
             <aside className='reparticao'>
+            <div className='card'>
               <img className='icon-presidente'></img>
                 <p className='Nome-presidente'>Tiago Costa </p>
                   <span className='seta-right'></span>  
-
+              </div>
+              <div className='card'>
               <img className='icon-Co-presidente'></img>
                 <p className='Nome-Co-presidente'></p>
                   <span className='seta-right'></span>    
+                  </div>
 
+            <div className='card'>
               <img className='icon-evangelista'></img>
                 <p className='Nome-evangelista'></p>
                   <span className='seta-right'></span>  
+            </div>
 
+            <div className='card'>
               <img className='icon-missionario'></img>
                 <p className='Nome-missionario'></p>
+                </div>
             </aside>
           
         <section id='c' className='terceiro'>

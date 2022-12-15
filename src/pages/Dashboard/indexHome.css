@@ -3,10 +3,9 @@
 }
 .principal{
     min-height: 2004px;
-    display: flexbox;
 }
 
-/*--------------------containers--------------------------------------------*/
+/*--------------------containers------------------------------------------------*/
 .primeiro{  /*1º*/
     height: 650px;
     margin: 0%; 
@@ -14,28 +13,12 @@
 .segundo{
     height: 400px; /*2º*/
     margin: 0px;
+    width: 1349px;
     border: 1px solid gray;
     display: flex;
-    justify-content:center;
-
-  
-}
-.Title-diretoria{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-.icon-presidente{
-    height: 60px;
-    width: 60px;
-    border: 2px solid blueviolet;
-    border-radius: 15px;
-    background-image: url(../../assets/icons/3729.png);
-    background-size:cover;
-    background-position: center;
-
-    display: flex;
-    
-    justify-content: flex-end;
-
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
 }
 .terceiro{ /*3º*/
     height: 400px;
@@ -53,6 +36,61 @@
     justify-content: space-around;
   
 }
+
+/*------------estatuto--------------------------------------------------*/
+.estatuto-title{
+    display: flex;
+    border-bottom: 1px solid rgb(83, 80, 80);
+}
+.img-download{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 250px;
+    border: 1px solid black;
+}
+/*------------diretoria--------------------------------------------------*/
+.reparticao{
+    height: 50%;
+    width: 1349px;
+    border: 1px solid rosybrown;
+    margin: 0%;
+    position: absolute;
+    z-index: 0;
+
+    display: flex;
+    margin: 75px 0px 0px 0px;
+
+}
+.Title-diretoria{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    border: 1px solid rgb(230, 11, 11);
+    height: 60px;
+    width: 300px;
+
+}
+.icon-presidente{
+    height: 60px;
+    width: 60px;
+    border: 1px solid rgb(6, 2, 10);
+    border-radius: 15px;
+    background-image: url(../../assets/icons/3729.png);
+    background-size:cover;
+    background-position: center;
+
+}
+.Nome-presidente{
+    border: 1px solid rgb(7, 145, 231);
+    height: 50px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/*------------apresentação-----------------------------------------------------*/
 .Sub-div-img{
     background-image: url(../../assets/imagem.jpg);
     background-size:cover;
@@ -62,7 +100,7 @@
    
     filter: brightness(45%);
     z-index: 0;
-    
+
 }
 .info-img{
     display: flex;
@@ -78,7 +116,7 @@
 
     z-index: 1;
     margin-left: 33em;
-    
+    backdrop-filter: blur(2px);
 }
 
 .Sub-Title{
@@ -91,18 +129,4 @@
    font-size: 50px;
    margin-top: 30px;
    font-family: 'Courier New';
-}
-
-/*------------estatuto----------*/
-.estatuto-title{
-    display: flex;
-    border-bottom: 1px solid rgb(83, 80, 80);
-}
-.img-download{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100px;
-    width: 250px;
-    border: 1px solid black;
 }

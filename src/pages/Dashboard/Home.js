@@ -17,8 +17,7 @@ function Home(){
      return(
   <main className='principal'>
     <section id='a' className='primeiro'>
-      <div className='Sub-div-img'> 
-         <div className='Loop-Banner'>
+    <div className='Loop-Banner'>
            <Alert
               banner
                 message={
@@ -27,16 +26,30 @@ function Home(){
                </Marquee>
                }/></div>
         <span className='info-img'>
-        <h1 className='Title'>Conheça nosso site </h1>
-        <p className='Sub-Title'>Confira as informações mais relevantes pra você!</p>
+          <h1 className='Title'>Conheça nosso site </h1>
+           <p className='Sub-Title'>Confira as informações mais relevantes pra você!</p>
         </span>
-        </div>
+      <div className='Sub-div-img'>  </div>
         </section>  
           <section id='b' className='segundo'>
-            <h3>Diretoria e direção da igreja.</h3>
-              <div className='imagem-presidente'></div>
-               <h2>{cargo}</h2>
-                 </section>
+            <h3 className='Title-diretoria'>Diretoria e direção da igreja.</h3>
+            
+              <img className='icon-presidente'></img>
+                <p className='Nome-presidente'>Tiago Costa</p>
+                  <span className='seta-right'></span>  
+
+              <img className='icon-Co-presidente'></img>
+                <p className='Nome-Co-presidente'></p>
+                  <span className='seta-right'></span>    
+
+              <img className='icon-secretario'></img>
+                <p className='Nome-secretario'></p>
+                  <span className='seta-right'></span>  
+
+              <img className='icon-tesoureiro'></img>
+                <p className='Nome-tesoureiro'></p>
+                 
+            </section>
         <section id='c' className='terceiro'>
             <p>presidente</p>
                  </section>

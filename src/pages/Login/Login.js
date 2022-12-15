@@ -11,7 +11,7 @@ function Login() {
 
   return (
     <main className='main'>
-        <div className='container'>
+        <div className='container'>   
           <h2 className='title-login'>Login</h2>
         
           <div className='login-box'>

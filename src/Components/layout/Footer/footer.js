@@ -14,7 +14,7 @@ function  Footer(){
             <i>Copyright © 2022 Church</i>
         </div>
         <div className='info-column'>
-           teste 02 
+           Siga-nos 
             </div> 
         <aside className='Social-column'>
             <a ><YoutubeOutlined /></a>

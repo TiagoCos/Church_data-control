@@ -31,10 +31,9 @@ function Home(){
         </span>
       <div className='Sub-div-img'>  </div>
         </section>  
+
           <section id='b' className='segundo'>
             <h3 className='Title-diretoria'>Diretoria e direção da igreja.</h3>
-          </section>
-
             <aside className='reparticao'>
             <div className='card'>
               <img className='icon-presidente'></img>
@@ -58,9 +57,11 @@ function Home(){
                 <p className='Nome-missionario'></p>
                 </div>
             </aside>
+          </section>
           
         <section id='c' className='terceiro'>
-            <p>presidente</p>
+            <p >presidente aqui</p>
+           
                  </section>
 
         <section id='d' className='quarto'>

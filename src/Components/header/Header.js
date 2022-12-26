@@ -1,7 +1,6 @@
 import React from 'react';
 import  '../header/indexHeader.css'
 import { Anchor } from 'antd';
-import logo from '../../assets/icons/logo.png';
 import { Link } from 'react-router-dom';
 import logo02 from '../../assets/icons/logo02.jpg'
 

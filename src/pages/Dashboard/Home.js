@@ -72,8 +72,8 @@ function Home(){
            <h3 className='estatuto-title'> Baixe o estatuto para conhecer essa comunidade!</h3>
             <a className='img-download' download href={estatuto}></a>
              </span>
-              </section>
-          
+        </section>
+        
         </main>
     )
 }

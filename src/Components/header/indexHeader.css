@@ -1,5 +1,4 @@
 .header{
-   
     background: rgba(0, 0, 0, 0.77);
     height: 90px;
     display: flex;
@@ -21,8 +20,6 @@
     /* background: linear-gradient(68.15deg, #181547 16.62%, #58878f 85.61%);*/ 
     height: 60px ;
     padding: 0%;
-    
-
     
 }
 #link{

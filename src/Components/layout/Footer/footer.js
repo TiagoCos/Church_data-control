@@ -1,26 +1,30 @@
 import '../Footer/indexFooter.css'
-import {YoutubeOutlined} from '@ant-design/icons'
-import {FacebookOutlined} from '@ant-design/icons'
-import {InstagramOutlined } from '@ant-design/icons'
+import facebook from '../../../assets/icons/icons-social/facebook.png'
+import insta from '../../../assets/icons/icons-social/instagram.png'
+import Youtube from '../../../assets/icons/icons-social/youtube.png'
 
 function  Footer(){
-    
     return(
       <footer className='footer'>
-        <span className='info-column'>
-       
-        </span>
         <div className='info-column'>
-            <i>Copyright © 2022 Church</i>
+            <div className ='column'>
+            "A RD University ajudou a aprimorar os
+             processos comerciais e operacionais da minha agência", Joilson Fernandes.
+            </div>
+            <div className ='column'>
+            "A RD University ajudou a aprimorar os
+             processos comerciais e operacionais da minha agência", Joilson Fernandes.
+            </div>
+            <div className ='column'>
+                <img src={facebook}></img>
+                <img src={insta}></img>
+                <img src={Youtube}></img>
+            </div>
         </div>
-        <div className='info-column'>
-           Siga-nos 
-            </div> 
-        <aside className='Social-column'>
-            <a ><YoutubeOutlined /></a>
-            <a><InstagramOutlined /></a>
-            <a><FacebookOutlined /></a>
-        </aside>
+        <div className='rodape-column'>
+            <i>Copyright © 2022</i>
+        </div>
+       
     </footer>  
     )
 }

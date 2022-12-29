@@ -2,7 +2,6 @@ import  '../Dashboard/indexHome.css';
 import { Alert, Card } from 'antd';
 import Marquee from 'react-fast-marquee' ;
 import React from 'react';
-import 'antd/dist/antd.css';
 import { useState } from 'react';
 
 

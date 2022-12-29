@@ -1,39 +1,17 @@
 .main{
-  min-height: 45em;
+  min-height: 46em;
   padding: 0px;
   margin: 0%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-
 .container{
-  border-radius: 20px;
-  padding: 2em 4em;
-  padding: 1em 3em;
+  width: 500px;
   height: 500px;
-  width:350px ;
-  padding: 1em 3em;
-  height: 500px;
-  width:400px ;
-  border: 1px solid brown;
-  color: rgb(5, 5, 5);
-  background: linear-gradient(68.15deg, #aa3737 16.62%, #bd4407 85.61%);
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
 
-}
-.login-box{
-  border:  1px solid green;
-  height: 20em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-.btn-login{
-  color: #140c08;
-}
-.title-login{
-  display: flex;
-  justify-content: center;
+  padding: 20px 30px;
+  margin-top: 10vh;
+  border-radius: 10px;
+  text-align: center;
 }

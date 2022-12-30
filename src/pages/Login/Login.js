@@ -13,22 +13,25 @@ function Login() {
     <main className='main'>
         <div className='container'>   
           <h1>Login</h1>
-          <form action=''>
-              <label for='email'>E-mail: </label>
-              <input type='email' name='email' id='email' placehoder='Digite seu email' autoComplete='off'></input>
-              <div class="campo">
-                <label for="senioridade"><strong>Senioridade</strong></label>
-                <select id="senioridade" required>
-                  <option selected disabled value="">Selecione</option>
+          <form action='value'>
+              <label for='CPF'>CPF: </label>
+              <input type='CPF' name='CPF' id='CPF' placehoder='Digite seu CPF' autoComplete='off'></input>
+              <div className="campo">
+                <label for="Categoria">Categoria: </label>
+                <select id="Categoria" required>
+                  <option selected disabled value="value">Selecione</option>
                   <option>Secretário</option>
                   <option>Tesoureiro</option>
-                  <option>Adiministrador</option>
+                  <option>Administrador</option>
                 </select>
                </div>
-
-              <label for='password'>Senha</label>
+              <button></button>
+              <label for='password'>Senha: </label>
               <input type='password'></input>
           </form>
+          <button className='button-form'>
+              <a id='submit' href='#'>Entrar</a>
+          </button>
         </div>
     </main>
   )

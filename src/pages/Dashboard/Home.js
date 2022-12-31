@@ -1,14 +1,13 @@
 import  '../Dashboard/indexHome.css';
-import { Alert, Card } from 'antd';
+import { Alert } from 'antd';
 import Marquee from 'react-fast-marquee' ;
 import React from 'react';
-import { useState } from 'react';
+
 
 
 function Home(){
-  const [cargo , setCargo] = useState('')
   const estatuto = '../../assets/icons/logo.png'
-  const msg = 'teste de mensagem'
+  const msg = 'teste de mensagem, pato no tucupi, comer pato no tucupi é coisas do Pará'
 
 
 
@@ -16,13 +15,14 @@ function Home(){
   <main className='principal'>
     <section id='a' className='primeiro'>
     <div className='Loop-Banner'>
-           <Alert
+           <Alert  className='alert'
               banner
                 message={
                <Marquee pauseOnHover gradient={false}>
-               <strong>{msg}</strong>
+              {msg}
                </Marquee>
-               }/></div>
+               }/>
+    </div>
         <span className='info-img'>
           <h1 className='Title'>Conheça nosso site </h1>
            <p className='Sub-Title'>Confira as informações mais relevantes pra você!</p>

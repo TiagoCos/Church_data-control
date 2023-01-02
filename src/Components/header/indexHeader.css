@@ -1,11 +1,14 @@
 .header{
-    background: rgba(0, 0, 0, 0.77);
+    background: rgb(0, 0, 0);
     height: 90px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-   
+    
+}
+.Anchor{
+    z-index: 0;
 }
 .logo{
     height: 44px;

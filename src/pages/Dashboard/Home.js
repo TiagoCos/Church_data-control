@@ -27,40 +27,42 @@ function Home(){
           <h1 className='Title'>Conheça nosso site </h1>
            <p className='Sub-Title'>Confira as informações mais relevantes pra você!</p>
         </span>
-      <div className='Sub-div-img'>  </div>
+      <div className='Sub-div-img'></div>
         </section>  
 
           <section id='b' className='segundo'>
             <h3 className='Title-diretoria'>Diretoria e direção da igreja.</h3>
             <aside className='reparticao'>
             <div className='card'>
-              <img className='icon-presidente'></img>
-                <p className='Nome-presidente'>Tiago Costa </p>
-                  <span className='seta-right'></span>  
+              <img className='icon-presidente' alt=''></img>
+                <p className='Nome-presidente' id='Nome-cargos'>Tiago Costa </p>
+               
               </div>
               <div className='card'>
-              <img className='icon-Co-presidente'></img>
-                <p className='Nome-Co-presidente'></p>
-                  <span className='seta-right'></span>    
-                  </div>
+              <img className='icon-presidente' alt=''></img>
+                <p className='Nome-Co-presidente' id='Nome-cargos' ></p>
+              </div>
 
             <div className='card'>
-              <img className='icon-evangelista'></img>
-                <p className='Nome-evangelista'></p>
-                  <span className='seta-right'></span>  
+              <img className='icon-presidente' alt=''></img>
+                <p className='Nome-evangelista' id='Nome-cargos'></p>
+               
             </div>
 
             <div className='card'>
-              <img className='icon-missionario'></img>
-                <p className='Nome-missionario'></p>
+              <img className='icon-presidente' alt=''></img>
+                <p className='Nome-missionario' id='Nome-cargos' ></p>
                 </div>
             </aside>
           </section>
           
         <section id='c' className='terceiro'>
-            <p >presidente aqui</p>
-           
-                 </section>
+        <iframe 
+        width="560" height="315" src="https://www.youtube.com/embed/sgKK0YRQyMQ" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+        encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+        </iframe>
+        </section>
 
         <section id='d' className='quarto'>
             <p>Filiação</p>

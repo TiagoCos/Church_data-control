@@ -78,13 +78,16 @@
     border:1px solid rgb(238, 159, 14);
     margin-right: 15px;
     margin: 30px;
+
+    margin-left: auto;
+    margin-right: auto;
     
     
 }
 .Title-diretoria{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: flex;
-    border: 1px solid rgb(230, 11, 11);
+    border: 1px solid rgb(255, 255, 255);
     height: 75px;
     width: 100%;
     justify-content: center;
@@ -92,24 +95,22 @@
     color: rgb(255, 255, 255);
     background-color: black;
 
-    
-  
-
 }
 .icon-presidente{
     height: 60px;
     width: 60px;
     border: 1px solid rgb(6, 2, 10);
-    border-radius: 15px;
+    border-radius: 22px;
     background-image: url(../../assets/icons/3729.png);
     background-size:cover;
     background-position: center;
-    margin: 0px 0px  ;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+
 
 }
-.Nome-presidente{
-    padding: 0px;
-    margin: 0px;
+#Nome-cargos{
     border: 1px solid rgb(7, 145, 231);
     height: 30px;
     width: 180px;
@@ -121,16 +122,13 @@
 
 /*------------apresentação-----------------------------------------------------*/
 .Sub-div-img{
-    background-image: url(../../assets/imagem.jpg);
+    background-image: url(../../assets/imagem01.jpg);
     background-size:cover;
     background-position: center;
     height: 580px;
     border-bottom:1px solid rgb(49, 49, 49);
    
-    filter: brightness(45%);
     z-index: 0;
-  
-
 }
 .info-img{
     display: flex;
@@ -144,7 +142,7 @@
     filter: contrast(250%);
     font-size: small;
 
-    z-index: 1;
+    z-index: 2;
     margin-left: 33em;
    
 }

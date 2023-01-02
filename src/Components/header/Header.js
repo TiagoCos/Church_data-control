@@ -6,7 +6,7 @@ import logo02 from '../../assets/icons/logo02.jpg'
 
 function Header(){
     return(
-     <Anchor >
+     <Anchor className='Anchor'>
        <header className='header'>
         <div className='list'>
           <Link to= '/' ><img className='logo' src={logo02}/> </Link>

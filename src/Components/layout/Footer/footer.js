@@ -8,17 +8,15 @@ function  Footer(){
       <footer className='footer'>
         <div className='info-column'>
             <div className ='column'>
-            "A RD University ajudou a aprimorar os
-             processos comerciais e operacionais da minha agência", Joilson Fernandes.
+                teste
             </div>
             <div className ='column'>
-            "A RD University ajudou a aprimorar os
-             processos comerciais e operacionais da minha agência", Joilson Fernandes.
+            Siganos 
             </div>
             <div className ='column'>
-                <img src={facebook}></img>
-                <img src={insta}></img>
-                <img src={Youtube}></img>
+                <img src={facebook} alt=''></img>
+                <img src={insta} alt=''></img>
+                <img src={Youtube} alt=''></img>
             </div>
         </div>
         <div className='rodape-column'>

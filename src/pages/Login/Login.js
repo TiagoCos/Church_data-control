@@ -12,25 +12,31 @@ function Login() {
   return (
     <main className='main'>
         <div className='container'>   
+
           <h1>Login</h1>
-          <form action='value'>
-              <label for='CPF'>CPF: </label>
-              <input type='CPF' name='CPF' id='CPF' placehoder='Digite seu CPF' autoComplete='off'></input>
-              <div className="campo">
-                <label for="Categoria">Categoria: </label>
-                <select id="Categoria" required>
-                  <option selected disabled value="value">Selecione</option>
-                  <option>Secretário</option>
-                  <option>Tesoureiro</option>
-                  <option>Administrador</option>
-                </select>
-               </div>
+          <form>
+            <label >CPF: </label>
+              <input type='CPF' name='CPF' id='CPF' placeholder='Digite seu CPF' autoComplete='off'></input>
+                  <div className="campo">
+                    <label>Categoria: </label>
+                    <select id="Categoria" required>
+                      <option selected disabled>Selecione</option>
+                      <option>Secretário</option>
+                      <option>Tesoureiro</option>
+                      <option>Administrador</option>
+                    </select>
+                  </div>
               <button></button>
-              <label for='password'>Senha: </label>
-              <input type='password'></input>
+              <label >Senha: </label>
+              <input type='password' placeholder='Digite sua senha'></input>
           </form>
           <button className='button-form'>
-              <a id='submit' href='#'>Entrar</a>
+          <a id='submit-entrar' href='#'>Entrar</a>
+          </button>
+
+          <p>Ainda não tem conta?</p>
+          <button>
+          <a id='criar-conta' href='#'>Registrar</a>
           </button>
         </div>
     </main>

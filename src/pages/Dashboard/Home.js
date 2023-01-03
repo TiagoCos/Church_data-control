@@ -1,5 +1,5 @@
 import  '../Dashboard/indexHome.css';
-import { Alert } from 'antd';
+import { Alert, Button  } from 'antd';
 import Marquee from 'react-fast-marquee' ;
 import React from 'react';
 
@@ -7,7 +7,7 @@ import React from 'react';
 
 function Home(){
   const estatuto = '../../assets/icons/logo.png'
-  const msg = 'teste de mensagem, pato no tucupi, comer pato no tucupi é coisas do Pará'
+  const msg = 'teste de mensagem'
 
 
 
@@ -17,38 +17,32 @@ function Home(){
     <div className='Loop-Banner'>
            <Alert  className='alert'
               banner
-                message={
-               <Marquee pauseOnHover gradient={false}>
-              {msg}
-               </Marquee>
-               }/>
-    </div>
-        <span className='info-img'>
-          <h1 className='Title'>Conheça nosso site </h1>
-           <p className='Sub-Title'>Confira as informações mais relevantes pra você!</p>
-        </span>
-      <div className='Sub-div-img'></div>
-        </section>  
-
-          <section id='b' className='segundo'>
-            <h3 className='Title-diretoria'>Diretoria e direção da igreja.</h3>
-            <aside className='reparticao'>
-            <div className='card'>
-              <img className='icon-presidente' alt=''></img>
-                <p className='Nome-presidente' id='Nome-cargos'>Tiago Costa </p>
-               
+              message={
+              <Marquee pauseOnHover gradient={false}>{msg}</Marquee>}/>
               </div>
-              <div className='card'>
-              <img className='icon-presidente' alt=''></img>
-                <p className='Nome-Co-presidente' id='Nome-cargos' ></p>
+            <span className='info-img'>
+            <h1 className='Title'>Conheça nosso site </h1>
+              <p className='Sub-Title'>Confira as informações mais relevantes pra você!</p>
+              </span>
+              <div className='Sub-div-img'></div>
+            </section>  
+
+        <section id='b' className='segundo'>
+                <h3 className='Title-diretoria'>Diretoria e direção da igreja.</h3>
+                <aside className='reparticao'>
+                <div className='card'>
+                  <img className='icon-presidente' alt=''></img>
+                    <p className='Nome-presidente' id='Nome-cargos'>Tiago Costa </p>             
+      </div>
+        <div className='card'>
+          <img className='icon-presidente' alt=''></img>
+            <p className='Nome-Co-presidente' id='Nome-cargos' ></p>
               </div>
 
-            <div className='card'>
-              <img className='icon-presidente' alt=''></img>
-                <p className='Nome-evangelista' id='Nome-cargos'></p>
-               
-            </div>
-
+       <div className='card'>
+          <img className='icon-presidente' alt=''></img>
+            <p className='Nome-evangelista' id='Nome-cargos'></p>
+               </div>
             <div className='card'>
               <img className='icon-presidente' alt=''></img>
                 <p className='Nome-missionario' id='Nome-cargos' ></p>
@@ -57,11 +51,7 @@ function Home(){
           </section>
           
         <section id='c' className='terceiro'>
-        <iframe 
-        width="560" height="315" src="https://www.youtube.com/embed/sgKK0YRQyMQ" 
-        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
-        encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-        </iframe>
+      
         </section>
 
         <section id='d' className='quarto'>

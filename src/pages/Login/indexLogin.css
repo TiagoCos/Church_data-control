@@ -2,16 +2,56 @@
   min-height: 46em;
   padding: 0px;
   margin: 0%;
+  background-image: url(../../assets/ceu.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
+textarea:focus, input:focus{
+  outline: none;
+}
+a, label{
+  font-size: .9rem;
+}
+a:hover{
+  color: #08558b;
+}
+/*-----------*/
+
 .container{
-  width: 500px;
+  width: 450px;
   height: 500px;
   border: 1px solid black;
   margin-left: auto;
   margin-right: auto;
-
+  background-color: #fff;
   padding: 20px 30px;
-  margin-top: 10vh;
+  
   border-radius: 10px;
   text-align: center;
+}
+form{
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+label, input, select{
+  display: block;
+  width: 100%;
+  text-align: left;
+  
+}
+label{
+  font-weight: bold;
+}
+input{
+  border-bottom: 2px solid #323232;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+select, option{
+  border-bottom: 2px solid #323232;
+  padding: 10px;
+  font-size: 1rem;
+  color:#323232;
 }

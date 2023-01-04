@@ -1,8 +1,9 @@
 import  '../Dashboard/indexHome.css';
-import { Alert, Button  } from 'antd';
+import { Alert } from 'antd';
 import Marquee from 'react-fast-marquee' ;
 import React from 'react';
 
+//import { Button } from 'antd';
 
 
 function Home(){
@@ -61,7 +62,9 @@ function Home(){
         <section id='e'className='quinto' >
           <span>
            <h3 className='estatuto-title'> Baixe o estatuto para conhecer essa comunidade!</h3>
-            <a className='img-download' download href={estatuto}></a>
+                <button>
+                <a className='img-download' download href={estatuto}></a>
+                </button>
              </span>
         </section>
         

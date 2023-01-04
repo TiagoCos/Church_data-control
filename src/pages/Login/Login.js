@@ -20,7 +20,7 @@ function Login() {
                   <div className="campo">
                     <label>Categoria: </label>
                     <select id="Categoria" required>
-                      <option selected disabled>Selecione</option>
+                      <option selected disabled >Selecione</option>
                       <option>Secretário</option>
                       <option>Tesoureiro</option>
                       <option>Administrador</option>
@@ -30,7 +30,7 @@ function Login() {
               <label >Senha: </label>
               <input type='password' placeholder='Digite sua senha'></input>
           </form>
-          <button className='button-form'>
+          <button className='button-form' type='submit'>
           <a id='submit-entrar' href='#'>Entrar</a>
           </button>
 

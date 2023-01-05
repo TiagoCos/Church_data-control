@@ -17,9 +17,7 @@ a, label{
   font-size: .9rem;
   text-decoration: none; /*tira o sublinhado*/
 }
-a:hover{
-  color: #08558b;
-}
+
 /*-----------*/
 
 .container{

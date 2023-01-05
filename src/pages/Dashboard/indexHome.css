@@ -10,17 +10,17 @@
 
 /*--------------------containers------------------------------------------------*/
 .primeiro{  /*1º*/
-    height: 545px;
+    height: 590px;
     margin: 0%; 
 }
 .segundo{
     height: 500px; /*2º*/
     margin: 0px;
-    width: 1349px;
-    border: 1px solid rgb(255, 187, 0);
+    width: 100%;
     display: flex;
     justify-content: center;
-   
+    background-color: #0c303f;
+    padding: 0%;
 }
 .terceiro{ /*3º*/
     height: 400px;
@@ -62,8 +62,7 @@
 /*------------diretoria--------------------------------------------------*/
 .reparticao{
     height: 250px;
-    width: 1349px;
-    border: 1px solid rgb(0, 0, 0);
+    width: 100%;
     margin: 0%;
     position: absolute;
     z-index: 0;
@@ -75,7 +74,7 @@
 .card{
     height: 190px;
     width: 180px;
-    border:2px solid rgb(24, 23, 22);
+    border:2px solid rgb(255, 255, 255);
     margin-right: 15px;
     margin: 30px;
 
@@ -83,6 +82,8 @@
     margin-right: auto;
     background-color: bisque;
     border-radius: 1rem;
+
+    box-shadow: 6px 6px 6px rgb(163, 162, 162);
     
 }
 .Title-diretoria{
@@ -90,11 +91,12 @@
     display: flex;
     border: 1px solid rgb(255, 255, 255);
     height: 75px;
-    width: 100%;
+    width: 70%;
     justify-content: center;
     align-items: center;
     color: rgb(255, 255, 255);
     background-color: black;
+    border-radius: 12px;
 
 }
 .icon-presidente{
@@ -128,7 +130,7 @@
     background-image: url(../../assets/imagem01.jpg);
     background-size:cover;
     background-position: center;
-    height: 500px;
+    height: 100%;
     border-bottom:1px solid rgb(49, 49, 49);
    
     background-position-y: -300px;
@@ -172,4 +174,28 @@
     font-family:'Times New Roman';
     font-size: 15px;
     font-weight: bold;
+}
+.btn-quem-somos{
+    height: 7vh;
+    width: 18vh;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 13px;
+    font-weight: bold;
+    color: black;
+    background: #ffffff;
+}
+.btn-a{
+    color: black;
+    height: 7vh;
+    width: 18vh;
+    margin: 0px;
+}
+.btn-a:hover{
+    cursor:pointer;
+    color: rgb(255, 255, 255);
+    background-color: black;
+}
+.btn-quem-somos:hover{
+    background-color: black;
+    border: 2px solid rgb(255, 255, 255);
 }

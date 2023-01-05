@@ -14,7 +14,7 @@ function Header(){
             <a id='link' href='#d' >Igrejas Filiadas</a>
             <a id='link' href='#e' >Estatuto</a>
             <a id='link' href='#c' >Palavra do presidente  </a> 
-            <Link  className='Login-btn' to='/Login' ><p>Entrar</p></Link> 
+            <Link  className='Login-btn' to='/Login' ><p>Login</p></Link> 
          </div>
        </header >
  

@@ -19,7 +19,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: #0c303f;
+    background-color: rgba(7, 7, 7, 0.918);
     padding: 0%;
 }
 .terceiro{ /*3º*/
@@ -35,30 +35,39 @@
 .quinto{
     height: 400px; /*5º*/
     margin: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    align-content: space-between;
+   
   
 }
 
 /*------------estatuto--------------------------------------------------*/
 .estatuto-title{
     display: flex;
-    border-bottom: 1px solid rgb(83, 80, 80);
+    border: #05adf5 solid 1px;
+    height:80px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
 }
 .img-download{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100px;
-    width: 250px;
-    border: 1px solid black;
-
-    background-image: url(../../assets/icons/baixar.png);
     background-repeat: no-repeat;
     background-size:contain;
     background-position: center;
+    font-weight: bold;
 }
+.btn-download{
+    border-bottom: 1px solid black;
+    padding: 15px 30px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 4px #252525;
+}
+.span-container{
+
+    height: 300px;
+    width: 100%;
+    
+}
+
 /*------------diretoria--------------------------------------------------*/
 .reparticao{
     height: 250px;
@@ -80,7 +89,8 @@
 
     margin-left: auto;
     margin-right: auto;
-    background-color: bisque;
+    /*background-color: bisque;*/
+    background-color: #e4eefc;
     border-radius: 1rem;
 
     box-shadow: 6px 6px 6px rgb(163, 162, 162);
@@ -95,7 +105,7 @@
     justify-content: center;
     align-items: center;
     color: rgb(255, 255, 255);
-    background-color: black;
+    background-color: rgb(29, 32, 32);
     border-radius: 12px;
 
 }

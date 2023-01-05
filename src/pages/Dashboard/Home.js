@@ -7,7 +7,7 @@ import React from 'react';
 
 
 function Home(){
-  const estatuto = '../../assets/icons/logo.png'
+  const estatuto = 'a'
   const msg = 'teste de mensagem'
 
 
@@ -64,10 +64,10 @@ function Home(){
                </section>
 
         <section id='e'className='quinto' >
-          <span>
-           <h3 className='estatuto-title'> Baixe o estatuto para conhecer essa comunidade!</h3>
-                <button>
-                <a className='img-download' download href={estatuto}></a>
+        <h3 className='estatuto-title'> Baixe o estatuto para conhecer essa comunidade!</h3>
+          <span className='span-container'>
+                <button className='btn-download'>
+                <a className='img-download' download href='#'>Baixar</a>
                 </button>
              </span>
         </section>

@@ -3,16 +3,15 @@ import { Alert } from 'antd';
 import Marquee from 'react-fast-marquee' ;
 import React from 'react';
 
-//import { Button } from 'antd';
 
 
 function Home(){
-  const estatuto = 'a'
+ 
   const msg = 'teste de mensagem'
 
 
 
-     return(
+return(
   <main className='principal'>
     <section id='a' className='primeiro'>
     <div className='Loop-Banner'>
@@ -63,7 +62,7 @@ function Home(){
             <p>Filiação</p>
                </section>
 
-        <section id='e'className='quinto' >
+      <section id='e'className='quinto' >
         <h3 className='estatuto-title'> Baixe o estatuto para conhecer essa comunidade!</h3>
           <span className='span-container'>
                 <button className='btn-download'>

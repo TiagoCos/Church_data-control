@@ -1,5 +1,5 @@
 import '../Login/indexLogin.css'
-
+import { Link } from 'react-router-dom';
 function Login() {
 /*const teste ={
   height: '160px',
@@ -10,8 +10,8 @@ function Login() {
 
 
   return (
-    <main className='main'>
-        <div className='container'>   
+    <main className='mainL'>
+        <div className='container-login'>   
 
           <h1>Login</h1>
           <form>
@@ -36,7 +36,7 @@ function Login() {
 
           <p>Ainda não tem conta?</p>
           <button>
-          <a id='criar-conta' href='#'>Registrar</a>
+          <Link to='/Cadastro' id='criar-conta'>Registrar</Link> 
           </button>
         </div>
     </main>

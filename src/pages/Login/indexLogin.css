@@ -1,4 +1,4 @@
-.main{
+.mainL{
   min-height: 46em;
   padding: 0px;
   margin: 0%;
@@ -20,7 +20,7 @@ a, label{
 
 /*-----------*/
 
-.container{
+.container-login{
   width: 450px;
   height: 500px;
   border: 1px solid black;

@@ -188,24 +188,17 @@
 .btn-quem-somos{
     height: 7vh;
     width: 18vh;
-    border: 2px solid rgb(0, 0, 0);
+    border: 2px solid #fff;
     border-radius: 13px;
-    font-weight: bold;
-    color: black;
-    background: #ffffff;
+    background: rgba(59, 59, 59, 0.575);
+    
 }
 .btn-a{
-    color: black;
-    height: 7vh;
-    width: 18vh;
-    margin: 0px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
 }
 .btn-a:hover{
-    cursor:pointer;
-    color: rgb(255, 255, 255);
-    background-color: black;
-}
-.btn-quem-somos:hover{
-    background-color: black;
-    border: 2px solid rgb(255, 255, 255);
+    color: brown;
+    
 }

@@ -2,6 +2,7 @@ import '../Cadastro/indexCadastro.css'
 import { Link } from 'react-router-dom'
 import voltar from '../../assets/icons/60577.png'
 import Message from  '../../Components/layout/Message/Message.js'
+
 function Cadastro(){
     return(
       <div className='principal-cadastro'>
@@ -19,7 +20,7 @@ function Cadastro(){
                 <a href='#'>Cadastrar</a>
                 </button>
               </form>
-              <Message msg='alguma mensagem'/>
+              <Message msg='alguma mensagem' type='error'/>
         </div>
       </div>
     )

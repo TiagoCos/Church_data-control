@@ -1,18 +1,19 @@
 import '../Login/indexLogin.css'
 import { Link } from 'react-router-dom';
 function Login() {
+
 /*const teste ={
   height: '160px',
   color: '#fff',
   textAlign: 'center',
   background: '#a52a2a',
+  border: '1px solid blak',
 }*/
 
 
   return (
     <main className='mainL'>
         <div className='container-login'>   
-
           <h1>Login</h1>
           <form>
             <label >CPF: </label>

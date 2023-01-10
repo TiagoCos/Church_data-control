@@ -20,7 +20,7 @@ function Cadastro(){
                 <a href='#'>Cadastrar</a>
                 </button>
               </form>
-              <Message msg='alguma mensagem' type='error'/>
+              <Message msg='seu usuario foi cadastrado' type='valido' />
         </div>
       </div>
     )

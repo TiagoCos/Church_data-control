@@ -1,3 +1,22 @@
+.mensagem-container{
+    width: 100%;
+    padding:0.5em;
+    border: 1px solid rgb(109, 109, 109);
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 2em;
+    border-radius: 5px;
+}
 .message{
-    border: 1px solid black;
+    color: rgb(79, 42, 165);
+}
+.erro{
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+.valido{
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
 }

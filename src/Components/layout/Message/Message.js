@@ -1,13 +1,28 @@
-import styles from '../Message/indexMessage.css'
+import  '../Message/indexMessage.css'
+import { useState, useEffect } from 'react'
 
-function Message({type, msg}){
+function Message({msg, type}){
+    const [ visible, setVisible] = useState(false)
+    useEffect(() =>{
+        if(!msg && !type){
+            setVisible(false)
+            return
+        }
+        setVisible(true)
+        const timer = setTimeout(()=>{
+            setVisible(false)
+        },3000)
+
+        return () => clearTimeout(timer)
+    },[msg])
     return(
-        <div className={`${styles} `}>{msg}</div>
+     <>
+        {visible && (
+               <div className='mensagem-container'>
+               <div className={type}>{msg}</div>
+               </div>
+        )}
+     </>
     )
 }
-{/*https://www.youtube.com/watch?v=R3S8DEzEn6s&ab_channel=Rocketseat
-    https://www.youtube.com/watch?v=aDKxJfJiM28&t=575s&ab_channel=MarioSouto-DevSoutinho
-    https://www.youtube.com/watch?v=UihbmA0pTCE&t=210s&ab_channel=MatheusBattisti-HoradeCodar
-
-*/}
 export default Message

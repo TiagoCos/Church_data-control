@@ -9,6 +9,7 @@ function Header(){
 
        <header className='header'>
         <div className='list'>
+
           <Link to= '/' ><img className='logo' src={logo} alt=''/> </Link>
             <a id='link' href='#b' >Conheça a Diretoria</a> 
             <a id='link' href='#d' >Igrejas Filiadas</a>

@@ -1,26 +1,30 @@
 import '../Footer/indexFooter.css'
-import facebook from '../../../assets/icons/icons-social/facebook.png'
-import insta from '../../../assets/icons/icons-social/instagram.png'
-import Youtube from '../../../assets/icons/icons-social/youtube.png'
+import {FaFacebook, FaInstagram, FaYoutube} from 'react-icons/fa'
 
 function  Footer(){
     return(
       <footer className='footer'>
         <div className='info-column'>
-            <div className ='column'>
-                teste
+            <div className ='column-1'>
+                <ul>
+                    <li></li>
+                </ul>
             </div>
-            <div className ='column'>
-            Siganos 
+            <div className ='column-2'>
+            <ul>
+                    <li></li>
+            </ul>
             </div>
-            <div className ='column'>
-                <img src={facebook} alt=''></img>
-                <img src={insta} alt=''></img>
-                <img src={Youtube} alt=''></img>
+            <div className ='social-column'>
+                <ul>
+                    <li className='social-li'><FaFacebook/></li>
+                    <li className='social-li'><FaInstagram/></li>
+                    <li className='social-li'><FaYoutube/></li>
+                </ul>
             </div>
         </div>
         <div className='rodape-column'>
-            <i>Copyright © 2022</i>
+            <i>Copyright © 2023</i>
         </div>
        
     </footer>  

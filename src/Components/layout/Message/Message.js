@@ -15,6 +15,7 @@ function Message({msg, type}){
 
         return () => clearTimeout(timer)
     },[msg])
+    
     return(
      <>
         {visible && (

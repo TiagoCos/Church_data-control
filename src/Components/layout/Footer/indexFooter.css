@@ -5,6 +5,7 @@
 .footer{
     background: rgb(7, 7, 7);
     height: 125px;
+    max-width: 194vh;
 }
 .info-column{
     width: 100%;

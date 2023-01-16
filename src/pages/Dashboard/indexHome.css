@@ -5,13 +5,14 @@
 }
 .principal{
     min-height: 2004px;
-    max-width: 1349px
+    max-width: 194vh;
 }
 
 /*--------------------containers------------------------------------------------*/
 .primeiro{  /*1º*/
     height: 590px;
     margin: 0%; 
+    margin-bottom: 50px;
 }
 .segundo{
     height: 500px; /*2º*/
@@ -19,8 +20,9 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: rgba(7, 7, 7, 0.918);
+    background-color: #000000d9;
     padding: 0%;
+ 
 }
 .terceiro{ /*3º*/
     height: 400px;
@@ -69,46 +71,7 @@
 }
 
 /*------------diretoria--------------------------------------------------*/
-.reparticao{
-    height: 250px;
-    width: 100%;
-    margin: 0%;
-    position: absolute;
-    z-index: 0;
 
-    display: flex;
-    margin: 75px 0px 0px 0px;
-
-}
-.card{
-    height: 190px;
-    width: 180px;
-    border:2px solid rgb(255, 255, 255);
-    margin-right: 15px;
-    margin: 30px;
-
-    margin-left: auto;
-    margin-right: auto;
-    /*background-color: bisque;*/
-    background-color: #e4eefc;
-    border-radius: 1rem;
-
-    box-shadow: 6px 6px 6px rgb(163, 162, 162);
-    
-}
-.Title-diretoria{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    display: flex;
-    border: 1px solid rgb(255, 255, 255);
-    height: 75px;
-    width: 70%;
-    justify-content: center;
-    align-items: center;
-    color: rgb(255, 255, 255);
-    background-color: rgb(29, 32, 32);
-    border-radius: 12px;
-
-}
 .icon-presidente{
     height: 60px;
     width: 60px;
@@ -124,16 +87,7 @@
 
 
 }
-#Nome-cargos{
-    border: 1px solid rgb(3, 3, 3);
-    height: 30px;
-    width: 176px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 60px;
-    background-color: #fff;
-}
+
 
 /*------------apresentação-----------------------------------------------------*/
 .Sub-div-img{

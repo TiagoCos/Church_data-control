@@ -6,7 +6,7 @@ import Message from  '../../Components/layout/Message/Message.js'
 function Cadastro(){
     return(
       <div className='principal-cadastro'>
-        <Link to='/Login' className='link-voltar'><img className='img-voltar' src={voltar}></img></Link>
+        <Link to='/Login' className='link-voltar'><img className='img-voltar' src={voltar} alt='carregando...'></img></Link>
         <div className='container-cadastro'>
             <h1>Cadastro de Usuário</h1>
               <form>
@@ -17,10 +17,10 @@ function Cadastro(){
                 <input type='senha' placeholder='Confirme sua senha' autoComplete='off'></input>
 
                 <button className='button-form-cadastro'>
-                <a href='#'>Cadastrar</a>
+                <a href='#d'>Cadastrar</a>
                 </button>
               </form>
-              <Message msg='seu usuario foi cadastrado' type='valido' />
+              <Message msg='seu usuario foi cadastrado' type='erro' />
         </div>
       </div>
     )

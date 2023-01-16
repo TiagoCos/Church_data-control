@@ -4,12 +4,14 @@ import Marquee from 'react-fast-marquee' ;
 import React from 'react';
 
 
+import { Avatar, Card } from 'antd';
+
 
 function Home(){
  
-  const msg = 'teste de mensagem'
+const msg = 'teste de mensagem'
 
-
+const { Meta } = Card;
 
 return(
   <main className='principal'>
@@ -20,39 +22,31 @@ return(
               message={
               <Marquee pauseOnHover gradient={false}>{msg}</Marquee>}/>
               </div>
-            <span className='info-img'>
+         <span className='info-img'>
             <h1 className='Title'>Conheça nosso site </h1>
               <p className='Sub-Title'>Confira as informações mais relevantes pra você!</p>
                {/* botão*/} 
-               <button className='btn-quem-somos'>
-                  <a className='btn-a' href='#d'>Quem somos</a>
-               </button>
-              </span>
-              <div className='Sub-div-img'></div>
-            </section>  
+                <button className='btn-quem-somos'>
+                 <a className='btn-a' href='#d'>Quem somos</a>
+                </button>
+               </span>
+             <div className='Sub-div-img'></div>
+          </section>  
 
-        <section id='b' className='segundo'>
-                <h3 className='Title-diretoria'>Diretoria e direção da igreja.</h3>
-                <aside className='reparticao'>
-                <div className='card'>
-                  <img className='icon-presidente' alt=''></img>
-                    <p className='Nome-presidente' id='Nome-cargos'>Tiago Costa </p>             
-      </div>
-        <div className='card'>
-          <img className='icon-presidente' alt=''></img>
-            <p className='Nome-Co-presidente' id='Nome-cargos' ></p>
-              </div>
-
-       <div className='card'>
-          <img className='icon-presidente' alt=''></img>
-            <p className='Nome-evangelista' id='Nome-cargos'></p>
-               </div>
-            <div className='card'>
-              <img className='icon-presidente' alt=''></img>
-                <p className='Nome-missionario' id='Nome-cargos' ></p>
-                </div>
-            </aside>
-          </section>
+      <section id='b' className='segundo'>  
+        <Card
+          style={{ width: 300, border: '1px solid #fff',
+          height: 220, background: '#ececec',}}
+          cover={
+            <img
+              alt="example" src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"/>}>
+                <b>Title</b>
+          <Meta
+            avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
+            description="This is the description"
+          />
+        </Card>
+      </section>
           
         <section id='c' className='terceiro'>
       

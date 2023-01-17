@@ -8,6 +8,7 @@
     max-width: 194vh;
 }
 
+
 /*--------------------containers------------------------------------------------*/
 .primeiro{  /*1º*/
     height: 590px;
@@ -15,17 +16,15 @@
     margin-bottom: 50px;
 }
 .segundo{
-    height: 500px; /*2º*/
+    height: 700px; /*2º*/
     margin: 0px;
     width: 100%;
-    display: flex;
-    justify-content: center;
+    display: block;
     background-color: #000000d9;
-    padding: 0%;
- 
+    padding: 40px;
 }
 .terceiro{ /*3º*/
-    height: 400px;
+    height: 600px;
     margin: 0px;
     
 }
@@ -85,10 +84,27 @@
     background-color: #fff;
     margin-top: 5px;
 
+}
+.Card-identificação{
+    width: 300px;
+    border: 1px solid #fff;
+    height: 230px;
+    background: #ececec;
 
 }
+.container-cards{
+    width: 100%;
+    display: flex;
 
-
+}
+.titulo-cards{
+    font-size: 4.5em;
+    color: rgb(218, 216, 214);
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    font-family:monospace;
+}
 /*------------apresentação-----------------------------------------------------*/
 .Sub-div-img{
     background-image: url(../../assets/imagem01.jpg);
@@ -156,3 +172,4 @@
     color: brown;
     
 }
+/*-------vídeo---------*/

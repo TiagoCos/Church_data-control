@@ -3,7 +3,6 @@ import { Alert } from 'antd';
 import Marquee from 'react-fast-marquee' ;
 import React from 'react';
 
-
 import { Avatar, Card } from 'antd';
 
 
@@ -34,22 +33,23 @@ return(
           </section>  
 
       <section id='b' className='segundo'>  
+      <div className='container-cards'>
+        <h1 className='titulo-cards'>Diretoria e cargos</h1>
+        </div>
         <Card
-          style={{ width: 300, border: '1px solid #fff',
-          height: 220, background: '#ececec',}}
+        className='Card-identificação'
           cover={
-            <img
-              alt="example" src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"/>}>
-                <b>Title</b>
-          <Meta
-            avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
-            description="This is the description"
-          />
+            <img alt="example" src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"/>}>
+             <b>Title</b>
+          <Meta avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
+            description="This is the description" />
         </Card>
       </section>
           
-        <section id='c' className='terceiro'>
-      
+    <section id='c' className='terceiro'>
+            <video controls ><iframe width="560" height="315" src="https://www.youtube.com/embed/n7VZxg9pxkg?start=1"
+             title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+             clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></video>
         </section>
 
         <section id='d' className='quarto'>

@@ -11,7 +11,7 @@ function App() {
   return (
       <Router>
             
-         <Header/>
+       <Header/>
       
         <Routes> {/*esse seria o Switch */}
           <Route  path='/' element={<Home />}/>

@@ -1,11 +1,10 @@
 *{
-    margin: 0;
     box-sizing: border-box;
     border: none;
 }
 .principal{
     min-height: 2004px;
-    max-width: 1350px;
+
 }
 
 

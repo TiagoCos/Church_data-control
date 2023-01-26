@@ -2,14 +2,11 @@ import React from 'react';
 import '../Login/indexLogin.css'
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-
+import Message from '../../Components/layout/Message/Message';
+import axios from 'axios';
 
 const Login = () => {
-
-const RegisterForm = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+const Validation= () => {
   const [usernameError, setUsernameError] = useState('');
   const [isUsernameAvailable, setIsUsernameAvailable] = useState(false);
 
@@ -21,25 +18,32 @@ const RegisterForm = () => {
     setUsernameError(isAvailable ? '' : 'username already taken');
   };
 
-  const handlePasswordChange = (event) => {
-    setPassword(event.target.value);
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    if (!validate()) {
-      return;
-    }
-    // Submit the form
-  };
 
   const checkUsernameAvailability = async (username) => {
-    // make a request to the server to check if the
-  }
+    try {
+        // make a request to the server to check if the username is available
+        const response = await axios.get(`/api/users?username=${username}`);
+        if (response.data.length > 0) {
+            // username is not available
+            return false;
+        } else {
+            // username is available
+            return true;
+        }
+    } catch (error) {
+        console.log(error);
+        return false;
+    }
+};
+
 }
+/*--------------são só pra validar ------------------------------------------------------------------------------------ */
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const [Categoria, setCategoria] = useState('');
+  // contato com o Message
+  const [TypeMsg, setTypeMsg] = useState('');
+  const [Msg, setMsg] = useState('');
 
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
@@ -48,7 +52,10 @@ const RegisterForm = () => {
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
   };
-
+  const handleCategoriaChange = (event) => {
+    setCategoria(event.target.value);
+  };
+  // se passar nos testes do validade(return true), ai vai!
   const handleSubmit = (event) => {
     event.preventDefault();
     if (!validate()) {
@@ -59,32 +66,35 @@ const RegisterForm = () => {
 
   const validate = () => {
     if (!username) {
-      setError('Username is required');
+      setMsg('CPF é requerida');
+      setTypeMsg('Error')
       return false;
     }
     if (!password) {
-      setError('Password is required');
+      setMsg('Senha é requerida');
+      setTypeMsg('Error')  
       return false;
     }
-    if (password.length < 8) {
-      setError('Password must be at least 8 characters');
+    if (!Categoria) {
+      setMsg('Categoria é requerida');
+      setTypeMsg('Error')  
       return false;
     }
-    setError('');
     return true;
   };
 
+  
   return (
     <div className='mainL'>
     <form className='container-login' onSubmit={handleSubmit}>
       <label>
         CPF:
-        <input type="text" value={username} placeholder='Digite seu CPF' autoComplete='' onChange={handleUsernameChange} />
+        <input type="text" value={username} placeholder='Digite seu CPF' autoComplete='off' onChange={handleUsernameChange} />
       </label>
       <br />
       <div className="campo">
         <label>Categoria: </label>
-        <select id="Categoria" required>
+        <select id="Categoria" required value={Categoria} onChange={handleCategoriaChange}>
            <option selected disabled >Selecione</option>
            <option>Secretário</option>
            <option>Tesoureiro</option>
@@ -97,7 +107,6 @@ const RegisterForm = () => {
         <input type="password" value={password} placeholder='Digite seu Senha' onChange={handlePasswordChange} />
       </label>
       <br />
-      {error && <p>{error}</p>}
       <button className='button-form' type='submit'>
           <a id='submit-entrar' href='#'>Entrar</a>
           </button>
@@ -106,6 +115,7 @@ const RegisterForm = () => {
           <button>
           <Link to='/Cadastro' id='criar-conta'>Registrar</Link> 
           </button>
+          <Message msg={Msg} type={TypeMsg} />
     </form>
     </div>
   );

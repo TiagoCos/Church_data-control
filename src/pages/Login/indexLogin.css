@@ -26,7 +26,7 @@ a, label{
   border: 1px solid black;
   margin-left: auto;
   margin-right: auto;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255);
   padding: 20px 30px;
   
   border-radius: 10px;

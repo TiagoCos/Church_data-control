@@ -1,7 +1,10 @@
 import '../Footer/indexFooter.css'
 import {FaFacebook, FaInstagram, FaYoutube} from 'react-icons/fa'
+import { useState } from 'react'
 
 function  Footer(){
+    const [year, setYear] = useState(new Date().getFullYear());
+    
     return(
       <footer className='footer'>
         <div className='info-column'>
@@ -24,7 +27,7 @@ function  Footer(){
             </div>
         </div>
         <div className='rodape-column'>
-            <i>Copyright © 2023</i>
+            <i>Copyright © {year}</i>
         </div>
        
     </footer>  

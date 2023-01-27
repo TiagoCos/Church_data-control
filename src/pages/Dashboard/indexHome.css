@@ -34,20 +34,24 @@
 }
 .quinto{
     height: 400px; /*5º*/
-    margin: 0px;
-    align-content: space-between;
-   
-  
 }
 
 /*------------estatuto--------------------------------------------------*/
 .estatuto-title{
-    display: flex;
     border: #05adf5 solid 1px;
     height:80px;
-    width: 500px;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
+    
+}
+.span-container{
+    display: flex;
+    height: 300px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    
 }
 .img-download{
     background-repeat: no-repeat;
@@ -61,12 +65,7 @@
     border-radius: 15px;
     box-shadow: 4px 4px 4px #252525;
 }
-.span-container{
 
-    height: 300px;
-    width: 100%;
-    
-}
 
 /*------------diretoria--------------------------------------------------*/
 

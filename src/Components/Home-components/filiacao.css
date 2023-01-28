@@ -1,0 +1,28 @@
+.quarto{
+    height: 400px; /*4º*/
+    margin: 0px;
+    padding: 0%;
+    
+}
+/*-------Filiação------------------------------------------------------------------*/
+.galeria{
+    display: flex;
+    height: 20rem;
+    gap: 1rem;
+}
+.galeria #teste{
+    flex: 1;
+    border-radius: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    transition: all 0.7 cubic-bezier(.25, .4, .45, 1.4);
+    border: 1px solid red;
+
+}
+.galeria #teste:hover{
+    flex: 5;
+}
+#teste{
+    background-image:url(../../assets/gato.jpg)
+}

@@ -1,8 +1,15 @@
+import './filiacao.css'
 
 function Filiacao(){
     return(
     <section id='d' className='quarto'>
-        <p>Filiação</p>
+        <div className="galeria">
+        <div id="teste"></div>
+        <div id="teste"></div>
+        <div id="teste"></div>
+        <div id="teste"></div>
+        <div id="teste"></div>  
+        </div>
      </section>
     )
 }

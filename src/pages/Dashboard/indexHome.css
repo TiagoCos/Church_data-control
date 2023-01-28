@@ -27,43 +27,53 @@
     margin: 0px;
     
 }
-.quarto{
-    height: 400px; /*4º*/
-    margin: 0px;
-    border: 1px solid rgb(255, 72, 0);
-}
+
 .quinto{
-    height: 400px; /*5º*/
+    height: 360px; /*5º*/
+   
 }
 
 /*------------estatuto--------------------------------------------------*/
 .estatuto-title{
-    border: #05adf5 solid 1px;
-    height:80px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    
+    padding: 1em;
+
+    color: #fff;
+    font-family: monospace;
+    font-size: 2.0em;
+}
+.span-container:hover{
+    box-shadow: 2px 2px 16px #ececec;
 }
 .span-container{
     display: flex;
-    height: 300px;
-    width: 100%;
+    height: 200px;
+    width: 60%;
     align-items: center;
     justify-content: center;
-    
+
+    backdrop-filter: blur(12px);
+    background-color: rgba(225, 225, 225, 0.281);
+    border: #ffffff solid 1px;
+    border-radius: 1em;
+    margin-left: auto;
+    margin-right: auto;
 }
 .img-download{
     background-repeat: no-repeat;
     background-size:contain;
     background-position: center;
     font-weight: bold;
+   
 }
 .btn-download{
     border-bottom: 1px solid black;
     padding: 15px 30px;
     border-radius: 15px;
     box-shadow: 4px 4px 4px #252525;
+    cursor: pointer;
 }
 
 

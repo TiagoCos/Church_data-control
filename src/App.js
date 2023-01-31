@@ -21,6 +21,7 @@ function App() {
           <Route path='/Cadastro' element={<Cadastro/>}/>
           <Route path='/Secretario' element={<Secretario/>}/>
           <Route path='/Ficha' element={<Ficha/>}/>
+          
         </Routes>
 
        <Footer/>

@@ -9,6 +9,7 @@ import Estatuto from '../../Components/Home-components/estatuto';
 
 
 function Home(){
+  
 return(
   <main className='principal'>
       <Apresentacao/>

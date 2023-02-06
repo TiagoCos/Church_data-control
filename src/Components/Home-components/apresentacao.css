@@ -1,0 +1,70 @@
+/*------------apresentação-----------------------------------------------------*/
+.Sub-div-img{
+    background-image: url(../../assets/imagem01.jpg);
+    background-size:cover;
+    background-position: center;
+    height: 100%;
+    border-bottom:1px solid rgb(49, 49, 49);
+   
+    background-position-y: -300px;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+}
+.info-img{
+    display: flex;
+    align-items: center;
+    color: brown;
+    height: 300px;
+    width:750px;
+    flex-wrap: wrap;
+    position: absolute;
+    font-size: small;
+
+    z-index: 2;
+    margin-top: 14vh;
+    padding: 3em;
+    backdrop-filter: blur(12px);
+    background-color: rgba(225, 225, 225, 0.05);
+    border-radius: 1.6rem;
+}
+
+.Sub-Title{
+    font-size: 23px;
+    color: rgb(255, 255, 255);
+    font-family:monospace;
+}
+.Title{
+   color: rgb(230, 14, 14);
+   font-size: 50px;
+   margin-top: 30px;
+   font-family: 'Courier New';
+}
+
+.alert{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    color: rgb(8, 7, 7);
+    
+    height: 4vh;
+    font-family:'Times New Roman';
+    font-size: 15px;
+    font-weight: bold;
+}
+.btn-quem-somos{
+    height: 7vh;
+    width: 18vh;
+    border: 2px solid #fff;
+    border-radius: 13px;
+    background: rgba(59, 59, 59, 0.575);
+    filter: contrast(250%);
+}
+.btn-a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+.btn-a:hover{
+    color: brown;
+    
+}

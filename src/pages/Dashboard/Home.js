@@ -18,7 +18,7 @@ return(
       <Filiacao />
       <Estatuto />
   
-        </main>
+    </main>
     )
 }
   

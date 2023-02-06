@@ -2,7 +2,7 @@
   min-height: 46em;
   padding: 0px;
   margin: 0%;
-  background-image: url(../../assets/icons/ceu02.png);
+  background-image: url(../../assets/ceu.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -13,11 +13,15 @@
 textarea:focus, input:focus{
   outline: none;
 }
-a, label{
+ label{
   font-size: .9rem;
   text-decoration: none; /*tira o sublinhado*/
+  margin: 0.4em;
 }
-
+a{ 
+  text-decoration: none; /*tira o sublinhado*/
+  background-color: none;
+}
 /*-----------*/
 
 .container-login{
@@ -26,11 +30,12 @@ a, label{
   border: 1px solid black;
   margin-left: auto;
   margin-right: auto;
-  background-color: rgba(255, 255, 255);
+  background-color: rgb(255, 255, 255);
   padding: 20px 30px;
   
   border-radius: 10px;
   text-align: center;
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
   
 }
 form{
@@ -41,6 +46,7 @@ label, input, select{
   display: block;
   width: 100%;
   text-align: left;
+  padding: 0.3em;
   
 }
 label{
@@ -51,19 +57,22 @@ input{
   padding: 10px;
   margin-bottom: 20px;
   font-size: 1rem;
+ 
+ 
 }
 select, option{
   border-bottom: 2px solid #323232;
   padding: 10px;
   font-size: 1rem;
   color:#323232;
+  
 }
 input:focus{
   border-bottom:2px solid rgb(161, 53, 53) ;
 }
 /*------Entrar--------*/
 button[type ="submit"]{
-  border-bottom: 2px solid #323232;
+ 
   padding: 10px;
   margin-bottom: 20px;
   font-size: 1rem;
@@ -79,6 +88,9 @@ button[type ="submit"]{
   border: 2px solid black;
   width: 35%;
   border-radius: 400px;
-
-  color: #fff;
+  background-color: rgb(22, 7, 7);
+  color: #fa0000;
+  cursor: pointer;
+  
+  filter:drop-shadow(67%);
 }

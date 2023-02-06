@@ -42,7 +42,10 @@ const Login = () => {
 
   return (
     <div className='mainL'>
+      
     <form  className='container-login' onSubmit={handleSubmit}>
+    <h1>Tela de Login</h1>
+      <label>CPF:</label>
       <input
       required
         type="text"
@@ -51,16 +54,19 @@ const Login = () => {
         autoComplete='off'
         onChange={(e) => setCpf(e.target.value)}
       />
+      <label>Tipo:</label>
       <select
         required
         value={tipo}
         onChange={(e) => setTipo(e.target.value)}
       >
+       
         <option selected disabled value="">Selecione um tipo</option>
         <option value="secretario">Secretário</option>
         <option value="tesoureiro">Tesoureiro</option>
         <option value="administrador">Administrador</option>
       </select>
+      <label>Senha:</label>
       <input
         required
         type="password"
@@ -69,7 +75,7 @@ const Login = () => {
         autoComplete='off'
         onChange={(e) => setSenha(e.target.value)}
       />
-      <button type="submit" disabled={loading}>
+      <button type="submit" className='bt-login' disabled={loading}>
         {loading ? 'Carregando...' : 'Login'}
       </button>
       <p>Ainda não tem conta?</p>

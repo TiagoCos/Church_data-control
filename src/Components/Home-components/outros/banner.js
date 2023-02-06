@@ -1,6 +1,7 @@
 import { Alert } from 'antd';
 import Marquee from 'react-fast-marquee' ;
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 function Banner(){
     const [MsgBanner, setMsgBanner] = useState('')

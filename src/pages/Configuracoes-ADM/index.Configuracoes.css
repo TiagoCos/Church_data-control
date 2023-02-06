@@ -1,0 +1,51 @@
+.Config-div-main{
+   height: 2004px;
+   background-color: #d8d8d8;
+   margin: 0%;
+}
+#all-containers{
+    backdrop-filter: blur(12px);
+    background-color: rgba(225, 225, 225, 0.281);
+    border: #ffffff solid 1px;
+    border-radius: 1em;
+    /*margin: 5em;*/
+    padding: 1.5em;
+}
+#all-containers:hover{
+    box-shadow: 2px 2px 16px #ececec;
+}
+.Config-div-main > p{
+    border-bottom: 1px solid black;
+}
+button[type ="Remove"]{
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+
+  text-align: center;
+  text-transform: uppercase; /*todas as letras são em maiuscula*/
+  font-weight: bold;
+
+  margin-top: 10px;
+  margin-right: 3em;
+  margin-left: 2em;
+  height: 44px;
+  border: 2px solid;
+  width: 35%;
+  border-radius: 400px;
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+
+  cursor: pointer;
+}
+/*---------------------------------------------------*/
+
+.container-message-banner{
+   
+    display: block;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+ 
+}

@@ -6,13 +6,13 @@ import Message from  '../../Components/layout/Message/Message.js'
 function Cadastro(){
     return(
       <div className='principal-cadastro'>
-        <Link to='/Login' className='link-voltar'><img className='img-voltar' src={voltar} alt='carregando...'></img></Link>
+        {/*<Link to='/Login' className='link-voltar'><img className='img-voltar' src={voltar} alt='carregando...'></img></Link>*/}
         <div className='container-cadastro'>
             <h1>Cadastro de Usuário</h1>
               <form>
-                <label id='label-cd'>CPF: </label>
+                <label>CPF: </label>
                 <input type='CPF'  placeholder='Digite seu CPF' autoComplete='off'></input>
-                <label id='label-cd'>Senha:</label>
+                <label>Senha:</label>
                 <input type='senha' placeholder='Digite sua senha' autoComplete='off'></input>
                 <input type='senha' placeholder='Confirme sua senha' autoComplete='off'></input>
 

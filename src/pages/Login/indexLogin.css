@@ -20,7 +20,7 @@ textarea:focus, input:focus{
 }
 a{ 
   text-decoration: none; /*tira o sublinhado*/
-  background-color: none;
+
 }
 /*-----------*/
 
@@ -92,4 +92,7 @@ button[type ="submit"]{
   color: #eee7e7;
   cursor: pointer;
   
+}
+.container-login > button > Link{
+  background-color: #cf0000;
 }

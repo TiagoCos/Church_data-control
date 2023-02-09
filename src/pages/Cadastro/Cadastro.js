@@ -16,7 +16,7 @@ function Cadastro(){
                 <input type='senha' placeholder='Digite sua senha' autoComplete='off'></input>
                 <input type='senha' placeholder='Confirme sua senha' autoComplete='off'></input>
 
-                <button className='button-form-cadastro'>
+                <button className='button-form-cadastro' type='Submit'>
                 <a href='#d'>Cadastrar</a>
                 </button>
               </form>

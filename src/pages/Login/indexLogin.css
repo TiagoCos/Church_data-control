@@ -5,7 +5,6 @@
   background-image: url(../../assets/ceu.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-
   display: flex;
   align-items: center;
 
@@ -88,8 +87,8 @@ button[type ="submit"]{
   border: 2px solid black;
   width: 35%;
   border-radius: 400px;
-  background-color: #323232;  
-  color: #eee7e7;
+  background-color: #b970e4;  
+  color: #0c0c0c;
   cursor: pointer;
   
 }

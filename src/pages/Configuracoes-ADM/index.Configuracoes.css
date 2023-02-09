@@ -1,18 +1,19 @@
 .Config-div-main{
-   height: 2004px;
-   background-color: #d8d8d8;
-   margin: 0%;
+   min-height: 2004px;
+   background-color:  #ebebeb;
+   padding-top: 5em;
+   
 }
 #all-containers{
     backdrop-filter: blur(12px);
-    background-color: rgba(225, 225, 225, 0.281);
-    border: #ffffff solid 1px;
+    background-color: #ffffff;
+    border: #232323 solid 1px;
     border-radius: 1em;
-    /*margin: 5em;*/
+    margin: 5em;
     padding: 1.5em;
 }
 #all-containers:hover{
-    box-shadow: 2px 2px 16px #ececec;
+    box-shadow: 2px 2px 16px #000000;
 }
 .Config-div-main > p{
     border-bottom: 1px solid black;

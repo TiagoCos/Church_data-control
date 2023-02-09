@@ -39,7 +39,7 @@ const Login = () => {
       setLoading(false);
     }
   };
-
+  
   return (
     <div className='mainL'>
       
@@ -60,7 +60,6 @@ const Login = () => {
         value={tipo}
         onChange={(e) => setTipo(e.target.value)}
       >
-       
         <option selected disabled value="">Selecione um tipo</option>
         <option value="secretario">Secretário</option>
         <option value="tesoureiro">Tesoureiro</option>

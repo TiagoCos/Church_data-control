@@ -19,8 +19,9 @@ function Cadastro(){
                 <button className='button-form-cadastro' type='Submit'>
                 <a href='#d'>Cadastrar</a>
                 </button>
+
               </form>
-              <Message msg='seu usuario foi cadastrado' type='erro' />
+              <Message msg='seu usuario foi cadastrado' type='Aviso' />
         </div>
       </div>
     )

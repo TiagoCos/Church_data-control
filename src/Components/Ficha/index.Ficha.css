@@ -2,19 +2,20 @@
     min-height: 900px;
     display:flex ;
     justify-content: center;
-    align-items: center;
+    padding: 2em;
 }
 .Ficha-De-Cadastro{
     display:inline-block;
-    width:70%;
-    border: 1px solid #f7f702;
-    height: 600px;
-    background-color: rgb(248, 212, 169);
-    padding: 2em;
     box-shadow: #232313 6px 6px 6px ;
+    width: 60%;
+    backdrop-filter: blur(12px);
+    background-color: #ffffff;
+    border: #232323 solid 1px;
+    border-radius: 1em;
+    padding: 2em;
 }
 
 .Titulo-ficha{
-    
+    text-align: center;
     border: 1px solid #2d107c;
 }

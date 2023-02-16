@@ -30,7 +30,7 @@ function Configuracoes() {
       <h2>Mude sua mensagem </h2>
       <form onSubmit={handleSubmit}>
         <label>Coloque sua mensagem aqui:</label>
-        <input
+        <input 
           type="text"
           value={editedMessage}
           onChange={handleMessageEdit}

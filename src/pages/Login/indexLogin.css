@@ -1,5 +1,5 @@
 .mainL{
-  min-height: 46em;
+  min-height: 44em;
   padding: 0px;
   margin: 0%;
   background-image: url(../../assets/ceu.jpg);
@@ -19,13 +19,13 @@ textarea:focus, input:focus{
 }
 a{ 
   text-decoration: none; /*tira o sublinhado*/
-
+  color:rgb(51, 12, 226) ;
 }
 /*-----------*/
 
 .container-login{
   width: 450px;
-  height: 500px;
+  height: 550px;
   border: 1px solid black;
   margin-left: auto;
   margin-right: auto;
@@ -73,25 +73,33 @@ input:focus{
 button[type ="submit"]{
  
   padding: 10px;
-  margin-bottom: 20px;
   font-size: 1rem;
 
   text-align: center;
   text-transform: uppercase; /*todas as letras são em maiuscula*/
   font-weight: bold;
-
-  margin-top: 10px;
+  margin-top: 5px;
   margin-right: 3em;
   margin-left: 2em;
   height: 44px;
   border: 2px solid black;
   width: 35%;
   border-radius: 400px;
-  background-color: #b970e4;  
+  background-color: #c186e4;  
   color: #0c0c0c;
   cursor: pointer;
   
 }
-.container-login > button > Link{
-  background-color: #cf0000;
+.bt-login{
+  margin: 8px;
+}
+input:invalid{
+  animation:shake .2 ease-in-out 0s 2;
+  border: 2px solid red;
+}
+@keyframes shake{
+  0%{transform: translate(0rem);}
+  25%{transform: translate(-5rem);}
+  50%{transform: translate(0.5rem);}
+  100%{transform: translate(0rem);}
 }

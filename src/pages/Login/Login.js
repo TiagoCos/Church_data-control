@@ -16,7 +16,8 @@ const Login = () => {
 
   useEffect(() => {
     if (error) {
-      alert(error);
+      setTypeMsg('erro');
+      setMsg('campos inválidos, confira seus dados!')
     }
   }, [error]);
 
@@ -25,7 +26,8 @@ const Login = () => {
     setLoading(true);
     setError('');
     if (!cpf || !senha || !tipo) {
-      setError('Todos os campos são obrigatórios');
+      setTypeMsg('campos');
+      setMsg('CAMPOS OBRIGATORIOS!')
       setLoading(false);
       return;
     }
@@ -47,7 +49,7 @@ const Login = () => {
     <h1>Tela de Login</h1>
       <label>CPF:</label>
       <input
-      required
+       
         type="text"
         placeholder="Digite seu CPF"
         value={cpf}
@@ -56,7 +58,6 @@ const Login = () => {
       />
       <label>Tipo:</label>
       <select
-        required
         value={tipo}
         onChange={(e) => setTipo(e.target.value)}
       >
@@ -67,7 +68,7 @@ const Login = () => {
       </select>
       <label>Senha:</label>
       <input
-        required
+     
         type="password"
         placeholder="Digite sua Senha"
         value={senha}

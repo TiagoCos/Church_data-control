@@ -1,6 +1,6 @@
 .Config-div-main{
    min-height: 2004px;
-   background-color:  #ebebeb;
+   background-color:  #e0dede;
    padding-top: 5em;
    
 }
@@ -11,10 +11,9 @@
     border-radius: 1em;
     margin: 5em;
     padding: 1.5em;
+    box-shadow: 6px 6px 6px  rgba(0, 0, 0, 0.5);
 }
-#all-containers:hover{
-    box-shadow: 2px 2px 16px #000000;
-}
+
 .Config-div-main > p{
     border-bottom: 1px solid black;
 }

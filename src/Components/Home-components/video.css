@@ -1,0 +1,9 @@
+.terceiro{ /*3º*/
+    height: 600px;
+    margin: 0px;
+    padding: 1.5em;
+}
+/*-------vídeo---------*/
+.container-video{
+    border: 3px solid #e60e0e;
+}

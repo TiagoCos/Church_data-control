@@ -12,6 +12,7 @@
 textarea:focus, input:focus{
   outline: none;
 }
+
  label{
   font-size: .9rem;
   text-decoration: none; /*tira o sublinhado*/
@@ -37,6 +38,7 @@ a{
   box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
   
 }
+
 form{
   margin-top: 30px;
   margin-bottom: 40px;

@@ -8,9 +8,9 @@
 }
 /*--------------------containers------------------------------------------------*/
 .primeiro{  /*1º*/
-    height: 590px;
+    height: 600px;
     margin: 0%; 
-    margin-bottom: 50px;
+    margin-bottom: 28px;
 }
 .segundo{
     height: 700px; /*2º*/
@@ -19,11 +19,6 @@
     display: block;
     background-color: #000000d9;
     padding: 40px;
-}
-.terceiro{ /*3º*/
-    height: 600px;
-    margin: 0px;
-    
 }
 
 .quinto{
@@ -112,4 +107,4 @@
     font-family:monospace;
 }
 
-/*-------vídeo---------*/
+

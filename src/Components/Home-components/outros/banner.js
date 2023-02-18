@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 function Banner(){
-    const [MsgBanner, setMsgBanner] = useState('')
+    const [MsgBanner, setMsgBanner] = useState('aqui    ')
     
     return(
         <div className='Loop-Banner'>

@@ -15,7 +15,6 @@ function App() {
       <Router>
             
        <Header/>
-      
         <Routes> {/*esse seria o Switch */}
           <Route path='/' element={<Home />}/>
           <Route path='/Login' element={<Login/>}/>

@@ -53,6 +53,7 @@ function Configuracoes() {
           />
         <label>Envie sua imagem:</label>
         <input 
+          alt='carregando...'
           type='image'
           />
           <button type="submit">Enviar</button>
@@ -67,3 +68,4 @@ function Configuracoes() {
 }
 
 export default Configuracoes;
+

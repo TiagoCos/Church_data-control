@@ -61,7 +61,7 @@ const Login = () => {
         value={tipo}
         onChange={(e) => setTipo(e.target.value)}
       >
-        <option selected disabled value="">Selecione um tipo</option>
+        <option disabled value="inactive">Selecione um tipo</option>
         <option value="secretario">Secretário</option>
         <option value="tesoureiro">Tesoureiro</option>
         <option value="administrador">Administrador</option>

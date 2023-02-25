@@ -14,15 +14,15 @@
     background: #ffffff;
     box-shadow: 0 20px 80px rgb(000/ 8%);
 }
-img {
+.swiper-slide > img {
     margin: 0 auto 30px;
     width: 140px;
     height: 140px; object-fit: contain;
 }
-h2 {
+.swiper-slide > h2 {
     color: #2f2e41; margin: 0 0 6px;
 }
-h3 {
+.swiper-slide > h3 {
     color: #69687a;
     margin: 0 0 24px;
     font-weight: 400;
@@ -30,7 +30,7 @@ h3 {
     align-self: stretch; 
 }
 
-input, button { 
+.swiper-slide > input{ 
     display: block;
     height: 48px;
     width: 270px;
@@ -40,12 +40,21 @@ input, button {
     font-family: Poppins;
     text-align: center; }
 
-input {
+.swiper-slide > button {
+        display: block;
+        height: 48px;
+        width: 270px;
+        margin: 0 40px;
+        border-radius: 4px;
+        font-size: 16px;
+        font-family: Poppins;
+        text-align: center; }
+.swiper-slide > input {
     padding: 12px; 
     margin-bottom: 8px;
  }
 
-button {
+ .swiper-slide > button {
     background: #9563ff;
     color: #f9f9f9;
     border: 0;

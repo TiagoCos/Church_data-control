@@ -22,7 +22,7 @@ function Cadastro() {
   const [Msg, setMsg] = useState('');
   const navigate = useNavigate();
   // final de tudo, pra passar pra proxima pagina do slid
-  const Certo = false;
+  
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -32,20 +32,24 @@ function Cadastro() {
     const cpfValido = await verificarCPFValido(cpf);
     
     if (cpfExiste || !cpfValido) {
-    Certo = true;
+    
       setTypeMsg('erro');
       setMsg(cpfExiste ? ERR_CADASTRO_EXISTENTE : ERR_CPF_INVALIDO);
       return;
     }
-
-    navigate('/proxima-pagina'); // Substitua "/proxima-pagina" pelo caminho da página que você deseja navegar
+    setCerto(true);
+   // navigate('/proxima-pagina'); // Substitua "/proxima-pagina" pelo caminho da página que você deseja navegar
+  }
+  //-----------event input---------------
+  function handleInput(event, cpf) {
+    const valor = event.target.value;
+    if (valor.length === 11) {
+      verificarCPFValido(cpf);
+      console.log("Valor do input tem 11 caracteres!");
+    }
   }
 //---------------------------------------------slides---------------------------------
-const [username, setUsername] = useState('');
-
-  const handleUsernameChange = (event) => {
-    setUsername(event.target.value);
-  };
+const [Certo, setCerto] = useState(false);
 
 const handleNext = () => {
   setStep((step) => step + 1);
@@ -53,7 +57,7 @@ const handleNext = () => {
 
 const handleRestart = () => {
   setStep(0);
-  setUsername('');
+  setCerto(true);
 };
 
 const [step, setStep] = useState(0);
@@ -68,12 +72,12 @@ const renderStep = (step) => {
           <h3>Let's create your username</h3>
             <form onSubmit={handleSubmit}>
           <label>CPF: </label>
-          <input type="text" name="cpf" placeholder="Digite seu CPF" autoComplete="off"
-           minLength={6} value={username}/>
+          <input type="text" name="cpf" placeholder="Digite seu CPF" autoComplete="off" 
+           maxLength={11} onInput={handleInput}/>
         
         </form>
         <Message type={TypeMsg} message={Msg} />
-        <button disabled={!username && Certo } type="button" onClick={handleNext}>
+        <button disabled={ Certo } type="button" onClick={handleNext}>
             Próximo
           </button>
         </div>

@@ -14,15 +14,15 @@
     background: #ffffff;
     box-shadow: 0 20px 80px rgb(000/ 8%);
 }
-.swiper-slide > img {
+img {
     margin: 0 auto 30px;
     width: 140px;
     height: 140px; object-fit: contain;
 }
-.swiper-slide > h2 {
+h2 {
     color: #2f2e41; margin: 0 0 6px;
 }
-.swiper-slide > h3 {
+h3 {
     color: #69687a;
     margin: 0 0 24px;
     font-weight: 400;
@@ -30,7 +30,7 @@
     align-self: stretch; 
 }
 
-.swiper-slide > input{ 
+input{ 
     display: block;
     height: 48px;
     width: 270px;
@@ -40,7 +40,7 @@
     font-family: Poppins;
     text-align: center; }
 
-.swiper-slide > button {
+button {
         display: block;
         height: 48px;
         width: 270px;
@@ -49,18 +49,12 @@
         font-size: 16px;
         font-family: Poppins;
         text-align: center; }
-.swiper-slide > input {
+input {
     padding: 12px; 
     margin-bottom: 8px;
  }
 
- .swiper-slide > button {
-    background: #9563ff;
-    color: #f9f9f9;
-    border: 0;
-    transition: 0.175s;
-    cursor: pointer;
-}
+
 button:disabled { 
     background: #e1e0e8;
     color: #bbbac5;

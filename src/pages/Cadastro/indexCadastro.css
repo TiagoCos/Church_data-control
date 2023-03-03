@@ -20,11 +20,57 @@
     text-align: center;
     box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
 }
-.img-voltar{
-    height: 50px;
-    width: 50px;
+
+.btn-cadastro {
+    background: #9563ff;
+    color: #f9f9f9;
+    border: 0;
+    transition: 0.175s;
+    cursor: pointer;
 }
-.button-form-cadastro > a{
-    text-decoration: none;
-    color: black;
+
+.image-cadastro{
+    margin: 0 auto 30px;
+    width: 140px;
+    height: 140px; 
+    object-fit: contain;
 }
+.swiper-slide > h2 {
+    color: #2f2e41; 
+    margin: 0 0 6px;
+}
+.swiper-slide > h3 {
+    color: #69687a;
+    margin: 0 0 24px;
+    font-weight: 400;
+    font-size: 14px;
+    align-self: stretch; 
+}
+
+input{ 
+    display: block;
+    height: 48px;
+    width: 270px;
+    margin: 0 40px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: Poppins;
+    text-align: center; }
+
+button {
+        display: block;
+        height: 48px;
+        width: 270px;
+        margin: 0 40px;
+        border-radius: 4px;
+        font-size: 16px;
+        font-family: Poppins;
+        text-align: center; }
+
+
+button:disabled { 
+    background: #e1e0e8;
+    color: #bbbac5;
+    cursor: not-allowed;
+}
+.swiper { width: 100%;}

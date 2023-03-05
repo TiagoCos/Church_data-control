@@ -6,13 +6,13 @@ import { cpf as validateCpf } from "cpf-cnpj-validator";
 
 const ERR_CADASTRO_EXISTENTE = "Seu CPF já possui cadastro!";
 const ERR_CPF_INVALIDO = "CPF inválido!";
-
+// aqui ele busca no banco de dados se há algum casdastro ja feito
 async function verificarCPF(cpf) {
   const response = await fetch(`sua_api/cpf/${cpf}`);
   const data = await response.json();
   return data.existe;
 }
-
+// chama o validador de cpf, para saber se o numero digitado é realmente um cpf valido
 async function verificarCPFValido(cpf) {
   return validateCpf(cpf);
 }
@@ -22,8 +22,11 @@ function Cadastro() {
   const [Msg, setMsg] = useState("");
   const navigate = useNavigate();
 
+// função do form que valida os valores
   async function handleSubmit(event) {
-    event.preventDefault();
+    console.log('deu certo submit')
+    setCerto(true);
+   /* event.preventDefault();
     const { value: cpf } = event.target.cpf;
 
     const cpfExiste = await verificarCPF(cpf);
@@ -35,20 +38,21 @@ function Cadastro() {
       return;
     } else {
       setCerto(true);
-    }
+    }*/
   }
 
   const [length, setLength] = useState(false);
-
-  const hendleLength = (event) => {
+// um evento para saber se o numero do cpf está completo
+  const handleLength = (event) => {
     const valor = event.target.value;
     if (valor.length === 11) {
+      console.log('deu certo ')
       setLength(true);
     }
   };
 
   const [Certo, setCerto] = useState(false);
-
+//passa de pagina no slid
   const handleNext = () => {
     setStep((step) => step + 1);
   };
@@ -57,7 +61,25 @@ function Cadastro() {
     setStep(0);
     setCerto(false);
   };
+// --------slid 1--------------------------------------------------------------
+const [senha, setSenha] = useState('');
+  const [confirmSenha, setConfirmSenha] = useState('');
 
+  const handleCadastrar = (event) => {
+    event.preventDefault();
+    if (senha === confirmSenha) {
+      fetch('/api/cadastrar-senha', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ senha: senha })
+      })
+      .then(response => response.json())
+      .then(data => console.log(data))
+      .catch(error => console.error(error));
+    } else {
+      console.log('As senhas não conferem!');
+    }
+  }
   const [step, setStep] = useState(0);
 
   const renderStep = (step) => {
@@ -77,8 +99,15 @@ function Cadastro() {
                 placeholder="Digite seu CPF"
                 autoComplete="off"
                 maxLength={11}
-                onInput={hendleLength}
+                onInput={handleLength}
               />
+            <button onClick={(event) => {
+              event.preventDefault();
+              handleSubmit();
+              handleLength();
+            }}>verificar</button>
+
+
               <Message type={TypeMsg} message={Msg} />
               <button
                 className="btn-cadastro"
@@ -97,9 +126,28 @@ function Cadastro() {
           <div className="swiper-slide">
             <h2>Step 2</h2>
             <h3>Step 2 subtitle</h3>
-            <button className="btn-cadastro" type="button" onClick={handleRestart}>
-              Restart
-            </button>
+          <form onSubmit={handleCadastrar}>
+            <label>
+              Senha:
+              <input
+                type="password"
+                value={senha}
+                onChange={event => setSenha(event.target.value)}
+              />
+            </label>
+            <br />
+            <label>
+              Confirmar senha:
+              <input
+                type="password"
+                value={confirmSenha}
+                onChange={event => setConfirmSenha(event.target.value)}
+              />
+            </label>
+            <br />
+            <button type="submit">Cadastrar</button>
+          </form>
+
           </div>
         );
       default:

@@ -46,7 +46,8 @@ const Login = () => {
     <div className='mainL'>
       
     <form  className='container-login' onSubmit={handleSubmit}>
-    <h1>Tela de Login</h1>
+    <h2>Login</h2>
+    
       <label>CPF:</label>
       <input
        
@@ -75,7 +76,7 @@ const Login = () => {
         autoComplete='off'
         onChange={(e) => setSenha(e.target.value)}
       />
-      <button type="submit" className='bt-login' disabled={loading}>
+      <button  className='bt-login' disabled={loading}>
         {loading ? 'Carregando...' : 'Login'}
       </button>
       <p>Ainda não tem conta?</p>

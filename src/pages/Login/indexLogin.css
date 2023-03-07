@@ -9,21 +9,6 @@
   align-items: center;
 
 }
-textarea:focus, input:focus{
-  outline: none;
-}
-
- label{
-  font-size: .9rem;
-  text-decoration: none; /*tira o sublinhado*/
-  margin: 0.4em;
-}
-a{ 
-  text-decoration: none; /*tira o sublinhado*/
-  color:rgb(51, 12, 226) ;
-}
-/*-----------*/
-
 .container-login{
   width: 450px;
   height: 550px;
@@ -33,15 +18,43 @@ a{
   background-color: rgb(255, 255, 255);
   padding: 20px 30px;
   
-  border-radius: 10px;
   text-align: center;
   box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
   
-}
+  background: rgba(225, 225, 225, 0.15);
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(225, 225, 225, 0.5);
+  border-radius: 20px;
 
-form{
   margin-top: 30px;
   margin-bottom: 40px;
+
+}
+.mainL > h2{
+  color: #2f2e41; 
+  margin: 0 0 6px;
+  font-size: 2em;
+}
+.bt-login{
+  margin-top: 3vh;
+ margin-bottom: 8px;
+}
+/*-----global------*/
+textarea:focus, input:focus, select:focus, option:focus, details:focus{
+  outline: none;
+  text-decoration: none;
+}
+
+label{
+  font-size: .9rem;
+  text-decoration: none; /*tira o sublinhado*/
+  margin: 0.4em;
+
+  font-weight: bold;
+}
+a{ 
+  text-decoration: none; /*tira o sublinhado*/
+  color:rgb(51, 12, 226) ;
 }
 label, input, select{
   display: block;
@@ -50,58 +63,59 @@ label, input, select{
   padding: 0.3em;
   
 }
-label{
-  font-weight: bold;
+
+/*-----------*/
+.container-login > label, input, select{
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.3em;
+  
 }
+
 input{
-  border-bottom: 2px solid #323232;
+  
   padding: 10px;
   margin-bottom: 20px;
   font-size: 1rem;
  
+  height: 48px;
+  width: 270px;
+  margin: 0 40px;
  
 }
-select, option{
-  border-bottom: 2px solid #323232;
+.container-login > select, option{
   padding: 10px;
   font-size: 1rem;
   color:#323232;
-  
+
+  height: 48px;
+  width: 270px;
+  margin: 0 40px;
 }
-input:focus{
-  border-bottom:2px solid rgb(161, 53, 53) ;
-}
+
 /*------Entrar--------*/
 button[type ="submit"]{
  
-  padding: 10px;
-  font-size: 1rem;
-
+  display: block;
+  height: 48px;
+  width: 270px;
+  margin: 0 40px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: Poppins;
   text-align: center;
-  text-transform: uppercase; /*todas as letras são em maiuscula*/
-  font-weight: bold;
-  margin-top: 5px;
-  margin-right: 3em;
-  margin-left: 2em;
-  height: 44px;
-  border: 2px solid black;
-  width: 35%;
-  border-radius: 400px;
-  background-color: #c186e4;  
-  color: #0c0c0c;
-  cursor: pointer;
   
 }
-.bt-login{
-  margin: 8px;
-}
-input:invalid{
-  animation:shake .2 ease-in-out 0s 2;
+
+input{
+  animation: shake 0.5s ease-in-out;
   border: 2px solid red;
 }
-@keyframes shake{
-  0%{transform: translate(0rem);}
-  25%{transform: translate(-5rem);}
-  50%{transform: translate(0.5rem);}
-  100%{transform: translate(0rem);}
+
+@keyframes shake {
+  0% { transform: translate(0rem); }
+  25% { transform: translate(-2rem); }
+  50% { transform: translate(0.5rem); }
+  100% { transform: translate(0rem); }
 }

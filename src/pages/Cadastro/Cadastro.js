@@ -92,9 +92,8 @@ const [senha, setSenha] = useState('');
             <h3>Let's create your username</h3>
             <form onSubmit={handleSubmit}>
               <label>CPF: </label>
-              <input
+              <input className="Cdt-input"
                 type="text"
-                className="cpf"
                 id="cpf"
                 placeholder="Digite seu CPF"
                 autoComplete="off"
@@ -129,7 +128,7 @@ const [senha, setSenha] = useState('');
           <form onSubmit={handleCadastrar}>
             <label>
               Senha:
-              <input
+              <input className="Cdt-input"
                 type="password"
                 value={senha}
                 onChange={event => setSenha(event.target.value)}
@@ -138,7 +137,7 @@ const [senha, setSenha] = useState('');
             <br />
             <label>
               Confirmar senha:
-              <input
+              <input className="Cdt-input"
                 type="password"
                 value={confirmSenha}
                 onChange={event => setConfirmSenha(event.target.value)}
@@ -157,10 +156,8 @@ const [senha, setSenha] = useState('');
 
   return (
     <div className="principal-cadastro">
-      <div className="container-cadastro">
-        <div className="card">
-          <div className="swiper">{renderStep(step)}</div>
-        </div>
+      <div className="card">
+        <div className="swiper">{renderStep(step)}</div>
       </div>
     </div>
   );

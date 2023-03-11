@@ -100,11 +100,11 @@ const [senha, setSenha] = useState('');
                 maxLength={11}
                 onInput={handleLength}
               />
-            <button onClick={(event) => {
+            <button className="btn-verificar" onClick={(event) => {
               event.preventDefault();
               handleSubmit();
               handleLength();
-            }}>verificar</button>
+            }}>Verificar</button>
 
 
               <Message type={TypeMsg} message={Msg} />
@@ -123,8 +123,8 @@ const [senha, setSenha] = useState('');
       case 1:
         return (
           <div className="swiper-slide">
-            <h2>Step 2</h2>
-            <h3>Step 2 subtitle</h3>
+            <h2>Quase lá</h2>
+            <h3>Digite sua senha </h3>
           <form onSubmit={handleCadastrar}>
             <label>
               Senha:

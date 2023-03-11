@@ -44,17 +44,24 @@
 }
 
 .bt-login{
- height: 48px;
+  height: 48px;
   width: 270px;
   margin-top: 1.5em;
   display: block;
   margin-bottom: 0.6em;
-  border-radius: 4px;
-  font-size: 16px;
   font-family: Poppins;
   text-align: center;
-
   margin-left: 40px;
+
+  background: #9563ff;
+  color: #f9f9f9;
+  border: 0;
+  transition: 0.175s;
+  cursor: pointer;
+
+  margin: 20px 40px;
+  border-radius: 4px;
+  font-size: 16px;
 }
 /*-----global------*/
 textarea:focus, input:focus, select:focus, option:focus, details:focus{
@@ -117,12 +124,20 @@ button[type ="submit"]{
   display: block;
   height: 48px;
   width: 270px;
-  margin: 0 40px;
+  margin: 20px 50px;
   border-radius: 4px;
   font-size: 16px;
   font-family: Poppins;
   text-align: center;
-  
+
+  background: #9563ff;
+  color: #f9f9f9;
+  border: 0;
+  transition: 0.175s;
+  cursor: pointer;
+
+  border-radius: 4px;
+  font-size: 16px;
 }
 
 .input{

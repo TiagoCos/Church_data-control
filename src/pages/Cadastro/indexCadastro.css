@@ -51,6 +51,22 @@
     font-family: Poppins;
     text-align: center;
 }
+.btn-verificar{
+    background: #9563ff;
+    color: #f9f9f9;
+    border: 0;
+    transition: 0.175s;
+    cursor: pointer;
+
+    display: block;
+    height: 48px;
+    width: 270px;
+    margin: 20px 40px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: Poppins;
+    text-align: center;
+}
 
 .image-cadastro{
     margin: 0 auto 30px;

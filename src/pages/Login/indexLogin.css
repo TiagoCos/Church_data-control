@@ -7,20 +7,21 @@
   background-size: cover;
   display: flex;
   align-items: center;
-
+  justify-content: center;
+  
 }
 .container-login{
   width: 450px;
   height: 550px;
-  border: 1px solid black;
-  margin-left: auto;
-  margin-right: auto;
+
+  position: relative;
+  flex-direction: column;
+  gap: 30px;
+
   background-color: rgb(255, 255, 255);
-  padding: 20px 30px;
-  
+  padding: 45px;
   text-align: center;
   box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
-  
   background: rgba(225, 225, 225, 0.15);
   backdrop-filter: blur(25px);
   border: 1px solid rgba(225, 225, 225, 0.5);
@@ -30,14 +31,30 @@
   margin-bottom: 40px;
 
 }
-.mainL > h2{
+.container-login > h2{
   color: #2f2e41; 
   margin: 0 0 6px;
-  font-size: 2em;
+  font-size: 2.3em;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
+
 .bt-login{
-  margin-top: 3vh;
- margin-bottom: 8px;
+ height: 48px;
+  width: 270px;
+  margin-top: 1.5em;
+  display: block;
+  margin-bottom: 0.6em;
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: Poppins;
+  text-align: center;
+
+  margin-left: 40px;
 }
 /*-----global------*/
 textarea:focus, input:focus, select:focus, option:focus, details:focus{
@@ -70,10 +87,10 @@ label, input, select{
   width: 100%;
   text-align: left;
   padding: 0.3em;
-  
+
 }
 
-input{
+.container-login > input{
   
   padding: 10px;
   margin-bottom: 20px;
@@ -108,7 +125,7 @@ button[type ="submit"]{
   
 }
 
-input{
+.input{
   animation: shake 0.5s ease-in-out;
   border: 2px solid red;
 }
@@ -119,3 +136,4 @@ input{
   50% { transform: translate(0.5rem); }
   100% { transform: translate(0rem); }
 }
+

@@ -7,12 +7,18 @@ function Ficha(){
                 <h1 className='Titulo-ficha'>Cadastro de membros</h1>
                 <form>
                     <label >CPF: </label>
-                    <input type='CPF' name='CPF' id='CPF' placeholder='Digite seu CPF' autoComplete='off'></input>
+                    <input 
+                    type='CPF' name='CPF' id='CPF'
+                    placeholder='Digite seu CPF' autoComplete='off'></input>
                     <label >CPF: </label>
-                    <input type='CPF' name='CPF' id='CPF' placeholder='Digite seu CPF' autoComplete='off'></input>
+                    <input
+                     type='CPF' name='CPF' id='CPF' placeholder='Digite seu CPF' autoComplete='off'></input>
                     <label >CPF: </label>
-                    <input type='CPF' name='CPF' id='CPF' placeholder='Digite seu CPF' autoComplete='off'></input>
+                    <input 
+                    type='CPF' name='CPF' id='CPF' placeholder='Digite seu CPF' autoComplete='off'></input>
                     
+                    
+
                 </form>
             </div>
         </div>

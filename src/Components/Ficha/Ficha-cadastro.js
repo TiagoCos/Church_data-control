@@ -1,30 +1,62 @@
-import React, { useState } from 'react';
-import Modal from 'react-modal';
-import MemberForm from '../MemberForm/MemberForm';
-Modal.setAppElement('#root');
+import React, { useState } from "react";
+import Modal from "react-modal";
+import MemberForm from '../MemberForm/MemberForm'
+
+Modal.setAppElement("#root");
+
+const membersData = [
+  { id: 1, name: "João" },
+  { id: 2, name: "Maria" },
+  { id: 3, name: "José" },
+];
 
 const Members = () => {
-  const [members, setMembers] = useState([]);
+  const [members, setMembers] = useState(membersData);
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
-  const handleAddMember = (member) => {
+  const addMember = (member) => {
     setMembers([...members, member]);
+    closeModal();
+  };
+
+  const removeMember = (id) => {
+    setMembers(members.filter((member) => member.id !== id));
+  };
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
     setModalIsOpen(false);
   };
 
   return (
-    <div>
+    <>
       <h1>Lista de Membros</h1>
-      <button onClick={() => setModalIsOpen(true)}>Adicionar Membro</button>
-      <ul>
-        {members.map((member) => (
-          <li key={member.id}>{member.name}</li>
-        ))}
-      </ul>
-      <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
-        <MemberForm onSubmit={handleAddMember} />
+      <button onClick={openModal}>Adicionar Membro</button>
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          {members.map((member) => (
+            <tr key={member.id}>
+              <td>{member.name}</td>
+              <td>
+                <button onClick={() => removeMember(member.id)}>Excluir</button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <Modal isOpen={modalIsOpen} onRequestClose={closeModal}>
+        <MemberForm addMember={addMember} closeModal={closeModal} />
       </Modal>
-    </div>
+    </>
   );
 };
 

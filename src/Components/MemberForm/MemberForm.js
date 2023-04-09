@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import './index.MemberForm.css'
+import React, { useState } from "react";
+import "./index.MemberForm.css";
 
-const MemberForm = ({ onSubmit }) => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
+const MemberForm = ({ addMember, closeModal }) => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    onSubmit({ name, email, id: Date.now() });
-    setName('');
-    setEmail('');
+    const newMember = { id: Date.now(), name: name, email: email };
+    addMember(newMember);
+    closeModal();
   };
 
   return (

@@ -1,28 +1,31 @@
-import  '../Ficha/index.Ficha.css'
+import React, { useState } from 'react';
+import Modal from 'react-modal';
+import MemberForm from '../MemberForm/MemberForm';
+Modal.setAppElement('#root');
 
-function Ficha(){
-    return(
-        <div className='main-ficha'>
-            <div className='Ficha-De-Cadastro'>
-                <h1 className='Titulo-ficha'>Cadastro de membros</h1>
-                <form>
-                    <label >CPF: </label>
-                    <input 
-                    type='CPF' name='CPF' id='CPF'
-                    placeholder='Digite seu CPF' autoComplete='off'></input>
-                    <label >CPF: </label>
-                    <input
-                     type='CPF' name='CPF' id='CPF' placeholder='Digite seu CPF' autoComplete='off'></input>
-                    <label >CPF: </label>
-                    <input 
-                    type='CPF' name='CPF' id='CPF' placeholder='Digite seu CPF' autoComplete='off'></input>
-                    
-                    
+const Members = () => {
+  const [members, setMembers] = useState([]);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
-                </form>
-            </div>
-        </div>
-    )
-}
+  const handleAddMember = (member) => {
+    setMembers([...members, member]);
+    setModalIsOpen(false);
+  };
 
-export default Ficha
+  return (
+    <div>
+      <h1>Lista de Membros</h1>
+      <button onClick={() => setModalIsOpen(true)}>Adicionar Membro</button>
+      <ul>
+        {members.map((member) => (
+          <li key={member.id}>{member.name}</li>
+        ))}
+      </ul>
+      <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
+        <MemberForm onSubmit={handleAddMember} />
+      </Modal>
+    </div>
+  );
+};
+
+export default Members;

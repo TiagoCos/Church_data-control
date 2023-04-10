@@ -1,21 +1,4 @@
 .main-ficha{
-    min-height: 900px;
-    display:flex ;
-    justify-content: center;
-  
-}
-.Ficha-De-Cadastro{
-    display:inline-block;
-    box-shadow: #232313 6px 6px 6px ;
-    width: 60%;
-    backdrop-filter: blur(12px);
-    background-color: #ffffff;
-    border: #232323 solid 1px;
-    border-radius: 1em;
-    padding: 2em;
-}
-
-.Titulo-ficha{
-    text-align: center;
-    border: 1px solid #2d107c;
+    height: 600px;
+    margin: 2em;
 }

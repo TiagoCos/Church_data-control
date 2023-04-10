@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import MemberForm from '../MemberForm/MemberForm'
-
+import '../Ficha/index.Ficha.css'
 Modal.setAppElement("#root");
 
 const membersData = [
@@ -33,7 +33,8 @@ const Members = () => {
 
   return (
     <>
-      <h1>Lista de Membros</h1>
+      <main className="main-ficha">
+      <h1 >Lista de Membros</h1>
       <button onClick={openModal}>Adicionar Membro</button>
       <table>
         <thead>
@@ -56,6 +57,7 @@ const Members = () => {
       <Modal isOpen={modalIsOpen} onRequestClose={closeModal}>
         <MemberForm addMember={addMember} closeModal={closeModal} />
       </Modal>
+      </main>
     </>
   );
 };

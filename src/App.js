@@ -8,7 +8,7 @@ import Cadastro from './pages/Cadastro/Cadastro';
 import  Secretario from './pages/Secretário/Secretario';
 import Ficha from './Components/Ficha/Ficha-cadastro';
 import Configuracoes from './pages/Configuracoes-ADM/Config-ADM';
-
+import NotFound from './pages/NotFound/NotFound';
 function App() {
   //Rotas 
   return (
@@ -20,9 +20,9 @@ function App() {
           <Route path='/Login' element={<Login/>}/>
           <Route path='/Cadastro' element={<Cadastro/>}/>
           <Route path='/Secretario' element={<Secretario/>}/>
-          <Route path='/Ficha' element={<Ficha/>}/>
+          <Route path='/Cadastro-de-membros' element={<Ficha/>}/>
           <Route path='/Configuracoes' element={<Configuracoes/>}/>
-         
+          <Route path='*' element={<NotFound/>}/>
         </Routes>
 
        <Footer/>

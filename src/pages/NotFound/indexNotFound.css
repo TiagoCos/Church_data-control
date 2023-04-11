@@ -5,24 +5,23 @@
    
 }
 .erro-404 > h1{
-    color: #666;
+    color: #676;
     font-size: 50px;
     font-family: monospace;
     font: bold;
 
     display: flex;
-    justify-content: flex-start ;
+    justify-content: center ;
     align-items: center;
-    border: #666 1px solid;
-    
-    padding: 1em;
+    padding-top: 4em;
+    padding-bottom: 1em;
 }
 .erro-404 > h2{
-    font-size: medium;
+    font-size: 1.5em;
     color: rgb(201, 9, 89);
     font: bold;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: #666 1px solid;
+    
 }

@@ -9,6 +9,7 @@ import  Secretario from './pages/Secretário/Secretario';
 import Ficha from './Components/Ficha/Ficha-cadastro';
 import Configuracoes from './pages/Configuracoes-ADM/Config-ADM';
 import NotFound from './pages/NotFound/NotFound';
+
 function App() {
   //Rotas 
   return (

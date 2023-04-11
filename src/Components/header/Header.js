@@ -1,5 +1,4 @@
 import  '../header/indexHeader.css'
-//import { Anchor } from 'antd';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/icons/casa.png'
 

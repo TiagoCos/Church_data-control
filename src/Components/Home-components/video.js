@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
 import { useState } from 'react';
+import './video.css'
 
 function Video_container({video}){
 

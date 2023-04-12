@@ -41,6 +41,8 @@ const Members = () => {
           <tr>
             <th>Nome</th>
             <th>Ações</th>
+            <th>Atualizar</th>
+            <th>Ver</th>
           </tr>
         </thead>
         <tbody>

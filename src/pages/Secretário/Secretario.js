@@ -17,7 +17,7 @@ function Secretario(){
       </button>
       {isOpen && (
         <ul className="menu-list">
-          <li><Link to='/Ficha'><div className="card-cadastro">cadastro de membros</div></Link></li>
+          <li><Link to='/Cadastro-de-membros'><div className="card-cadastro">cadastro de membros</div></Link></li>
           <li>Opção 2</li>
           <li>Opção 3</li>
         </ul>

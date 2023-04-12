@@ -22,7 +22,7 @@ const MemberForm = ({ addMember, closeModal }) => {
         Email:
         <input type="email" value={email} onChange={(event) => setEmail(event.target.value)} />
       </label>
-      <button type="submit">Salvar</button>
+      <button className='btn-Member' type="submit">Salvar</button>
     </form>
   );
 };

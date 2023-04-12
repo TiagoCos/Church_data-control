@@ -5,6 +5,11 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  
+}
+
+html, body {
+  scroll-behavior: smooth;
 }
 
 .logo{
@@ -20,6 +25,7 @@
   height: 60px ;
   padding: 0%;
   font-size: 1em;
+ 
 }
 
 #link{
@@ -30,6 +36,7 @@
   margin-left: 2em;
   height: 44px;
   font-weight: bold;
+  
 }
 
 .Login-btn{

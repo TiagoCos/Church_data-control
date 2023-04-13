@@ -6,11 +6,11 @@
     height: 600px;
   }
   
-  h1 {
+  .main-ficha > h1 {
     text-align: center;
   }
   
-  button {
+  .main-ficha > button {
     margin-bottom: 20px;
     padding: 10px;
     background-color: #3498db;
@@ -20,25 +20,25 @@
     cursor: pointer;
   }
   
-  table {
+  .main-ficha> table {
     border-collapse: collapse;
     width: 100%;
     max-width: 600px;
   }
   
-  th,
+  .main-ficha > th,
   td {
     text-align: left;
     padding: 10px;
     border-bottom: 1px solid #ddd;
   }
   
-  th {
+  .main-ficha > th {
     background-color: #3498db;
     color: #fff;
   }
   
-  tbody tr:hover {
+  .main-ficha > tbody tr:hover {
     background-color: #f5f5f5;
   }
   

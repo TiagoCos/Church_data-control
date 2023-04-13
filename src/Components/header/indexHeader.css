@@ -60,7 +60,8 @@ html, body {
 
 #link:hover{
   cursor:pointer;
-  color: brown
+  color: brown;
+  animation: Mover 0.4s ;
 }
 
 @media only screen and (max-width: 768px) {
@@ -80,4 +81,9 @@ html, body {
 #link:last-of-type, .Login-btn:last-of-type {
   margin-bottom: 10px;
 }
+}
+@keyframes Mover{
+  50%{
+    transform: translateY(-10%);
+  }
 }

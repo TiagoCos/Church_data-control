@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import './estatuto.css'
 
 function Estatuto(){
 const [qrCode, setQrcode] = useState('https://cdn.me-qr.com/qr/46001750.png?v=1674858547')
@@ -15,7 +15,7 @@ const [qrCode, setQrcode] = useState('https://cdn.me-qr.com/qr/46001750.png?v=16
                 <a><img src={qrCode} alt="..."
             style={{height: '80px', width: '80px', display: 'flex', boxShadow:'4px 4px 4px #252525'}}>
             </img></a>
-          
+       
             </span>
             
         </section>

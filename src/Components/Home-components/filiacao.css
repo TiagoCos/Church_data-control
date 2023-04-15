@@ -1,56 +1,41 @@
 .quarto{
     height: 400px;
     margin: 0px;
-    padding: 6em;
     padding: 3rem;
-    background-color: #000000d9;
-    color: #EFEFEF;
-
-    /* propriedades de slide */
-    overflow-x: scroll; /* habilita o scroll horizontal */
-    white-space: nowrap; /* evita quebrar a linha entre os elementos */
-    -webkit-overflow-scrolling: touch; /* melhora a performance do scroll em dispositivos móveis */
+    border-radius: 0.5em;
+    background: #ffffff1e;
 }
-
-
-/*-------Filiação------------------------------------------------------------------*/
-.conteudo {
+.card2{
     display: flex;
-    width: 350px;
-    scroll-snap-type: x mandatory;
-    scroll-padding: 25px;
-    column-gap: 20px;
+    flex-direction: column;
+    width: 100%px;
+    height: 100%;
+    border-radius: 10px; 
+    backdrop-filter: blur(25px);
+ 
 }
+.swiper2{ width: 100%;}
 
-.cardF {
-    flex: 0 0 100%;
-    padding: 30px;
-    scroll-snap-align: start;
-    border-radius: 30px;
+.swiper-slide2{
+    width: 100%;
+    height: 310px;
+    padding: 20px 40px 40px ;
+    text-align: center;
+    background: rgba(225, 225, 225, 0.15);
+    backdrop-filter: blur(25px);
+    border-radius: 20px;
 
-    border: red 1px solid;
 }
-
-.cardF h1 {
-    margin-bottom: 2rem;
+/*-------Filiação------------------------------------------------------------------*/
+.filiacao_btn{
+    background: #fff;
+    padding: 10px 20px;
+    display: flex;
+    cursor: pointer;
+    font-size: bold;
 }
-
-.cardF:nth-child(1) {
-    background: linear-gradient(-229deg, #00DBDE, #FC00FF);
-}
-
-.cardF:nth-child(2) {
-    background: linear-gradient(-229deg, #0093E9, #80D0C7);
-}
-
-.cardF:nth-child(3) {
-    background: linear-gradient(-229deg, #50d990, #d4d054);
-}
-
-.cardF:nth-child(4) {
-    background: linear-gradient(-229deg, #D9AFD9, #97D9E1);
-}
-
-.cardF:nth-child(5) {
-    background: linear-gradient(-229deg, #FBAB7E, #F7CE68);
+.fotos-back{
+    background-size:cover;
+    background-position: center;
+    
 }

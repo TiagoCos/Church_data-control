@@ -22,36 +22,41 @@ const handleNext = () => {
     switch (step) {
       case 0:
         return (
+          <>      <h1>01</h1>
+          <button 
+              onClick={handleNext}
+              className="filiacao_btn"
+          >Próximo</button>
           <div className="swiper-slide2">
-            <h1>01</h1>
-                <button 
-                    onClick={handleNext}
-                    className="filiacao_btn"
-                >Próximo</button>
-                <img className='fotos-back'  src={img1}></img>
+            <img className='fotos-back' alt='carregando' src={img1}></img>
           </div>
+          </>
         );
       case 1:
         return (
+          <>  <h1>02</h1>
+          <button
+                  onClick={handleNext}
+                  className="filiacao_btn"
+              >Próximo</button>
           <div className="swiper-slide2">
-            <h1>02</h1>
-            <button
-                    onClick={handleNext}
-                    className="filiacao_btn"
-                >Próximo</button>
-                <img className='fotos-back' type='image' src={img2}></img>
+          
+                <img className='fotos-back' alt='carregando' src={img2}></img>
           </div>
+          </>
         );
       case 2:
          return (
+          <> <h1>03</h1>
+          <button
+              onClick={handleRestart}
+              className="filiacao_btn"
+             >Voltar</button>
              <div className="swiper-slide2">
-                <h1>03</h1>
-                <button
-                    onClick={handleRestart}
-                    className="filiacao_btn"
-                >Voltar</button>
-                <img className='fotos-back' type='image' src={img3}></img>
+            
+                <img className='fotos-back' alt='carregando' src={img3}></img>
             </div>
+            </>
             );
       default:
         return null;

@@ -36,25 +36,39 @@ const Members = () => {
       <main className="main-ficha">
       <h1 >Lista de Membros</h1>
       <button onClick={openModal}>Adicionar Membro</button>
-      <table>
+      <table class="table-members">
         <thead>
           <tr>
             <th>Nome</th>
-            <th>Ações</th>
-            <th>Atualizar</th>
-            <th>Ver</th>
+            <th>Estado Civil</th>
+            <th>Gênero</th>
+            <th>Endereço</th>
+            <th>Numero</th>
+            <th>Email</th>
+            <th>Ativo?</th>
+            <th>Excluir</th>
           </tr>
         </thead>
         <tbody>
-          {members.map((member) => (
-            <tr key={member.id}>
-              <td>{member.name}</td>
-              <td>
-                <button onClick={() => removeMember(member.id)}>Excluir</button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
+  {members.map((member) => (
+    <tr key={member.id}>
+      <td>{member.name}</td>
+      <td>{member.cpf}</td>
+      <td>{member.birthDate}</td>
+      <td>{member.maritalStatus}</td>
+      <td>{member.gender}</td>
+      <td>{member.address}</td>
+      <td>{member.phone}</td>
+      <td>{member.email}</td>
+      <td>{member.observation}</td>
+      <td>{member.isActive ? 'Sim' : 'Não'}</td>
+      <td>
+        <button onClick={() => removeMember(member.id)}>Excluir</button>
+      </td>
+    </tr>
+  ))}
+</tbody>
+
       </table>
       <Modal isOpen={modalIsOpen} onRequestClose={closeModal}>
         <MemberForm addMember={addMember} closeModal={closeModal} />

@@ -3,14 +3,14 @@
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    height: 600px;
+    min-height: 600px;
   }
   
-  .main-ficha > h1 {
+   h1 {
     text-align: center;
   }
   
-  .main-ficha > button {
+   button {
     margin-bottom: 20px;
     padding: 10px;
     background-color: #3498db;
@@ -26,19 +26,31 @@
     max-width: 600px;
   }
   
-  .main-ficha > th,
+  th,
   td {
     text-align: left;
     padding: 10px;
     border-bottom: 1px solid #ddd;
+    width: calc(100% / 8); /* adiciona essa linha */
   }
   
+  /*novo*/
   .main-ficha > th {
     background-color: #3498db;
     color: #fff;
+    text-align: center;
+    
   }
-  
-  .main-ficha > tbody tr:hover {
+  thead{
+    display:flex;
+    min-width: 53em;
+
+  }
+  .table-members th {
+    text-align: center;
+  }
+/*------------*/  
+   tbody tr:hover {
     background-color: #f5f5f5;
   }
   

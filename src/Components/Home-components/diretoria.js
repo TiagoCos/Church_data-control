@@ -1,24 +1,26 @@
-import { Avatar, Card } from 'antd';
-//import MyCard from './outros/card';
+import React, { useState } from 'react';
 
-function Diretoria(){
-    const { Meta } = Card;
-    return(
-      <section id='b' className='segundo'>  
-      <div className='container-cards'>
-        <h1 className='titulo-cards'>Diretoria e cargos</h1></div>
-       <Card className='Card-identificação'
-          cover={
-          <img alt="example" src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"/>}>
-          <b>Title</b>
-        <Meta avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}  description="This is the description" />
-       </Card>
+const Diretoria = () => {
+  const [cards, setCards] = useState([]);
 
-      
+  const handleAddCard = (title) => {
+    const newCard = { id: Date.now(), title };
+    setCards([...cards, newCard]);
+  };
 
-      </section>
-          
-    )
-}
+  return (
+    <section id='b' className='segundo'>
+    <div className='diretoria-container'>
+      <h2>Diretoria</h2>
+      {cards.map((card) => (
+        <div className='diretoria-card'
+        key={card.id}>
+          <h3>{card.title}</h3>
+        </div>
+      ))}
+    </div>
+    </section>
+  );
+};
 
-export default Diretoria
+export default Diretoria;

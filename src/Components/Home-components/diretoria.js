@@ -1,26 +1,27 @@
 import React, { useState } from 'react';
+import CardForm from '../Config-components/diretoria_config';
+import './Diretoria.css'; // importe o arquivo CSS aqui
 
-const Diretoria = () => {
+function Diretoria() {
   const [cards, setCards] = useState([]);
 
-  const handleAddCard = (title) => {
-    const newCard = { id: Date.now(), title };
+  const handleCardSubmit = (cardData) => {
+    const newCard = { ...cardData };
     setCards([...cards, newCard]);
   };
 
   return (
-    <section id='b' className='segundo'>
-    <div className='diretoria-container'>
-      <h2>Diretoria</h2>
+    <div className="card-container"> 
+      <CardForm onSubmit={handleCardSubmit} />
       {cards.map((card) => (
-        <div className='diretoria-card'
-        key={card.id}>
-          <h3>{card.title}</h3>
+        <div className="card" key={card.title}> 
+          <h2>{card.title}</h2>
+          <p>{card.description}</p>
+          <img src={card.image} alt={card.title} />
         </div>
       ))}
     </div>
-    </section>
   );
-};
+}
 
 export default Diretoria;

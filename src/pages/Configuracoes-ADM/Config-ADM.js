@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './index.Configuracoes.css'
-import Diretoria_Cfg from '../../Components/Config-components/diretoria_config';
+import CardForm from '../../Components/Config-components/diretoria_config';
 
 
 function Configuracoes() {
+
   const [message, setMessage] = useState('');
   const [editedMessage, setEditedMessage] = useState('');
 
@@ -63,7 +64,10 @@ function Configuracoes() {
     </div>
     <p></p>
     <div id='all-containers' className='Container-Vídeo'>
-      <Diretoria_Cfg/>
+      <p>teste</p>
+      <div className="card-container"> 
+     <CardForm/>
+    </div>
     </div>
     </main>
   );

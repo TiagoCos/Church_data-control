@@ -1,30 +1,62 @@
 import React, { useState } from 'react';
 
-const Configuracoes = ({ onAddCard }) => {
-  const [cardTitle, setCardTitle] = useState('');
+function CardForm({ onSubmit }) {
+    //novo diretoria
+    const [cards, setCards] = useState([]);
 
-  const handleInputChange = (e) => {
-    setCardTitle(e.target.value);
-  };
+    const handleCardSubmit = (cardData) => {
+      const newCard = { ...cardData };
+      setCards([...cards, newCard]);
+    };
+  //______________________________
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+  const [image, setImage] = useState('');
 
-  const handleFormSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    if (cardTitle) {
-      onAddCard(cardTitle);
-      setCardTitle('');
-    }
+    const cardData = { title, description, image };
+    onSubmit(cardData);
+    setTitle('');
+    setDescription('');
+    setImage('');
   };
 
   return (
-    <div>
-      <h2>Configurações</h2>
-      <form onSubmit={handleFormSubmit}>
-        <label htmlFor="card-title">Título do Card:</label>
-        <input type="text" id="card-title" value={cardTitle} onChange={handleInputChange} />
-        <button type="submit">Adicionar Card</button>
-      </form>
-    </div>
-  );
-};
+    <form onSubmit={handleSubmit}>
+      <label htmlFor="title">Title:</label>
+      <input
+        type="text"
+        id="title"
+        value={title}
+        onChange={(e) => setTitle(e.target.value)}
+      />
+      <label htmlFor="description">Description:</label>
+      <textarea
+        id="description"
+        value={description}
+        onChange={(e) => setDescription(e.target.value)}
+      />
+      <label htmlFor="image">Image URL:</label>
+      <input
+        type="text"
+        id="image"
+        value={image}
+        onChange={(e) => setImage(e.target.value)}
+      />
+      <button type="submit">Submit</button>
 
-export default Configuracoes;
+
+    
+      {cards.map((card) => (
+        <div className="card" key={card.title}> 
+          <h2>{card.title}</h2>
+          <p>{card.description}</p>
+          <img src={card.image} alt={card.title} />
+        </div>
+      ))}
+    </form>
+  );
+}
+
+export default CardForm;

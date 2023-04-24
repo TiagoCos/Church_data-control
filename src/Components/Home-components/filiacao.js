@@ -1,6 +1,6 @@
 import './filiacao.css'
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
 
@@ -8,9 +8,25 @@ function Filiação({img1 = 'https://picsum.photos/200/300',
  img2='https://picsum.photos/400/600',
   img3='https://picsum.photos/500/500'}){
 
+  useEffect(() =>{
+    fetch('http://localhost:5000/todos', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+    .then((resp) => resp.json())
+    .then((data) =>{
+      console.log(data)
+    })
+    .catch((err) => console.log(err))
+  },[])
+
+
+
+
 const handleRestart = () => {
     setStep(0);
-  
     };
 const [step, setStep] = useState(0);
 

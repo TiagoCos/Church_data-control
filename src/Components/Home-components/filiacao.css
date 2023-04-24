@@ -1,5 +1,5 @@
 .quarto{
-    height: 450px;
+    height: 520px;
     margin: 0px;
     
     border-radius: 0.5em;
@@ -36,10 +36,11 @@
     font-size: bold;
     color: black;
     align-self: center;
-    
+    border: solid 2px black;
+    margin-left: 5px;
 }
 .fotos-back{
-  width: 100%;
-  height: 100%;
+  width: 55%;
+  height: 110%;
   object-fit:fill;
 }

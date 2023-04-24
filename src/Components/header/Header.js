@@ -10,7 +10,7 @@ function Header(){
         <div className='list'>
 
           <Link to= '/' ><img className='logo' src={logo} alt=''/> </Link>
-            <a id='link' href='#b' >Conheça a Diretoria</a> 
+            <a id='link' href='#b' >Diretoria</a> 
             <a id='link' href='#d' >Igrejas Filiadas</a>
             <a id='link' href='#e' >Estatuto</a>
             <a id='link' href='#c' >Palavra do presidente  </a> 

@@ -1,32 +1,47 @@
-  .card-container {
+.cards-diretoria {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
   }
-
-  .card {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
-    width: 300px;
-    margin-bottom: 20px;
+  
+  .Card_diretoria {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    max-width: 300px;
+    overflow: hidden;
+    width: 250px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .Card_diretoria:hover {
+    transform: translateY(-5px);
+  }
+  
+  .Card_diretoria-img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  .Card_diretoria-info {
     padding: 20px;
+    text-align: center;
   }
-
-  .card h2 {
+  
+  .Card_diretoria-title {
+    color: #333333;
     font-size: 24px;
+    font-weight: 600;
     margin-bottom: 10px;
   }
-
-  .card p {
+  
+  .Card_diretoria-description {
+    color: #666666;
     font-size: 16px;
-    margin-bottom: 20px;
+    line-height: 1.5;
   }
-
-  @media (max-width: 768px) {
-    .card {
-      width: 100%;
-      margin-right: 0;
-    }
-  }
+  

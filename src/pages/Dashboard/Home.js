@@ -8,12 +8,12 @@ import Estatuto from '../../Components/Home-components/estatuto';
 
 
 
-function Home(){
+function Home({nome,descricao,img}){
   
 return(
   <main className='principal'>
       <Apresentacao/>
-      <Diretoria />
+      <Diretoria nome={nome} descricao={descricao} img={img} />
       <Video_container/>
       <Filiacao />
       <Estatuto />

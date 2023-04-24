@@ -4,7 +4,7 @@ function Apresentacao(){
    
     return(
         
-    <section id='a' className='primeiro'>
+    <section id='a' className='primeiro' defer>
       <Banner />
         <div className='Sub-div-img'>
          <span className='info-img'>

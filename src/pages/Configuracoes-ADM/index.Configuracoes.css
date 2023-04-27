@@ -1,6 +1,5 @@
 .Config-div-main{
    min-height: 2004px;
-   background-color:  #e0dede;
    padding-top: 5em;
    
 }
@@ -32,7 +31,7 @@ button[type ="Remove"]{
   height: 44px;
   border: 2px solid;
   width: 35%;
-  border-radius: 400px;
+  border-radius: 5px;
   color: #721c24;
   background-color: #f8d7da;
   border-color: #f5c6cb;

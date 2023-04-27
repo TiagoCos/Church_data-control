@@ -1,10 +1,11 @@
 import './Diretoria.css';
 
-function Diretoria({nome= 'tiago', descrição='trabalhando', img='carregando'}) {
+function Diretoria({nome, descrição, img}) {
   
   return (
     <div className="segundo"> 
       <div className='cards-diretoria'>
+        
         <div className='Card_diretoria'>
           <img className='Card_diretoria-img' src={img} alt='' />
           <div className='Card_diretoria-info'>

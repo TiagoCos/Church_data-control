@@ -11,7 +11,7 @@ function CardForm() {
       <input type="text" value={descricao} onChange={(e) => setDescricao(e.target.value)} />
       <input type="text" value={img} onChange={(e) => setImg(e.target.value)} />
 
-      <Diretoria nome={nome} descricao={descricao} img={img} />
+      
     </div>
   );
 }

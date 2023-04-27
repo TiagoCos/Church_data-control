@@ -1,10 +1,11 @@
 import Banner from './outros/banner';
 import './apresentacao.css'
+
 function Apresentacao(){
    
     return(
         
-    <section id='a' className='primeiro' defer>
+    <section id='a' className='primeiro' >
       <Banner />
         <div className='Sub-div-img'>
          <span className='info-img'>

@@ -3,6 +3,7 @@ import axios from 'axios';
 import './index.Configuracoes.css'
 import CardForm from '../../Components/Config-components/diretoria_config';
 import BannerConfig from '../../Components/Config-components/Banner-config';
+import Video_config from '../../Components/Config-components/video_config';
 
 function Configuracoes() {
 
@@ -11,6 +12,7 @@ function Configuracoes() {
     <main className='Config-div-main'>
    <BannerConfig/>
     <p></p>
+ { /*
     <div id='all-containers' className='Container-Diretoria&Cargos'>
      <form>
         <h2>Adicione uma nova pessoa aos cargos da diretoria</h2>
@@ -30,13 +32,11 @@ function Configuracoes() {
           <button type="submit">Enviar</button>
      </form>
     </div>
-    <p></p>
-    <div id='all-containers' className='Container-Vídeo'>
-      <p>teste</p>
-      <div className="card-container"> 
-     <CardForm/>
-    </div>
-    </div>
+    */}
+      <p></p>
+       <div id='all-containers' className='Container-Vídeo'>
+      <Video_config />
+     </div>
     </main>
   );
 }

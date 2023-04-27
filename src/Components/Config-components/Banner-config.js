@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Banner from '../Home-components/outros/banner';
 
 function BannerConfig() {
   const [mensagem, setMensagem] = useState('');
   
-  const elementos = [
-    <div key="1">{mensagem} aqui </div>,
-   
-  ];
   
   useEffect(() => {
     // faz uma chamada para a API para buscar a mensagem atual
@@ -44,15 +41,8 @@ function BannerConfig() {
 
   return (
     <div>
-      <h1>Minha Aplicação</h1>
-      <h2>{mensagem}</h2>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Novo elemento da lista "Mensagem":
-          <input name="mensagem" required/>
-        </label>
-        <button type="submit">Adicionar</button>
-      </form>
+      <h1>Configurações do Banner</h1>
+      <Banner mensagem={mensagem} />
 
       <form onSubmit={(event) => {
           event.preventDefault();

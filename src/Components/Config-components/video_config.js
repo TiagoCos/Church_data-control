@@ -17,7 +17,8 @@ function Video_config(){
     
     return(
         <main>
-         <Video_container Video ={Video}/>
+          
+         <Video_container />
          <form onSubmit={(event) => {
           event.preventDefault();
           updateVideo(1, event.target.elements.novoVideo.value);

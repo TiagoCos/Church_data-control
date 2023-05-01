@@ -8,7 +8,7 @@
     color: #fff;
     font-family: monospace;
     font-size: 2.0em;
-   
+    flex-wrap: wrap;
    
 }
 
@@ -23,7 +23,7 @@
     justify-content: center;
 
     backdrop-filter: blur(12px);
-    background-color: rgba(255, 255, 255, 0.363);
+    background: linear-gradient(-229deg, #ccc4c4 ,#ccc4c4);
     border: #ffffff solid 1px;
     border-radius: 1em;
     margin-left: auto;

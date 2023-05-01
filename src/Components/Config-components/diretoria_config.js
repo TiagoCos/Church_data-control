@@ -1,19 +1,36 @@
 import { useState } from 'react';
 import Diretoria from '../Home-components/diretoria';
-function CardForm() {
+
+function Diretoria_Config() {
   const [nome, setNome] = useState('');
   const [descricao, setDescricao] = useState('');
   const [img, setImg] = useState('');
 
   return (
     <div>
-      <input type="text" value={nome} onChange={(e) => setNome(e.target.value)} />
-      <input type="text" value={descricao} onChange={(e) => setDescricao(e.target.value)} />
-      <input type="text" value={img} onChange={(e) => setImg(e.target.value)} />
-
+        <div id='all-containers' className='Container-Diretoria&Cargos'>
+     <form>
+        <h2>Adicione uma nova pessoa aos cargos da diretoria</h2>
+        <label>Nome:</label>
+          <input 
+          type='text'
+          />
+        <label>Descrição do cargo:</label>
+        <input 
+          type='text'
+          />
+        <label>Envie sua imagem:</label>
+        <input 
+          alt='carregando...'
+          type='image'
+          />
+          <button type="Submit">Enviar</button>
+     </form>
+    </div>
+    
       
     </div>
   );
 }
 
-export default CardForm;
+export default Diretoria_Config;

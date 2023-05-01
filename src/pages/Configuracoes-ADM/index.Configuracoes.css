@@ -1,20 +1,33 @@
 .Config-div-main{
-   min-height: 2004px;
-   padding-top: 5em;
-   
+   min-height: 1500px;
+   padding-top: 1.5em;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction:unset;
+   gap:2em;
+   justify-content: center;
+
 }
 #all-containers{
-    backdrop-filter: blur(12px);
+    
     background-color: #ffffff;
-    border: #232323 solid 1px;
+    border: #333333d5 solid 1px;
     border-radius: 1em;
-    margin: 5em;
+    margin: 1em;
     padding: 1.5em;
     box-shadow: 6px 6px 6px  rgba(0, 0, 0, 0.5);
+
+    height: 500px;
+    width: 600px;
+
+    transition: all 0.3s ease-in-out;
+}
+#all-containers:hover{
+    transform: translateY(-5px);
 }
 
 .Config-div-main > p{
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #333;
 }
 button[type ="Remove"]{
   padding: 10px;

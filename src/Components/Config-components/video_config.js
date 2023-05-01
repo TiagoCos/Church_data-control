@@ -17,8 +17,8 @@ function Video_config(){
     
     return(
         <main>
-          
-         <Video_container />
+          <div id='all-containers' className='Container-Vídeo'>
+            <h1>Adicione seu novo Vídeo aqui</h1>
          <form onSubmit={(event) => {
           event.preventDefault();
           updateVideo(1, event.target.elements.novoVideo.value);
@@ -26,7 +26,7 @@ function Video_config(){
         <input placeholder='insira um novo link' name='novoVideo' required></input>
         <button type='submit'>Atualizar </button>
       </form>
-
+      </div>
         </main>
     )
 }

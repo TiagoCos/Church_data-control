@@ -40,7 +40,7 @@ function BannerConfig() {
   }
 
   return (
-    <div>
+    <div id='all-containers'>
       <h1>Configurações do Banner</h1>
       <Banner mensagem={mensagem} />
 

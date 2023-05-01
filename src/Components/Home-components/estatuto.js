@@ -11,7 +11,7 @@ const [qrCode, setQrcode] = useState('https://cdn.me-qr.com/qr/46001750.png?v=16
                 <button className='btn-download'>
                 <a className='img-download' download href='#'>Baixar</a>
                 </button>
-                <p style={{marginLeft:'50px', marginRight:'50px', fontSize:'bold' }}><strong> Ou  </strong> </p>
+                <p style={{marginLeft:'50px', marginRight:'50px', fontSize:'bold' }}> </p>
                 <a><img src={qrCode} alt="..."
             style={{height: '80px', width: '80px', display: 'flex', boxShadow:'4px 4px 4px #252525'}}>
             </img></a>

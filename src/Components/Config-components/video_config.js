@@ -1,6 +1,6 @@
 import { useState, useEffect} from "react"
 import axios from "axios";
-import Video_container from "../Home-components/video";
+
 
 function Video_config(){
     const [Video, setVideo] = useState('');
@@ -18,7 +18,7 @@ function Video_config(){
     return(
         <main>
           <div id='all-containers' className='Container-Vídeo'>
-            <h1>Adicione seu novo Vídeo aqui</h1>
+            <h2>Adicione seu novo Vídeo aqui</h2>
          <form onSubmit={(event) => {
           event.preventDefault();
           updateVideo(1, event.target.elements.novoVideo.value);

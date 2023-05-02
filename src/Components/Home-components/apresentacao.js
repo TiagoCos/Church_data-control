@@ -13,7 +13,7 @@ function Apresentacao(){
               <p className='Sub-Title'>Confira as informações mais relevantes pra você!</p>
                {/* botão*/} 
                 <button className='btn-quem-somos' >
-                 <a className='btn-a' href='#d'>Quem somos</a>
+                 <a className='btn-a' href='#c'>Quem somos</a>
                 </button>
                </span>
              </div>

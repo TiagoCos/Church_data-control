@@ -17,6 +17,7 @@ html, body {
   width: 44px;
   margin-top: 5px;
   margin-right: 2.5em;
+  
 }
 
 .list{
@@ -55,12 +56,12 @@ html, body {
 
 .Login-btn:hover{
   cursor:pointer;
-  color: brown;
+  color: #b392ff;
 }
 
 #link:hover{
   cursor:pointer;
-  color: brown;
+  color: #b392ff;
   animation: Mover 0.4s ;
 }
 
@@ -80,6 +81,10 @@ html, body {
 
 #link:last-of-type, .Login-btn:last-of-type {
   margin-bottom: 10px;
+}
+.logo{
+  margin-top:0px;
+  margin-right: 0%;
 }
 }
 @keyframes Mover{

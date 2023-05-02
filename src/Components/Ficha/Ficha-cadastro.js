@@ -35,7 +35,7 @@ const Members = () => {
     <>
       <main className="main-ficha">
       <h1 >Lista de Membros</h1>
-      <button onClick={openModal}>Adicionar Membro</button>
+      <button className="Btn-ficha" onClick={openModal}>Adicionar Membro</button>
       <table class="table-members">
         <thead>
           <tr>
@@ -63,7 +63,7 @@ const Members = () => {
       <td>{member.observation}</td>
       <td>{member.isActive ? 'Sim' : 'Não'}</td>
       <td>
-        <button onClick={() => removeMember(member.id)}>Excluir</button>
+        <button  className="Btn-ficha" onClick={() => removeMember(member.id)}>Excluir</button>
       </td>
     </tr>
   ))}

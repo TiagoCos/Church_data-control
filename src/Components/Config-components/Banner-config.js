@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Banner from '../Home-components/outros/banner';
 
 function BannerConfig() {
   const [mensagem, setMensagem] = useState('');
   
-  
+  /*
   useEffect(() => {
     // faz uma chamada para a API para buscar a mensagem atual
     axios.get('http://localhost:5000/Mensagem')
@@ -28,9 +27,9 @@ function BannerConfig() {
         console.error(error);
       });
   }
-
+*/
   function updateMensagem(id, novaMensagem) {
-    axios.put(`http://localhost:5000/Mensagem/${id}`, { mensagem: novaMensagem })
+    axios.put(`http://localhost:5000/Name/${id}`, { banner: novaMensagem })
       .then(response => {
         setMensagem(response.data.mensagem); // Renderiza a propriedade 'mensagem' do objeto
       })
@@ -41,8 +40,7 @@ function BannerConfig() {
 
   return (
     <div id='all-containers'>
-      <h1>Configurações do Banner</h1>
-      <Banner mensagem={mensagem} />
+      <h2>Configurações do Banner</h2>
 
       <form onSubmit={(event) => {
           event.preventDefault();

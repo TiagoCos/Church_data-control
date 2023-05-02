@@ -6,8 +6,7 @@
     height: 100%;
     border-bottom:1px solid rgb(49, 49, 49);
    
-    
-    
+
     display: flex;
     justify-content: center;
     background-attachment:fixed;
@@ -49,7 +48,7 @@
     color: rgb(8, 7, 7);
     
     height: 4vh;
-    font-family:'Times New Roman';
+    font-family: 'Courier New';
     font-size: 15px;
     font-weight: bold;
 }

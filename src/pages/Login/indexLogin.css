@@ -62,37 +62,7 @@
   border-radius: 4px;
   font-size: 16px;
 }
-/*-----global------*/
-textarea:focus, input:focus, select:focus, option:focus, details:focus{
-  outline: none;
-  text-decoration: none;
-  border: 1px solid #3f3f3f;
-}
 
-label{
-  font-size: .9rem;
-  text-decoration: none; /*tira o sublinhado*/
-  margin: 0.4em;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-a{ 
-  text-decoration: none; /*tira o sublinhado*/
-  color:rgb(51, 12, 226) ;
-}
-label, input, select{
-  display: block;
-  width: 100%;
-  text-align: left;
-  padding: 0.3em;
-
-  
-}
-input, select{
-  background: rgba(225, 225, 225, 0.5);
-
-}
-/*-----------*/
 .container-login > label, input, select{
   display: block;
   width: 100%;
@@ -122,37 +92,5 @@ input, select{
   margin: 0 40px;
 }
 
-/*------Entrar--------*/
-button[type ="submit"]{
- 
-  display: block;
-  height: 48px;
-  width: 270px;
-  margin: 20px 50px;
-  border-radius: 4px;
-  font-size: 16px;
-  font-family: Poppins;
-  text-align: center;
 
-  background: #9563ff;
-  color: #f9f9f9;
-  border: 0;
-  transition: 0.175s;
-  cursor: pointer;
-
-  border-radius: 4px;
-  font-size: 16px;
-}
-
-.input{
-  animation: shake 0.5s ease-in-out;
-  border: 2px solid red;
-}
-
-@keyframes shake {
-  0% { transform: translate(0rem); }
-  25% { transform: translate(-2rem); }
-  50% { transform: translate(0.5rem); }
-  100% { transform: translate(0rem); }
-}
 

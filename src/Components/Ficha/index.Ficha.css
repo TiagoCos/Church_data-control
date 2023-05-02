@@ -6,11 +6,8 @@
     min-height: 600px;
   }
   
-   h1 {
-    text-align: center;
-  }
-  
-   button {
+
+  .Btn-ficha {
     margin-bottom: 20px;
     padding: 10px;
     background-color: #3498db;

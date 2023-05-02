@@ -6,7 +6,59 @@
     
 }
 html , body, #root{
-    background: linear-gradient(-229deg, #ccc4c4 ,#ccc4c4, #41322b );
+    background: linear-gradient(-229deg, #ccc4c4 ,#ccc4c4, #41322bd5 );
     
 }
+/*-----global------*/
+textarea:focus, input:focus, select:focus, option:focus, details:focus{
+    outline: none;
+    text-decoration: none;
+    border: 1px solid #3f3f3f8a;
+  }
+  
+  label{
+    font-size: .9rem;
+    text-decoration: none; /*tira o sublinhado*/
+    margin: 0.4em;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  a{ 
+    text-decoration: none; /*tira o sublinhado*/
+    color:rgb(51, 12, 226) ;
+  }
+  label, input, select{
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0.3em;
+  
+    
+  }
+  input, select{
+    background: rgba(225, 225, 225, 0.5);
+  
+  }
+  /*-----------*/
 /*background: linear-gradient(-229deg, #D9AFD9, #97D9E1);*/
+button[type ="submit"]{
+ 
+    display: block;
+    height: 48px;
+    width: 270px;
+    margin: 20px 50px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: Poppins;
+    text-align: center;
+  
+    background: #9563ff;
+    color: #f9f9f9;
+    border: 0;
+    transition: 0.175s;
+    cursor: pointer;
+  
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  

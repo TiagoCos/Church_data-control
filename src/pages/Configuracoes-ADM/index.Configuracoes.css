@@ -16,18 +16,23 @@
     margin: 1em;
     padding: 1.5em;
     box-shadow: 6px 6px 6px  rgba(0, 0, 0, 0.5);
-
+    font-size: 1em;
     height: 500px;
     width: 600px;
-
+    
     transition: all 0.3s ease-in-out;
 }
 #all-containers:hover{
     transform: translateY(-5px);
+    background: linear-gradient(-220deg, #5b38acbd ,#b392ff, #ccc4c4, #b392ff,#5b38acbd);
+    background-color: #fff;
+    
 }
-
-.Config-div-main > p{
-    border-bottom: 1px solid #333;
+#all-containers input{
+    border-radius: 5px;
+}
+#all-containers input:hover{
+    background-color: #fff;
 }
 button[type ="Remove"]{
   padding: 10px;
@@ -53,11 +58,10 @@ button[type ="Remove"]{
 }
 /*---------------------------------------------------*/
 
-.container-message-banner{
-   
-    display: block;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
+#all-containers h2{
+    text-align: center;
  
+    color: #2f2e41; 
+    margin-bottom: 32px;
+    font-size: 2em;
 }

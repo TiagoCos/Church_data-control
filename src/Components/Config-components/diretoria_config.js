@@ -8,23 +8,31 @@ function Diretoria_Config() {
 
   return (
     <div>
-        <div id='all-containers' className='Container-Diretoria&Cargos'>
-     <form>
+        <div  className='Container-Diretoria&Cargos'>
+     <form id='all-containers'>
         <h2>Adicione uma nova pessoa aos cargos da diretoria</h2>
-        <label>Nome:</label>
+    
           <input 
+          required
           type='text'
+          autoComplete='off'
+          placeholder='insira um titulo para seu novo card'
           />
-        <label>Descrição do cargo:</label>
+    
         <input 
-          type='text'
+            required
+             type='text'
+             autoComplete='off'
+             placeholder='insira um Sub-titulo para seu novo card'
           />
-        <label>Envie sua imagem:</label>
         <input 
-          alt='carregando...'
+            autoComplete='off'
+            required
+            placeholder='insira uma nova imagem para seu novo card'
+            
           type='image'
           />
-          <button type="Submit">Enviar</button>
+          <button type="Submit" id='Submit-btn' >Enviar</button>
      </form>
     </div>
     

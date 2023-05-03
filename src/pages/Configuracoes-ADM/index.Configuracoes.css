@@ -9,59 +9,57 @@
 
 }
 #all-containers{
+    background: linear-gradient(-229deg, #cfcece, #F8F8F8,#ececec, #F8F8F8, #cfcece);
     
-    background-color: #ffffff;
-    border: #333333d5 solid 1px;
-    border-radius: 1em;
-    margin: 1em;
-    padding: 1.5em;
-    box-shadow: 6px 6px 6px  rgba(0, 0, 0, 0.5);
+    border: #2b2b2bb6 solid 1px;
+    border-radius: 3.5em;
+   
+    margin: 0.8em;
+
+
+    padding-right: 0.8em;
+    padding-left: 0.8em;
+
     font-size: 1em;
     height: 500px;
     width: 600px;
-    
     transition: all 0.3s ease-in-out;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
+
 #all-containers:hover{
     transform: translateY(-5px);
     background: linear-gradient(-220deg, #5b38acbd ,#b392ff, #ccc4c4, #b392ff,#5b38acbd);
     background-color: #fff;
-    
+    box-shadow: 6px 6px 6px  rgba(0, 0, 0, 0.5);
 }
 #all-containers input{
     border-radius: 5px;
+    width: 350px;
+    margin-top: 1em; /* espaço entre o título e o input */
 }
 #all-containers input:hover{
     background-color: #fff;
 }
-button[type ="Remove"]{
-  padding: 10px;
-  margin-bottom: 20px;
-  font-size: 1rem;
 
-  text-align: center;
-  text-transform: uppercase; /*todas as letras são em maiuscula*/
-  font-weight: bold;
-
-  margin-top: 10px;
-  margin-right: 3em;
-  margin-left: 2em;
-  height: 44px;
-  border: 2px solid;
-  width: 35%;
-  border-radius: 5px;
-  color: #721c24;
-  background-color: #f8d7da;
-  border-color: #f5c6cb;
-
-  cursor: pointer;
-}
 /*---------------------------------------------------*/
 
 #all-containers h2{
     text-align: center;
  
     color: #2f2e41; 
-    margin-bottom: 32px;
+    margin-top: 0 ;
+    margin-bottom:15vh;
+    box-sizing: border-box;
     font-size: 2em;
+}
+#Submit-btn{
+    
+    margin-right: auto;
+    margin-left: auto;
 }

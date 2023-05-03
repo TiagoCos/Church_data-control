@@ -46,8 +46,13 @@ function BannerConfig() {
           event.preventDefault();
           updateMensagem(1, event.target.elements.novaMensagem.value);
         }}>
-        <input placeholder='digite novo valor' name='novaMensagem' required></input>
-        <button type='submit'>Atualizar mensagem</button>
+        <input
+        placeholder='digite novo valor' 
+        name='novaMensagem' 
+        required
+        autoComplete='off'
+        ></input>
+        <button type='submit' id='Submit-btn'>Atualizar mensagem</button>
       </form>
 
     </div>

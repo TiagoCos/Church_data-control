@@ -61,4 +61,25 @@ button[type ="submit"]{
     border-radius: 4px;
     font-size: 16px;
   }
+  button[type ="Remove"]{
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1rem;
   
+    text-align: center;
+    text-transform: uppercase; /*todas as letras são em maiuscula*/
+    font-weight: bold;
+  
+    margin-top: 10px;
+    margin-right: 3em;
+    margin-left: 2em;
+    height: 44px;
+    border: 2px solid;
+    width: 35%;
+    border-radius: 5px;
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+  
+    cursor: pointer;
+  }

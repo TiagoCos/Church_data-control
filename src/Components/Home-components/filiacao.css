@@ -1,34 +1,48 @@
-.quarto{
-    height: 520px;
+.quarto {
+    height: 620px;
     margin: 0px;
-    
     border-radius: 0.5em;
     background-color: none;
-}
-.card2{
+  }
+  
+  .card2 {
     display: flex;
     flex-direction: column;
-    width: 100%px;
+    width: 100%;
     height: 100%;
-    border-radius: 10px; 
+    border-radius: 10px;
     backdrop-filter: blur(25px);
- 
-}
-.swiper2{ width: 100%;}
-
-.swiper-slide2{
+  }
+  
+  .swiper2 {
+    width: 100%;
+  }
+  
+  .swiper-slide2 {
     width: 100%;
     height: 310px;
-    padding: 20px 40px 40px ;
+    padding: 20px 40px 40px;
     text-align: center;
-    background: linear-gradient(-229deg, #ccc4c4 ,#ccc4c4);
+    background: linear-gradient(-229deg, #ccc4c4, #ccc4c4);
     backdrop-filter: blur(25px);
-
-    
-}
-
-/*-------Filiação------------------------------------------------------------------*/
-.filiacao_btn{
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+  
+  /* Adicione um estilo específico para cada slide */
+  .swiper-slide2:nth-of-type(1) {
+    filter: grayscale(100%);
+  }
+  
+  .swiper-slide2:nth-of-type(2) {
+    filter: grayscale(50%);
+  }
+  
+  .swiper-slide2:nth-of-type(3) {
+    filter: grayscale(0%);
+  }
+  
+  /* Estilize o botão */
+  .filiacao_btn {
     display: flex;
     background: #fff;
     padding: 10px 20px;
@@ -38,9 +52,48 @@
     align-self: center;
     border: solid 2px black;
     margin-left: 5px;
-}
-.fotos-back{
-  width: 55%;
-  height: 110%;
-  object-fit:fill;
-}
+  }
+  
+  /* Estilos para as animações de transição */
+  .swiper-slide2.entering {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  
+  .swiper-slide2.entering-active {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  
+  .swiper-slide2.exiting {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  
+  .swiper-slide2.exiting-active {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  
+  /* Defina as cores do gradiente para cada slide */
+  .swiper-slide2:nth-of-type(1) {
+    background: linear-gradient(-229deg, #000000, #bbbbbb);
+  }
+  
+  .swiper-slide2:nth-of-type(2) {
+    background: linear-gradient(-229deg, #e91010, #612727);
+  }
+  
+  .swiper-slide2:nth-of-type(3) {
+    background: linear-gradient(-229deg, #52756b, #26ccb6);
+  }
+  
+  /* Adicione outros estilos conforme necessário */
+  .fotos-back {
+    width: 55%;
+    height: 110%;
+    object-fit: fill;
+  }
+ .main-slide{
+    height: 100%;
+ }

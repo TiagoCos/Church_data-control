@@ -1,10 +1,10 @@
 .mensagem-container{
     width: 100%;
     padding:0.5em;
-    border: 1px solid rgb(109, 109, 109);
     margin: 0 auto;
     text-align: center;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
+    margin-top: 0.5em;
     border-radius: 5px;
 }
 .message{
@@ -12,16 +12,17 @@
 }
 .erro{
     color: #721c24;
-    background-color: #f8d7da;
-    border-color: #f5c6cb;
+    font-size: 17px ;
+    font-family: monospace;
+    
 }
 .valido{
     color: #155724;
-    background-color: #d4edda;
-    border-color: #c3e6cb;
+    font-size: 17px ;
+    font-family: monospace;
 }
 .Aviso{
     color: #c9c504;
-    background-color: #ede8d4;
-    border-color: #e5e6c3;
+    font-size: 17px ;
+    font-family: monospace;
 }

@@ -7,16 +7,22 @@
   ],
   "Video": [
     {
-      "video": "https://youtu.be/mb-Cnwi9BqA?list=PLYXIp3MDqkOV7W61L1ejWMUo1YJSLMhRa",
+      "video": "https://www.youtube.com/watch?v=sKqfb2TtZak&ab_channel=pandora.",
       "id": 1
     }
   ],
-  "Usuario": [
+  "Login": [
     {
-      "categoria": "",
-      "senha": "",
-      "CPF": "",
+      "tipo": "secretário",
+      "senha": "12345",
+      "CPF": "40028922",
       "id": 1
+    },
+    {
+      "tipo": "administrador",
+      "senha": "12345",
+      "CPF": "40028922",
+      "id": 2
     }
   ],
   "Membro": [

@@ -3,9 +3,10 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Message from '../../Components/layout/Message/Message';
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const [cpf, setCpf] = useState('');
+  const [CPF, setCpf] = useState('');
   const [senha, setSenha] = useState('');
   const [tipo, setTipo] = useState('');
   const [error, setError] = useState(''); // só quero usar o estado do error, 
@@ -13,6 +14,8 @@ const Login = () => {
 
   const [TypeMsg, setTypeMsg] = useState('');
   const [Msg, setMsg] = useState('');
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (error) {
@@ -23,24 +26,51 @@ const Login = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+  
+
     setLoading(true);
     setError('');
-    if (!cpf || !senha || !tipo) {
-      setTypeMsg('campos');
-      setMsg('CAMPOS OBRIGATORIOS!')
+    
+    if (!CPF || !senha || !tipo) {
+      setTypeMsg('erro');
+      setMsg('Campos obrigatórios');
       setLoading(false);
-      return;
+     
+      // resetando 
+      setTimeout(() => {
+        setMsg(null);
+        setTypeMsg(null);
+      }, 1000); // Tempo em milissegundos para limpar as mensagens de erro (aqui, 5 segundos)
+      
+      return ;
     }
-
+     
+    let response = null;
+  
     try {
-      const response = await axios.post('/api/login', { cpf, senha, tipo });
-      console.log(response.data);
+     
+        console.log('cheguei aqui ')
+      response = await axios.post('/http://localhost:5000/Login', { CPF, senha, tipo });
     } catch (e) {
       setError('Ocorreu um erro ao fazer login');
     } finally {
       setLoading(false);
+  
+      if (response !== null) {
+        const { tipo } = response.data;
+  
+        if (tipo === 'administrador') {
+          navigate('/administrador');
+        } else if (tipo === 'secretário') {
+          navigate('/secretário');
+        } else if (tipo === 'tesoureiro') {
+          navigate('/tesoureiro');
+        }
+      }
     }
   };
+  
   
   return (
     <div className='mainL'>
@@ -53,7 +83,7 @@ const Login = () => {
        
         type="text"
         placeholder="Digite seu CPF"
-        value={cpf}
+        value={CPF}
         autoComplete='off'
         onChange={(e) => setCpf(e.target.value)}
       />
@@ -63,7 +93,7 @@ const Login = () => {
         onChange={(e) => setTipo(e.target.value)}
       >
         <option disabled value="inactive">Selecione um tipo</option>
-        <option value="secretario">Secretário</option>
+        <option value="secretário">Secretário</option>
         <option value="tesoureiro">Tesoureiro</option>
         <option value="administrador">Administrador</option>
       </select>
@@ -80,10 +110,11 @@ const Login = () => {
         {loading ? 'Carregando...' : 'Login'}
       </button>
       <p>Ainda não tem conta?</p>
-          <button>
+          
           <Link to='/Cadastro' id='criar-conta'>Registrar</Link> 
-          </button>
+         
           <Message msg={Msg} type={TypeMsg} />
+          
     </form>
     
     </div>

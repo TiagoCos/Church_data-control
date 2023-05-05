@@ -3,6 +3,7 @@
     margin: 0px;
     border-radius: 0.5em;
     background-color: none;
+    display: flex;
   }
   
   .card2 {
@@ -52,27 +53,36 @@
     align-self: center;
     border: solid 2px black;
     margin-left: 5px;
+    font-family:  monospace;
+    text-align: center;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
   
   /* Estilos para as animações de transição */
   .swiper-slide2.entering {
-    opacity: 0;
+    opacity: 1;
     transform: translateX(-50%);
+    background-color: #ff0040;
+    color: #9dff00;
   }
   
   .swiper-slide2.entering-active {
-    opacity: 1;
+    opacity: 100%;
     transform: translateX(0%);
+    background-color: #008cff
   }
   
   .swiper-slide2.exiting {
     opacity: 0;
     transform: translateX(50%);
+    background-color: #9dff00
   }
   
   .swiper-slide2.exiting-active {
     opacity: 0;
     transform: translateX(50%);
+    background-color: #b8a9a9
   }
   
   /* Defina as cores do gradiente para cada slide */

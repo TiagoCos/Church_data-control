@@ -3,12 +3,12 @@ import axios from "axios";
 
 
 function Video_config(){
-    const [Video, setVideo] = useState('');
+  
 
     function updateVideo(id, novoVideo) {
         axios.put(`http://localhost:5000/Video/${id}`, { video: novoVideo })
           .then(response => {
-            setVideo(response.data.video); // Renderiza a propriedade 'video' do objeto
+           // setVideo(response.data.video); // Renderiza a propriedade 'video' do objeto
           })
           .catch(error => {
             console.error(error);

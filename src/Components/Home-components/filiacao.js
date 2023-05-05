@@ -1,36 +1,32 @@
 import './filiacao.css'
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
+function Filiação() {
+  const [img1, setImg1] = useState('https://picsum.photos/200/300');
+  const [img2, setImg2] = useState('https://picsum.photos/400/600');
+  const [img3, setImg3] = useState('https://picsum.photos/500/500');
 
-
-function Filiação({img1 = 'https://picsum.photos/200/300',
- img2='https://picsum.photos/400/600',
-  img3='https://picsum.photos/500/500'}){
-
-  useEffect(() =>{
-    fetch('http://localhost:5000/todos', {
+  useEffect(() => {
+    fetch('http://localhost:5000/filiacao', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
       },
     })
-    .then((resp) => resp.json())
-    .then((data) =>{
-      console.log(data)
-    })
-    .catch((err) => console.log(err))
-  },[])
+      .then((resp) => resp.json())
+      .then((data) => {
+        console.log(data)
+      })
+      .catch((err) => console.log(err))
+  }, [])
 
-
-
-
-const handleRestart = () => {
+  const handleRestart = () => {
     setStep(0);
-    };
-const [step, setStep] = useState(0);
+  };
+  const [step, setStep] = useState(0);
 
-const handleNext = () => {
+  const handleNext = () => {
     setStep((step) => step + 1);
   };
 
@@ -38,42 +34,49 @@ const handleNext = () => {
     switch (step) {
       case 0:
         return (
-          <>      <h1>01</h1>
-          <button 
+          <>
+            <h1 className="filiacao_heading">01</h1>
+            <button
               onClick={handleNext}
               className="filiacao_btn"
-          >Próximo</button>
-          <div className="swiper-slide2">
-            <img className='fotos-back' alt='carregando' src={img1}></img>
-          </div>
+            >
+              Próximo
+            </button>
+            <div className="swiper-slide2">
+              <img className='fotos-back' alt='carregando' src={img1}></img>
+            </div>
           </>
         );
       case 1:
         return (
-          <>  <h1>02</h1>
-          <button
-                  onClick={handleNext}
-                  className="filiacao_btn"
-              >Próximo</button>
-          <div className="swiper-slide2">
-          
-                <img className='fotos-back' alt='carregando' src={img2}></img>
-          </div>
+          <>
+            <h1 className="filiacao_heading">02</h1>
+            <button
+              onClick={handleNext}
+              className="filiacao_btn"
+            >
+              Próximo
+            </button>
+            <div className="swiper-slide2">
+              <img className='fotos-back' alt='carregando' src={img2}></img>
+            </div>
           </>
         );
       case 2:
-         return (
-          <> <h1>03</h1>
-          <button
+        return (
+          <>
+            <h1 className="filiacao_heading">03</h1>
+            <button
               onClick={handleRestart}
               className="filiacao_btn"
-             >Voltar</button>
-             <div className="swiper-slide2">
-            
-                <img className='fotos-back' alt='carregando' src={img3}></img>
+            >
+              Voltar
+            </button>
+            <div className="swiper-slide2">
+              <img className='fotos-back' alt='carregando' src={img3}></img>
             </div>
-            </>
-            );
+          </>
+        );
       default:
         return null;
     }
@@ -82,10 +85,12 @@ const handleNext = () => {
   return (
     <div className="quarto" id='d'>
       <div className="card2">
-        <div className="swiper2">{renderImg(step)}</div>
+        <div className="swiper2">
+          {renderImg(step)}
+        </div>
       </div>
     </div>
   );
-  }
+}
 
 export default Filiação;

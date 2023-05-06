@@ -40,3 +40,15 @@
     align-items: center;
     
 }
+.social-li > a{
+    color:aliceblue;
+}
+.Yu:Hover{
+    color: #FF0000;
+}
+.Fa:Hover{
+    color: #3B5998;
+}
+.In:Hover{
+    color: #E4405F;
+}

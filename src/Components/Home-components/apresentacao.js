@@ -9,7 +9,7 @@ function Apresentacao() {
   useEffect(() => {
     axios.get('http://localhost:5000/Name/1')
       .then(response => {
-        setNome(response.data.Nome);
+        setNome(response.data.Comunidade);
       })
       .catch(error => {
         console.error(error);

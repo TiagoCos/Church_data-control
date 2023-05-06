@@ -1,22 +1,61 @@
 import {useState, useEffect} from 'react'
+import axios from 'axios';
+import Message from '../layout/Message/Message';
 
 function Filiacao_Config(){
-    const [selectedFile, setSelectedFile] = useState(null);
+    const [selectedFile, setSelectedFile] = useState([]);
 
-     const handleFileChange = (event) => {
-     setSelectedFile(event.target.files[0]);
-
-  };
+     //componente de mensagem
+     const [TypeMsg, setTypeMsg] = useState('');
+     const [Msg, setMsg] = useState('');
+  
+     const handleFileChange = (id, novaImagem01, novaImagem02, novaImagem03) => {
+        const formData = new FormData();
+        formData.append('imagem01', novaImagem01);
+        formData.append('imagem02', novaImagem02);
+        formData.append('imagem03', novaImagem03);
+      
+        setTimeout(() => {
+          setMsg(null);
+          setTypeMsg(null);
+        }, 3000);
+      
+        axios
+          .put(`http://localhost:5000/Filiacao/${id}`, formData)
+          .then(() => {
+            setTypeMsg('valido');
+            setMsg('Alteração bem sucedida!');
+          })
+          .catch((error) => {
+            setTypeMsg('erro');
+            setMsg('Ocorreu um erro!');
+            console.log(formData)
+          });
+      };
     return(
         <div >
-            <form id='all-containers' onChange={handleFileChange}>
-                <h2>Itens do Slide</h2>
-                <input type='file' required placeholder='slide 01' ></input>
-                <input type='file' required></input>
-                <input type='file' required></input>
-                
-                <button type='Submit'>Enviar</button>
+            <form
+            id='all-containers'
+            onSubmit={(event) => {
+                event.preventDefault();
+                handleFileChange(
+                1,
+                event.target.elements.novaImagem01.files[0],
+                event.target.elements.novaImagem02.files[0],
+                event.target.elements.novaImagem03.files[0]
+                );
+            }}
+            >
+            <h2>Itens do Slide</h2>
+
+            <input type='file' id='novaImagem01' required />
+            <input type='file' id='novaImagem02' required />
+            <input type='file' id='novaImagem03' required />
+
+            <button type='submit'>Enviar</button>
+            <Message msg={Msg} type={TypeMsg} />
             </form>
+
         </div>
     )
 }

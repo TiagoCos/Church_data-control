@@ -1,40 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
+import Message from '../../Components/layout/Message/Message'
 function BannerConfig() {
   const [mensagem, setMensagem] = useState('');
-  
-  /*
-  useEffect(() => {
-    // faz uma chamada para a API para buscar a mensagem atual
-    axios.get('http://localhost:5000/Mensagem')
-      .then(response => {
-        setMensagem(response.data.mensagem); // Renderiza a propriedade 'mensagem' do objeto
-      })
-      .catch(error => {
-        console.error(error);
-      });
-  }, []);
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    const novaMensagem = event.target.elements.mensagem.value;
-    axios.post('http://localhost:5000/Mensagem', { mensagem: novaMensagem })
-      .then(response => {
-        setMensagem(response.data.mensagem); // Renderiza a propriedade 'mensagem' do objeto
-      })
-      .catch(error => {
-        console.error(error);
-      });
-  }
-*/
+  //componente de mensagem
+  const [TypeMsg, setTypeMsg] = useState('');
+  const [Msg, setMsg] = useState('');
+ 
   function updateMensagem(id, novaMensagem) {
-    axios.put(`http://localhost:5000/Name/${id}`, { banner: novaMensagem })
+     // resetando 
+     setTimeout(() => {
+      setMsg(null);
+      setTypeMsg(null);
+    }, 3000); // Tempo em milissegundos para limpar as mensagens de erro 
+
+    axios.put(`http://localhost:5000/Mensagem/${id}`, { mensagem: novaMensagem })
       .then(response => {
         setMensagem(response.data.mensagem); // Renderiza a propriedade 'mensagem' do objeto
+        setTypeMsg('valido');
+        setMsg('Alteração bem sucedida!')
       })
       .catch(error => {
-        console.error(error);
+        setTypeMsg('erro');
+        setMsg('Ocorreu um erro!')
       });
   }
 
@@ -54,7 +43,7 @@ function BannerConfig() {
         ></input>
         <button type='submit' id='Submit-btn'>Atualizar mensagem</button>
       </form>
-
+      <Message msg={Msg} type={TypeMsg} />
     </div>
   );
 }

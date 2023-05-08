@@ -31,35 +31,32 @@ function App() {
 
           {/*páginas bloqueadas pelo acesso direto*/ }
 
-          <Route path='/secretario' element={<Navigate to="/" />} />
-      
-          <Route path="/secretario" element={<PrivateRoute 
-           path="/secretario"
-           component={Secretario} 
-           isAuthenticated={isAuthenticated}/>} />
+          <Route path="/secretario" 
+          element={<PrivateRoute  >
+               <Secretario/>
+              </PrivateRoute>
+          } />
 
-            
-          <Route path='/Configuracoes' element={<Navigate to="/" />} />
-          <Route path="/configuracoes" element={<PrivateRoute 
-           path="/configuracoes"
-           component={Configuracoes} 
-           isAuthenticated={isAuthenticated}/>} />
-
-          <Route path='/Tesoureiro' element={<Navigate to="/" />} />
-          <Route path="/tesoureiro" element={<PrivateRoute 
-           path="/tesoureiro"
-           component={Tesoureiro} 
-           isAuthenticated={isAuthenticated}/>} />
-
-          <Route path='/Administrador' element={<Navigate to="/" />} />
-          <Route path="/administrador" element={<PrivateRoute 
-           path="/administrador"
-           component={Administrador} 
-           isAuthenticated={isAuthenticated}/>} />  {/*Amém , isso nunca tinha fim */}
+          <Route path="/configuracoes" 
+          element={<PrivateRoute  >
+               <Configuracoes/>
+              </PrivateRoute>
+          } />
+          
+          <Route path="/tesoureiro" 
+          element={<PrivateRoute  >
+               <Tesoureiro/>
+              </PrivateRoute>
+          } />
+              
+           <Route path="/administrador" 
+          element={<PrivateRoute  >
+               <Administrador/>
+              </PrivateRoute>
+          } />
          
         </Routes>
-
-       <Footer/>
+        <Footer/>
       </Router>
   );
 }

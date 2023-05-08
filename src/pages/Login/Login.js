@@ -68,21 +68,48 @@ const Login = () => {
   };
   
   return (
-    <div className="login">
-      <h1>Login</h1>
-      <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="CPF" onChange={(event) => setCpf(event.target.value)} />
-        <input type="password" placeholder="Senha" onChange={(event) => setSenha(event.target.value)} />
-        <select onChange={(event) => setTipo(event.target.value)}>
-          <option value="">Selecione um tipo</option>
-          <option value="administrador">Administrador</option>
-          <option value="secretário">Secretário</option>
-          <option value="tesoureiro">Tesoureiro</option>
-        </select>
-        {error && <Message type={TypeMsg} message={Msg} />}
-        <button type="submit" disabled={loading}>Login</button>
-        <Link to="/cadastrar">Criar conta</Link>
-      </form>
+    <div className='mainL'>
+
+    <form  className='container-login' onSubmit={handleSubmit}>
+    <h2>Login</h2>
+
+      <label>CPF:</label>
+      <input
+
+        type="text"
+        placeholder="Digite seu CPF"
+        value={CPF}
+        autoComplete='off'
+        onChange={(e) => setCpf(e.target.value)}
+      />
+      <label>Tipo:</label>
+      <select
+        value={tipo}
+        onChange={(e) => setTipo(e.target.value)}
+      >
+        <option disabled value="inactive">Selecione um tipo</option>
+        <option value="secretário">Secretário</option>
+        <option value="tesoureiro">Tesoureiro</option>
+        <option value="administrador">Administrador</option>
+      </select>
+      <label>Senha:</label>
+      <input
+
+        type="password"
+        placeholder="Digite sua Senha"
+        value={senha}
+        autoComplete='off'
+        onChange={(e) => setSenha(e.target.value)}
+      />
+      <button  className='bt-login'  disabled={loading}>
+        {loading ? 'Carregando...' : 'Login'}
+      </button>
+      <p>Ainda não tem conta?</p>
+
+          <Link to='/Cadastro' id='criar-conta'>Registrar</Link> 
+          <Message msg={Msg} type={TypeMsg} />
+    </form>
+
     </div>
   );
 };

@@ -1,12 +1,12 @@
-import {BrowserRouter as Router, Route, Routes, Navigate} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import './styles/global.css';
 import Home from './pages/Dashboard/Home';
 import Login from './pages/Login/Login';
 import Footer from './Components/layout/Footer/footer';
 import Header from './Components/header/Header';
 import Cadastro from './pages/Cadastro/Cadastro';
-import Secretario from './pages/Secretário/Secretario';
-import Ficha from './Components/Ficha/Ficha-cadastro';
+import Secretario from './pages/Secretario/secretario'
+
 import Configuracoes from './pages/Configuracoes-ADM/Config-ADM';
 import NotFound from './pages/NotFound/NotFound';
 import Tesoureiro from './pages/Tesoureiro/Tesoureiro';
@@ -27,7 +27,7 @@ function App() {
           <Route path='/Login' element={<Login />} />
           <Route path='/Cadastro' element={<Cadastro />} />
           <Route path='*' element={<NotFound />} />
-          <Route path='/Cadastro-de-membros' element={<Ficha />} />
+       
 
           {/*páginas bloqueadas pelo acesso direto*/ }
 

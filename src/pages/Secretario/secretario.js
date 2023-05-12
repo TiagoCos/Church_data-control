@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
-import MemberForm from '../MemberForm/MemberForm'
-import '../Ficha/index.Ficha.css'
+import MemberForm from "../../Components/MemberForm/MemberForm";
+import './index.secretario.css'
 Modal.setAppElement("#root");
 
 const membersData = [
@@ -38,15 +38,16 @@ const Members = () => {
       <button className="Btn-ficha" onClick={openModal}>Adicionar Membro</button>
       <table class="table-members">
         <thead>
-          <tr>
-            <th>Nome</th>
-            <th>Estado Civil</th>
-            <th>Gênero</th>
-            <th>Endereço</th>
-            <th>Numero</th>
-            <th>Email</th>
-            <th>Ativo?</th>
-            <th>Excluir</th>
+          <tr >
+          <th class="table-header">Nome</th>
+          <th class="table-header">Civil</th>
+          <th class="table-header">Gênero</th>
+          <th class="table-header">Endereço</th>
+          <th class="table-header">Numero</th>
+          <th class="table-header">Email</th>
+          <th class="table-header">Ativo?</th>
+          <th class="table-header">Excluir</th>
+
           </tr>
         </thead>
         <tbody>

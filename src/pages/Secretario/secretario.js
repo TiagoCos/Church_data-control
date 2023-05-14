@@ -5,7 +5,7 @@ import "./index.secretario.css";
 
 Modal.setAppElement("#root");
 
-const membersPerPage = 3;
+const membersPerPage = 5;
 
 const Members = () => {
   const [members, setMembers] = useState([

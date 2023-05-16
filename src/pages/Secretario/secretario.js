@@ -16,6 +16,38 @@ const Members = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
 
+
+  const [editModalIsOpen, setEditModalIsOpen] = useState(false);
+  const [selectedMember, setSelectedMember] = useState(null);
+  const saveMember = (member) => {
+    if (selectedMember) {
+      // edit existing member
+      const updatedMembers = members.map((m) =>
+        m.id === selectedMember.id ? member : m
+      );
+      setMembers(updatedMembers);
+      setSelectedMember(null);
+    } else {
+      // add new member
+      const newMember = {
+        ...member,
+        id: Date.now().toString(),
+      };
+      setMembers([...members, newMember]);
+    }
+    closeEditModal();
+  };
+  
+  const openEditModal = (id) => {
+    const member = members.find((member) => member.id === id);
+    setSelectedMember(member);
+    setEditModalIsOpen(true);
+  };
+  
+  const closeEditModal = () => {
+    setSelectedMember(null);
+    setEditModalIsOpen(false);
+  };
   const addMember = (member) => {
     setMembers([...members, member]);
     closeModal();
@@ -76,23 +108,30 @@ const Members = () => {
             </tr>
           </thead>
           <tbody>
-            {currentMembers.map((member) => (
-              <tr key={member.id}>
-                <td>{member.name}</td>
-                <td>{member.address}</td>
-                <td>{member.phone}</td>
-                <td>{member.email}</td>
-                <td>
-                  <button
-                    className="Btn-ficha"
-                    onClick={() => removeMember(member.id)}
-                  >
-                    Excluir
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
+  {currentMembers.map((member) => (
+    <tr key={member.id}>
+      <td>{member.name}</td>
+      <td>{member.address}</td>
+      <td>{member.phone}</td>
+      <td>{member.email}</td>
+      <td>
+        <button
+          className="Btn-ficha"
+          onClick={() => removeMember(member.id)}
+        >
+          Excluir
+        </button>
+        <button
+          className="Btn-ficha"
+          onClick={() => openEditModal(member.id)}
+        >
+          Editar
+        </button>
+      </td>
+    </tr>
+  ))}
+</tbody>
+
         </table>
         <div className="pagination">
           <ul className="pagination-list">{renderPageNumbers()}</ul>
@@ -100,6 +139,16 @@ const Members = () => {
         <Modal isOpen={modalIsOpen} onRequestClose={closeModal}>
           <MemberForm addMember={addMember} closeModal={closeModal} />
         </Modal>
+        <Modal isOpen={editModalIsOpen} onRequestClose={closeEditModal}>
+         {selectedMember && (
+       <MemberForm
+      member={selectedMember}
+      closeModal={closeEditModal}
+      saveMember={saveMember}
+    />
+  )}
+</Modal>
+
       </main>
     </>
   );

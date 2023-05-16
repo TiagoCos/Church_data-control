@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./index.MemberForm.css";
 
-const MemberForm = ({ addMember, closeModal }) => {
+const MemberForm = ({ addMember, closeModal, memberToEdit }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [birthdate, setBirthdate] = useState("");
@@ -12,10 +12,24 @@ const MemberForm = ({ addMember, closeModal }) => {
   const [observation, setObservation] = useState("");
   const [isActive, setIsActive] = useState(false);
 
+  useEffect(() => {
+    if (memberToEdit) {
+      setName(memberToEdit.name);
+      setEmail(memberToEdit.email);
+      setBirthdate(memberToEdit.birthdate);
+      setMaritalStatus(memberToEdit.maritalStatus);
+      setGender(memberToEdit.gender);
+      setAddress(memberToEdit.address);
+      setPhone(memberToEdit.phone);
+      setObservation(memberToEdit.observation);
+      setIsActive(memberToEdit.isActive);
+    }
+  }, [memberToEdit]);
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const newMember = { 
-      id: Date.now(), 
+      id: memberToEdit ? memberToEdit.id : Date.now(), 
       name: name, 
       email: email,
       birthdate: birthdate,
@@ -29,6 +43,7 @@ const MemberForm = ({ addMember, closeModal }) => {
     addMember(newMember);
     closeModal();
   };
+  
 
   return (
     <form onSubmit={handleSubmit}>
@@ -68,21 +83,24 @@ const MemberForm = ({ addMember, closeModal }) => {
       </label>
 
       <label>
-        Email:
-        <input type="email" value={email} onChange={(event) => setEmail(event.target.value)} />
-      </label>
-    
-      <label>
         Observação:
         <input type="text" value={observation} onChange={(event) => setObservation(event.target.value)} />
       </label>
-    
+
       <label>
-        Membro ativo?
-        <input type="checkbox" checked={isActive} onChange={(event) => setIsActive(event.target.checked)} />
+        Ativo:
+        <input type="checkbox" checked={isActive} onChange={() => setIsActive(!isActive)} />
       </label>
-    
-      <button className='btn-Member' type="submit">Salvar</button>
+
+      <div className="modal-buttons">
+      <button type="submit" className="btn-submit">
+       {memberToEdit ? "Salvar" : "Adicionar"}
+      </button>
+
+        <button type="button" className="btn-cancel" onClick={closeModal}>
+          Cancelar
+        </button>
+      </div>
     </form>
   );
 };

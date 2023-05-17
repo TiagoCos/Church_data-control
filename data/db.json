@@ -27,9 +27,9 @@
   ],
   "Diretoria": [
     {
-      "nome": "",
-      "descrição": "",
-      "foto": "",
+      "nome": "teste ",
+      "descrição": "novo teste aqui ",
+      "foto": "mais um teste",
       "id": 1
     }
   ],
@@ -61,20 +61,19 @@
       "img": ""
     }
   ],
-  "Membros":[
+  "Membros": [
     {
-       "id": 1,
-        "name": "João",
-        "CPF": "485.562.362-17",
-        "data de nascimento": "25/6/2015",
-        "estado civil": "solteiro",
-        "gênero": "Masculino",
-        "address": "Rua A",
-        "phone": "1234-5678",
-        "email": "joao@teste.com",
-        "observação": "nenhum",
-        "ativo": "sim"
-       }
-  
+      "id": 1,
+      "name": "João",
+      "CPF": "485.562.362-17",
+      "data de nascimento": "25/6/2015",
+      "estado civil": "solteiro",
+      "gênero": "Masculino",
+      "address": "Rua A",
+      "phone": "1234-5678",
+      "email": "joao@teste.com",
+      "observação": "nenhum",
+      "ativo": "sim"
+    }
   ]
 }

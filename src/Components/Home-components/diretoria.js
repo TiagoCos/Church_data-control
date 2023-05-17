@@ -4,17 +4,17 @@ import './Diretoria.css';
 
 
 
-function Diretoria({nome, descrição, img}) {
+function Diretoria({visivel = false}) {
 
   return (
     <div className="segundo"> 
       <div className='cards-diretoria'>
-        <CardConfig/>
-        <CardConfig/>
-        <CardConfig/>
-        <CardConfig/>
-        <CardConfig/>
-        <CardConfig/>
+        {visivel && <CardConfig />}
+        {visivel && <CardConfig />}
+        {visivel && <CardConfig />}
+        {visivel && <CardConfig />}
+        {visivel && <CardConfig />}
+        {visivel && <CardConfig />}
       </div>
     </div>
     

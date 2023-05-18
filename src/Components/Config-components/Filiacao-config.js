@@ -3,7 +3,6 @@ import axios from 'axios';
 import Message from '../layout/Message/Message';
 
 function Filiacao_Config(){
-    const [selectedFile, setSelectedFile] = useState([]);
 
      //componente de mensagem
      const [TypeMsg, setTypeMsg] = useState('');
@@ -48,9 +47,9 @@ function Filiacao_Config(){
             >
             <h2>Itens do Slide</h2>
 
-            <input type='file' id='novaImagem01' required />
-            <input type='file' id='novaImagem02' required />
-            <input type='file' id='novaImagem03' required />
+            <input type='file' name='novaImagem01' required />
+            <input type='file' name='novaImagem02' required />
+            <input type='file' name='novaImagem03' required />
 
             <button type='submit'>Enviar</button>
             <Message msg={Msg} type={TypeMsg} />

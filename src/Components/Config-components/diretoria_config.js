@@ -1,25 +1,11 @@
 import { useState } from 'react';
 import axios from 'axios';
 import Message from '../layout/Message/Message';
+import { Cards,Cards02,Cards03 } from '../Home-components/outros/Cards'
 
-export const CardConfig = () => {
-  return (
-    <div className='Card_diretoria'>
-      <img className='Card_diretoria-img' alt='' />
-      <div className='Card_diretoria-info'>
-        <h3 className='Card_diretoria-title'>title</h3>
-        <p className='Card_diretoria-description'>teste de descricao</p>
-      </div>
-    </div>
-  );
-}
 
 function Diretoria_Config() {
 
-  const [nome, setNome] = useState('testenome');
-  const [descricao, setDescricao] = useState('testeDescrição');
-  const [img, setImg] = useState('https://picsum.photos/500/500');
-  const [isCardVisible, setIsCardVisible] = useState(false);
   //componente de mensagem
   const [TypeMsg, setTypeMsg] = useState('');
   const [Msg, setMsg] = useState('');
@@ -38,7 +24,7 @@ function Diretoria_Config() {
     foto: novaFoto })
 
      .then(response => {
-     
+    
        setTypeMsg('valido');
        setMsg('Alteração bem sucedida!')
      })
@@ -47,50 +33,112 @@ function Diretoria_Config() {
        setMsg('Ocorreu um erro!')
      });
  }
-
-  const handleToggleCard = (event) => {
-    event.preventDefault(); // Impede o envio do formulário
-    setIsCardVisible(!isCardVisible);
-  };
-
   return (
-    <div>
-      <div className='Container-Diretoria&Cargos'>
-        <form className='container-especial' onSubmit={(event) => {
+    <div className='container-especial' >
+     
+      <div className='Hug'>
+        <form onSubmit={(event) => {
           event.preventDefault();
           updateDiretoria(1, event.target.elements.novoNome.value,
              event.target.elements.novaDescricao.value,
-             event.target.elements.novaFoto.value
+             event.target.elements.novaFoto.files[0]  //tem que ser assim para obter o item foto em si
             );
         }}>
-          {isCardVisible && <CardConfig />}
+       
+        <Cards/>
           <button type="Submit" id='Submit-btn'>Enviar</button>
 
           <input
-          placeholder='digite novo valor' 
+          placeholder='digite o nome' 
           name='novoNome' 
           required
           autoComplete='off'
         ></input>
                <input
-          placeholder='digite novo valor' 
+          placeholder='digite a descrição do seu card' 
           name='novaDescricao' 
           required
           autoComplete='off'
         ></input>
              <input
-          placeholder='digite novo valor' 
+          type='file'
           name='novaFoto' 
+          
+          autoComplete='off'
+        ></input>
+   
+        
+        </form>
+      
+        
+    
+      { /*----------------------Card02------------------------ */}
+      <form onSubmit={(event) => {
+          event.preventDefault();
+          updateDiretoria(2, event.target.elements.novoNome.value,
+             event.target.elements.novaDescricao.value,
+             event.target.elements.novaFoto.files[0]  //tem que ser assim para obter o item foto em si
+            );
+        }}>
+        
+        <Cards02/>
+          <button type="Submit" id='Submit-btn'>Enviar</button>
+
+          <input
+          placeholder='digite o nome' 
+          name='novoNome' 
           required
           autoComplete='off'
         ></input>
-          <button onClick={handleToggleCard}>
-            {isCardVisible ? 'Ocultar Card' : 'Mostrar Card'}
-          </button>
-        </form>
+               <input
+          placeholder='digite a descrição do seu card' 
+          name='novaDescricao' 
+          required
+          autoComplete='off'
+        ></input>
+             <input
+          type='file'
+          name='novaFoto' 
+       
+          autoComplete='off'
+        ></input>
         <Message msg={Msg} type={TypeMsg} />
-      </div>
+        </form>
 
+        { /*----------------------Card03------------------------ */}
+      <form onSubmit={(event) => {
+          event.preventDefault();
+          updateDiretoria(3, event.target.elements.novoNome.value,
+             event.target.elements.novaDescricao.value,
+             event.target.elements.novaFoto.files[0]  //tem que ser assim para obter o item foto em si
+            );
+        }}>
+        
+        <Cards03/>
+          <button type="Submit" id='Submit-btn'>Enviar</button>
+
+          <input
+          placeholder='digite o nome' 
+          name='novoNome' 
+          required
+          autoComplete='off'
+        ></input>
+               <input
+          placeholder='digite a descrição do seu card' 
+          name='novaDescricao' 
+          required
+          autoComplete='off'
+        ></input>
+             <input
+          type='file'
+          name='novaFoto' 
+     
+          autoComplete='off'
+        ></input>
+   
+   
+        </form>
+        </div>
     </div>
   );
 }

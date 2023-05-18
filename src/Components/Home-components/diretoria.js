@@ -1,25 +1,16 @@
-import { CardConfig } from '../Config-components/diretoria_config';
+import { Cards,Cards02,Cards03 } from './outros/Cards';
 import './Diretoria.css';
 
-
-
-
-function Diretoria({visivel = false}) {
-
+function Diretoria() {
   return (
     <div className="segundo"> 
       <div className='cards-diretoria'>
-        {visivel && <CardConfig />}
-        {visivel && <CardConfig />}
-        {visivel && <CardConfig />}
-        {visivel && <CardConfig />}
-        {visivel && <CardConfig />}
-        {visivel && <CardConfig />}
+        <Cards/>
+        <Cards02/>
+        <Cards03/>
       </div>
     </div>
-    
   );
-
 }
 
 export default Diretoria;

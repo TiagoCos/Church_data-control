@@ -27,10 +27,19 @@
   ],
   "Diretoria": [
     {
-      "nome": "teste ",
-      "descrição": "novo teste aqui ",
-      "foto": "mais um teste",
+      "nome": "asdas",
+      "descrição": "asdasd",
       "id": 1
+    },
+    {
+      "nome": "asd",
+      "descrição": "asda",
+      "id": 2
+    },
+    {
+      "nome": "sdasd",
+      "descrição": "ss",
+      "id": 3
     }
   ],
   "Name": [
@@ -58,7 +67,7 @@
   "Estatuto": [
     {
       "id": 1,
-      "img": ""
+      "estatuto": ""
     }
   ],
   "Membros": [

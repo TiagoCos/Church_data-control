@@ -3,18 +3,27 @@ import { useNavigate } from "react-router-dom";
 import Message from "../../Components/layout/Message/Message.js";
 import { useState } from "react";
 import { cpf as validateCpf } from "cpf-cnpj-validator";
+import axios from "axios";
 
 const ERR_CADASTRO_EXISTENTE = "Seu CPF já possui cadastro!";
 const ERR_CPF_INVALIDO = "CPF inválido!";
-// aqui ele busca no banco de dados se há algum casdastro ja feito
+
 async function verificarCPF(cpf) {
-  const response = await fetch(`sua_api/cpf/${cpf}`);
-  const data = await response.json();
-  return data.existe;
+  return true;
+  /*try {
+    const response = await axios.post('http://localhost:5000/Login', { CPF: cpf });
+    const data = response.data;
+    return data.existe;
+  } catch (error) {
+    console.error(error);
+    throw new Error('Erro ao verificar o CPF');
+  }
+  */
 }
-// chama o validador de cpf, para saber se o numero digitado é realmente um cpf valido
+
 async function verificarCPFValido(cpf) {
-  return validateCpf(cpf);
+  return true;
+  //return validateCpf(cpf);
 }
 
 function Cadastro() {
@@ -22,64 +31,72 @@ function Cadastro() {
   const [Msg, setMsg] = useState("");
   const navigate = useNavigate();
 
-// função do form que valida os valores
-  async function handleSubmit(event) {
-    console.log('deu certo submit')
-    setCerto(true);
-   /* event.preventDefault();
-    const { value: cpf } = event.target.cpf;
+  const [Certo, setCerto] = useState(false);
+
+  async function handleSubmit(cpfInput) {
+    setTimeout(() => {
+      setMsg(null);
+      setTypeMsg(null);
+    }, 3000);
+
+    const cpf = cpfInput;
 
     const cpfExiste = await verificarCPF(cpf);
     const cpfValido = await verificarCPFValido(cpf);
 
-    if (cpfExiste || !cpfValido) {
+    if (!cpfExiste && cpfValido) {
       setTypeMsg("erro");
-      setMsg(cpfExiste ? ERR_CADASTRO_EXISTENTE : ERR_CPF_INVALIDO);
+      setMsg(ERR_CADASTRO_EXISTENTE);
+      return;
+    } else if (!cpfValido) {
+      setTypeMsg("erro");
+      setMsg(ERR_CPF_INVALIDO);
       return;
     } else {
       setCerto(true);
-    }*/
+      const cpf_Cadastro = cpf;
+      handleCadastrar(cpf_Cadastro)
+    }
   }
 
-  const [length, setLength] = useState(false);
-// um evento para saber se o numero do cpf está completo
-  const handleLength = (event) => {
-    const valor = event.target.value;
-    if (valor.length === 11) {
-      console.log('deu certo ')
-      setLength(true);
-    }
-  };
-
-  const [Certo, setCerto] = useState(false);
-//passa de pagina no slid
   const handleNext = () => {
     setStep((step) => step + 1);
   };
 
-  const handleRestart = () => {
-    setStep(0);
-    setCerto(false);
-  };
-// --------slid 1--------------------------------------------------------------
-const [senha, setSenha] = useState('');
-  const [confirmSenha, setConfirmSenha] = useState('');
-
-  const handleCadastrar = (event) => {
+  const handleCadastrar = async (event,cpf_Cadastro) => {
     event.preventDefault();
+    //reseta valores da mensagem
+    setTimeout(() => {
+      setMsg(null);
+      setTypeMsg(null);
+    }, 3000);
+
     if (senha === confirmSenha) {
-      fetch('/api/cadastrar-senha', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ senha: senha })
-      })
-      .then(response => response.json())
-      .then(data => console.log(data))
-      .catch(error => console.error(error));
+      try {
+        const response = await axios.post('http://localhost:5000/Login', {
+          cpf: cpf_Cadastro,
+          senha: senha
+        });
+                    
+        if (response.status === 200) {
+          // cadastro feito
+          setTypeMsg('valido');
+          setMsg('Cadastrado com sucesso!');
+          navigate('/Login');
+        } else {
+          console.error('Erro ao cadastrar senha');
+        }
+      } catch (error) {
+        console.error(error);
+      }
     } else {
-      console.log('As senhas não conferem!');
+       setTypeMsg('erro');
+        setMsg('As senhas não são iguais!');
     }
-  }
+  };
+
+  const [senha, setSenha] = useState('');
+  const [confirmSenha, setConfirmSenha] = useState('');
   const [step, setStep] = useState(0);
 
   const renderStep = (step) => {
@@ -88,31 +105,30 @@ const [senha, setSenha] = useState('');
         return (
           <div className="swiper-slide">
             <img className="image-cadastro" src="1.svg" alt="" />
-            <h2>Welcome</h2>
-            <h3>Let's create your username</h3>
-            <form onSubmit={handleSubmit}>
-              <label>CPF: </label>
-              <input className="Cdt-input"
+            <h2>Bem-vindo</h2>
+            <h3>Vamos criar seu usuário</h3>
+
+            <form onSubmit={(event) => {
+              event.preventDefault();
+              handleSubmit(event.target.elements.cpfInput.value);
+            }}>
+              <label>CPF:</label>
+              <input
+                className="Cdt-input"
                 type="text"
                 id="cpf"
+                name="cpfInput"
                 placeholder="Digite seu CPF"
                 autoComplete="off"
-                maxLength={11}
-                onInput={handleLength}
+                minLength={10}
               />
-            <button className="btn-verificar" onClick={(event) => {
-              event.preventDefault();
-              handleSubmit();
-              handleLength();
-            }}>Verificar</button>
-
-
+              <button className="btn-verificar" type="submit">Verificar</button>
               <Message type={TypeMsg} message={Msg} />
               <button
                 className="btn-cadastro"
                 type="button"
                 id="bt"
-                disabled={!Certo || !length}
+                disabled={!Certo}
                 onClick={handleNext}
               >
                 Próximo
@@ -124,29 +140,31 @@ const [senha, setSenha] = useState('');
         return (
           <div className="swiper-slide">
             <h2>Quase lá</h2>
-            <h3>Digite sua senha </h3>
-          <form onSubmit={handleCadastrar}>
-            <label>
-              Senha:
-              <input className="Cdt-input"
-                type="password"
-                value={senha}
-                onChange={event => setSenha(event.target.value)}
-              />
-            </label>
-            <br />
-            <label>
-              Confirmar senha:
-              <input className="Cdt-input"
-                type="password"
-                value={confirmSenha}
-                onChange={event => setConfirmSenha(event.target.value)}
-              />
-            </label>
-            <br />
-            <button type="submit">Cadastrar</button>
-          </form>
-
+            <h3>Digite sua senha</h3>
+            <form onSubmit={handleCadastrar}>
+              <label>
+                Senha:
+                <input
+                  className="Cdt-input"
+                  type="password"
+                  value={senha}
+                  onChange={(event) => setSenha(event.target.value)}
+                />
+              </label>
+              <br />
+              <label>
+                Confirmar senha:
+                <input
+                  className="Cdt-input"
+                  type="password"
+                  value={confirmSenha}
+                  onChange={(event) => setConfirmSenha(event.target.value)}
+                />
+              </label>
+              <br />
+              <button type="submit">Cadastrar</button>
+              <Message type={TypeMsg} message={Msg} />
+            </form>
           </div>
         );
       default:

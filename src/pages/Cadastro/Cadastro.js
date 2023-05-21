@@ -59,6 +59,7 @@ function Cadastro() {
     }
   }
 
+
   const handleNext = () => {
     setStep((step) => step + 1);
   };
@@ -180,5 +181,8 @@ function Cadastro() {
     </div>
   );
 }
+
+
+
 
 export default Cadastro;

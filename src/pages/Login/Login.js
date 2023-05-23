@@ -41,7 +41,7 @@ const Login = () => {
       return ;
     }
      
-    axios.post('/http://localhost:5000/Login', { CPF, senha, tipo })
+    axios.get('/http://localhost:5000/Login', { CPF, senha, tipo })
       .then((response) => {
         const { token, tipo } = response.data;
         

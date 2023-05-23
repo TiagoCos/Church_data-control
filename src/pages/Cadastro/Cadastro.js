@@ -2,7 +2,7 @@ import "../Cadastro/indexCadastro.css";
 import { useNavigate } from "react-router-dom";
 import Message from "../../Components/layout/Message/Message.js";
 import { useState } from "react";
-import { cpf as validateCpf } from "cpf-cnpj-validator";
+import { cpf, cpf as validateCpf } from "cpf-cnpj-validator";
 import axios from "axios";
 
 const ERR_CADASTRO_EXISTENTE = "Seu CPF já possui cadastro!";
@@ -55,7 +55,7 @@ function Cadastro() {
     } else {
       setCerto(true);
       const cpf_Cadastro = cpf;
-      handleCadastrar(cpf_Cadastro)
+     
     }
   }
 
@@ -64,8 +64,8 @@ function Cadastro() {
     setStep((step) => step + 1);
   };
 
-  const handleCadastrar = async (event,cpf_Cadastro) => {
-    event.preventDefault();
+  const handleCadastrar = async (event) => {
+      event.preventDefault()
     //reseta valores da mensagem
     setTimeout(() => {
       setMsg(null);
@@ -74,18 +74,19 @@ function Cadastro() {
 
     if (senha === confirmSenha) {
       try {
-        const response = await axios.post('http://localhost:5000/Login', {
-          cpf: cpf_Cadastro,
+        const response = await axios.get('http://localhost:5000/Login', {
+          cpf: cpf,
           senha: senha
         });
                     
         if (response.status === 200) {
           // cadastro feito
-          setTypeMsg('valido');
-          setMsg('Cadastrado com sucesso!');
+         
           navigate('/Login');
-        } else {
-          console.error('Erro ao cadastrar senha');
+          alert("cadastro feito")
+        } else if(response === null){
+          alert("Erro ao cadastrar senha")
+         
         }
       } catch (error) {
         console.error(error);
@@ -149,6 +150,7 @@ function Cadastro() {
                   className="Cdt-input"
                   type="password"
                   value={senha}
+                  minLength={6}
                   onChange={(event) => setSenha(event.target.value)}
                 />
               </label>
@@ -159,6 +161,7 @@ function Cadastro() {
                   className="Cdt-input"
                   type="password"
                   value={confirmSenha}
+                  minLength={6}
                   onChange={(event) => setConfirmSenha(event.target.value)}
                 />
               </label>

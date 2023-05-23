@@ -1,6 +1,6 @@
 import './filiacao.css'
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+
 
 function Filiação() {
   const [img1, setImg1] = useState('https://picsum.photos/200/300');
@@ -17,6 +17,9 @@ function Filiação() {
       .then((resp) => resp.json())
       .then((data) => {
         console.log(data)
+        setImg1(data.img1)
+        setImg2(data.img2)
+        setImg3(data.img3)
       })
       .catch((err) => console.log(err))
   }, [])
@@ -35,7 +38,7 @@ function Filiação() {
       case 0:
         return (
           <>
-            <h1 className="filiacao_heading">01</h1>
+           
             <button
               onClick={handleNext}
               className="filiacao_btn"
@@ -50,7 +53,7 @@ function Filiação() {
       case 1:
         return (
           <>
-            <h1 className="filiacao_heading">02</h1>
+  
             <button
               onClick={handleNext}
               className="filiacao_btn"
@@ -65,7 +68,7 @@ function Filiação() {
       case 2:
         return (
           <>
-            <h1 className="filiacao_heading">03</h1>
+    
             <button
               onClick={handleRestart}
               className="filiacao_btn"

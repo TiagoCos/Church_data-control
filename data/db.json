@@ -23,50 +23,6 @@
       "senha": "123456",
       "CPF": "123",
       "id": 2
-    },
-    {
-      "cpf": "aaaaaaaaaaa",
-      "id": 3
-    },
-    {
-      "cpf": "aaaaaaaaaaa",
-      "id": 4
-    },
-    {
-      "cpf": "",
-      "id": 5
-    },
-    {
-      "cpf": "",
-      "id": 6
-    },
-    {
-      "cpf": "",
-      "id": 7
-    },
-    {
-      "cpf": "asadssaaaaaaaaaaaaaaaaaa",
-      "id": 8
-    },
-    {
-      "cpf": "asadssaaaaaaaaaaaaaaaaaa",
-      "id": 9
-    },
-    {
-      "cpf": "asadssaaaaaaaaaaaaaaaaaa",
-      "id": 10
-    },
-    {
-      "senha": "123",
-      "id": 11
-    },
-    {
-      "senha": "123",
-      "id": 12
-    },
-    {
-      "senha": "123",
-      "id": 13
     }
   ],
   "Diretoria": [

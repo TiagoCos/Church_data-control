@@ -41,11 +41,12 @@ const Login = () => {
       return ;
     }
      
-    axios.get('/http://localhost:5000/Login', { CPF, senha, tipo })
+    axios.post('/http://localhost:5000/Login', { CPF, senha, tipo })
       .then((response) => {
-        const { token, tipo } = response.data;
+        //lógica para pegar o token do server e usalo no localStorage
+        const { token } = response.data;
         
-        if (token && tipo) {
+        if (token != null) {
           localStorage.setItem('token', token);
           
           if (tipo === 'administrador') {

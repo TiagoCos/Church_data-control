@@ -6,13 +6,12 @@ import Footer from './Components/layout/Footer/footer';
 import Header from './Components/header/Header';
 import Cadastro from './pages/Cadastro/Cadastro';
 import Secretario from './pages/Secretario/secretario'
-
+import NewUser from './pages/Usuarios/NewUser'
 import Configuracoes from './pages/Configuracoes-ADM/Config-ADM';
 import NotFound from './pages/NotFound/NotFound';
 import Tesoureiro from './pages/Tesoureiro/Tesoureiro';
 import Administrador from './pages/Admin/Admin';
 
-import { isAuthenticated } from './Components/auth';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 function App() {
@@ -54,7 +53,12 @@ function App() {
                <Administrador/>
               </PrivateRoute>
           } />
-         
+           <Route path="/Usuarios" 
+          element={<PrivateRoute  >
+               <NewUser/>
+              </PrivateRoute>
+          } />
+
         </Routes>
         <Footer/>
       </Router>

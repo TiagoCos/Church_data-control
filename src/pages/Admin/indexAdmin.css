@@ -1,3 +1,14 @@
 .main-ADM{
     height: 50em;
 }
+.coluna-adm{
+    height: 100%;
+    border-right: 1px solid #3e3e3e;
+    flex-direction: column;
+    width: 15em;
+}
+.coluna-adm p{
+    padding: 20px 30px;
+    text-align: center;
+    border: #3e3e3e 1px solid;
+}

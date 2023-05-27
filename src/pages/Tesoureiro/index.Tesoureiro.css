@@ -1,0 +1,114 @@
+.Btn-values {
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 3px;
+  }
+  
+  .main-values {
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ddd;
+  }
+  
+  .main-values > h1 {
+    text-align: center;
+    margin: 30px;
+  }
+  
+  .table-values {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 20px;
+  }
+  
+  .table-values th,
+  .table-values td {
+    padding: 8px;
+    text-align: left;
+    background-color: #666666b6;
+  }
+  
+  .table-values th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .table-values td {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .table-values td:first-child {
+    width: 200px;
+  }
+  
+  .table-values td:nth-child(2) {
+    width: 250px;
+  }
+  
+  .table-values td:last-child {
+    white-space: pre-line;
+  }
+  
+  .Btn-values {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .escopo tr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .escopo td {
+    width: calc(100% / 3 - 10px);
+  }
+  
+  .table-header {
+    vertical-align: bottom;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pagination-list {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .pagination-list li {
+    margin-right: 10px;
+  }
+  
+  .page-link {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #333;
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .page-link:hover {
+    background-color: #007bff;
+  }
+  
+  .page-link.active {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+  }
+  

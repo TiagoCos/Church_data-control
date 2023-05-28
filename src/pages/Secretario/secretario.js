@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import Modal from "react-modal";
 import MemberForm from "../../Components/MemberForm/MemberForm";
 import "./index.secretario.css";
-
+import BotaoLogado from '../../Components/BotaoLogado/botaoLogado'
 Modal.setAppElement("#root");
 
 const membersPerPage = 5;
 
 const Members = () => {
+  
   const [members, setMembers] = useState([
     { id: 1, name: "João", address: "Rua A", phone: "1234-5678", email: "joao@teste.com" },
     { id: 2, name: "Maria", address: "Rua B", phone: "9876-5432", email: "maria@teste.com" },
@@ -94,6 +95,7 @@ const Members = () => {
   return (
     <>
       <main className="main-ficha">
+        <BotaoLogado/>
         <h1>Lista de Membros</h1>
         <button className="Btn-ficha" onClick={openModal}>
           Adicionar Membro

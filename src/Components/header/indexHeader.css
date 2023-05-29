@@ -50,8 +50,9 @@ html, body {
   font-weight: bold;
   border: 2px solid whitesmoke;
   padding: 10px 20px;
-  border-radius: 500px;
+  border-radius: 22px;
   font-weight: 700;
+  margin-left: 5rem;  
 }
 
 .Login-btn:hover{

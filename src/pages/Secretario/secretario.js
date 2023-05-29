@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Modal from "react-modal";
 import MemberForm from "../../Components/MemberForm/MemberForm";
 import "./index.secretario.css";
-import BotaoLogado from '../../Components/BotaoLogado/botaoLogado'
+
 Modal.setAppElement("#root");
 
 const membersPerPage = 5;
@@ -95,7 +95,7 @@ const Members = () => {
   return (
     <>
       <main className="main-ficha">
-        <BotaoLogado/>
+        
         <h1>Lista de Membros</h1>
         <button className="Btn-ficha" onClick={openModal}>
           Adicionar Membro

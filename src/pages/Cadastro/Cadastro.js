@@ -114,7 +114,7 @@ function Cadastro() {
               event.preventDefault();
               handleSubmit(event.target.elements.cpfInput.value);
             }}>
-              <label>CPF:</label>
+  
               <input
                 className="Cdt-input"
                 type="text"
@@ -122,7 +122,7 @@ function Cadastro() {
                 name="cpfInput"
                 placeholder="Digite seu CPF"
                 autoComplete="off"
-                minLength={10}
+                minLength={8}
               />
               <button className="btn-verificar" type="submit">Verificar</button>
               <Message type={TypeMsg} message={Msg} />

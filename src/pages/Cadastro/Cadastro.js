@@ -142,29 +142,30 @@ function Cadastro() {
         return (
           <div className="swiper-slide">
             <h2>Quase lá</h2>
-            <h3>Digite sua senha</h3>
+            <h3>Crie sua senha aqui</h3>
             <form onSubmit={handleCadastrar}>
-              <label>
-                Senha:
+             
                 <input
                   className="Cdt-input"
+                  placeholder="Digite sua senha "
                   type="password"
                   value={senha}
                   minLength={6}
                   onChange={(event) => setSenha(event.target.value)}
                 />
-              </label>
+            
               <br />
-              <label>
-                Confirmar senha:
+              
+       
                 <input
                   className="Cdt-input"
+                  placeholder="Confirme sua senha "
                   type="password"
                   value={confirmSenha}
                   minLength={6}
                   onChange={(event) => setConfirmSenha(event.target.value)}
                 />
-              </label>
+            
               <br />
               <button type="submit">Cadastrar</button>
               <Message type={TypeMsg} message={Msg} />

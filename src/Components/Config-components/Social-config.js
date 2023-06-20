@@ -38,6 +38,7 @@ function Social(){
                 event.target.elements.novoYoutube.value);
             }}>
                 <h2>Atualize suas redes sociais: </h2>
+                
                 <input placeholder='Instagram' required autoComplete='off' name='novoInstagram'></input>
                 <input placeholder='Facebook' required autoComplete='off' name='novoFacebook'></input>
                 <input placeholder='Youtube' required autoComplete='off' name='novoYoutube'></input>

@@ -43,7 +43,7 @@ const Login = () => {
      
     axios.post('/http://localhost:5000/Login', { CPF, senha, tipo })
       .then((response) => {
-        //lógica para pegar o token do server e usalo no localStorage
+        //lógica para pegar o token do server e usa-lo no localStorage
         const { token } = response.data;
         
         if (token != null) {
